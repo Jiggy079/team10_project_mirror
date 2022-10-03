@@ -2,7 +2,7 @@
 
 <details><summary>Wednesday 28th September 2022</summary>
 
-### Location & Time: George Green Library Group Study Room C06
+### Location & Time: George Green Library Group Study Room C06 1pm
 
 | Attendees | Attended |
 |-----------|--------------|
@@ -35,7 +35,7 @@
 </details>
 <details><summary>Monday 3rd October 2022</summary>
 
-### Location & Time: DLRC Group Study Room 3
+### Location & Time: DLRC Group Study Room 3 2.30pm
 
 | Attendees | Attended |
 |-----------|--------------|
@@ -63,6 +63,38 @@
 | Register interest in project 05-10| Hyanggi|
 | Register interest in project| Hyanggi|
 | Get CVs ready for next meeting to peer review | Everyone|
+
+</details>
+
+</details>
+<details><summary>Thursday 6th October 2022</summary>
+
+### Location & Time: DLRC Group Study Room 2 11am
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L |  |
+|Zhening Z |  |
+|Jamie V|  |
+|Yizhan H|  |
+| Nita K| |
+|Wenfei Q| |
+|Luke W|  |
+
+### Agenda:
+- Review projects assigned 
+- Start writing EoI
+- Pitch ideas and plans 
+- Review each other's CV's
+
+### Points Discussed:
+
+
+### Meeting Take-Aways/To-Dos:
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+
 
 </details>
 
