@@ -4,6 +4,7 @@
 - **Location & Time:** George Green Library Group Study Room C06
 
 | Attendees | Attended |
+|-----------|--------------|
 | Hyanggi L | Y |
 |Zhening Z | Y |
 |Jamie V| N |
