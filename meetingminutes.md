@@ -1,7 +1,7 @@
 # Meeting Minutes 
 
-<details><summary>** Wednesday 28th September 2022**</summary>
-** Location & Time:**George Green Library Group Study Room C06
+<details><summary> **Wednesday 28th September 2022**</summary>
+**Location & Time:** George Green Library Group Study Room C06
 
 | Attendees | Attended |
 |-----------|--------------|
