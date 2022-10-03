@@ -32,6 +32,7 @@
 | create form for ranking projects| Nita|
 | complete form to rank favourite projects| Everyone|
 
+</details>
 <details><summary>Monday 3rd October 2022</summary>
 
 ### Location & Time: DLRC Group Study Room 3
@@ -65,4 +66,3 @@
 
 </details>
 
-</details>
