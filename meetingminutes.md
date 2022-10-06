@@ -73,13 +73,13 @@
 
 | Attendees | Attended |
 |-----------|--------------|
-| Hyanggi L |  |
-|Zhening Z |  |
-|Jamie V|  |
-|Yizhan H|  |
-| Nita K| |
-|Wenfei Q| |
-|Luke W|  |
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V| Y |
+|Yizhan H| Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| N |
 
 ### Agenda:
 - Review projects assigned 
@@ -88,13 +88,17 @@
 - Review each other's CV's
 
 ### Points Discussed:
-
-
+- Interests for 3 choices for projects
+- start to upload CV draft in group teams
+- start to plan for pitch/EOI - more details in next week lecture
 ### Meeting Take-Aways/To-Dos:
 
 |To-Do| Assigned To:|
 |--------------------------------------|-------------------|
-
+| Complete with fill in the EOI form about interests/skills with bullet points for first choice - Visual Field Test | Everyone |
+| Complete with fill in the EOI form about interests/skills with bullet points for second choice - use of colour for data | Everyone | 
+| Complete with fill in the EOI form about interests/skills with bullet points for third choice - Automata Simulation Kit | Everyone |
+| start to upload CV draft to teams for next meeting | Everyone | 
 
 </details>
 
