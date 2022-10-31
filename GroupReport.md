@@ -11,7 +11,7 @@
 ## Team Management 
 
 [insert image of table from word/teams here]
-
+<br>
 [meeting minutes]
 
 ## Specification 
@@ -25,19 +25,19 @@
 
 #### Textual Analysis 
 
-[photo of textual analysis]
+[photo of textual analysis]<br>
 [notes]
 
 #### Use Case 
 
-[photo of use case]
-[context and justification of building a use case diagram]
+[photo of use case]<br>
+[context and justification of building a use case diagram]<br>
 [questions and assumptions formed]
 
 #### Personas 
 
-[photo of personas]
-[context and justification of making personas]
+[photo of personas]<br>
+[context and justification of making personas]<br>
 [questions and assumptions formed]
 
 #### User Stories 
@@ -50,7 +50,7 @@
 |  | | | 
 |  |  | | 
 
-[ context and justification of making user stories]
+[ context and justification of making user stories] <br>
 [questions and assumptions formed]
 
 ## Requirements 
