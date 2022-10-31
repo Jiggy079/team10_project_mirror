@@ -64,4 +64,22 @@
 [questions and assumptions formed]
 </details>
 
-## Requirements 
+## Specifications
+
+#### Activity Diagram 
+
+<details><summary> </summary>
+
+</details>
+
+#### Sequence Diagram 
+
+<details><summary> </summary>
+
+</details>
+
+#### Prototype
+
+<details><summary> </summary>
+
+</details>
