@@ -2,7 +2,7 @@
 |Contents|
 |--------|
 |[Team Management](#team-management)|
-|[Jump to Property Requirements:](#requirements)|
+|[Jump to Requirements:](#requirements)|
 |[Jump to Specification](#specification)|
 
 
