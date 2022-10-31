@@ -43,8 +43,10 @@
 #### User Stories 
 
 ##### User Name
+
+
 | Requirement | Acceptance Criteria | Priority | 
-| ------ | ------ |
+| ------------------ | -------------------- | ----- |
 |  | | | 
 |  |  | | 
 
