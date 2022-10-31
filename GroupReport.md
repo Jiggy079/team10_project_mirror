@@ -4,7 +4,7 @@
 |[Team Management](#team-management)|
 |[Jump to Requirements:](#requirements)|
 |[Jump to Specification](#specification)|
-|[Jump to Testing](#test_plan)|
+|[Jump to Testing](#test-plan)|
 
 
 
@@ -71,7 +71,7 @@
 [questions and assumptions formed]
 </details>
 
-## Specifications
+## Specification
 
 #### Activity Diagram 
 
