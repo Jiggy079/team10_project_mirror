@@ -12,7 +12,14 @@
 
 [insert image of table from word/teams here]
 <br>
-[meeting minutes]
+
+#### Meeting Minutes 
+
+<details><summary> </summary>
+
+[insert meeting minutes here]
+
+</details>
 
 ## Specification 
 
