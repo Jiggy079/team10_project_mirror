@@ -14,19 +14,19 @@
 
 #### Project Contributors 
 - Zhening Zhu <br>
-scyzz7@exmail.nottingham.ac.uk <br>
+    - scyzz7@exmail.nottingham.ac.uk <br>
 - Nita Krasniqi <br>
-psynk8@nottingham.ac.uk <br>
+    - psynk8@nottingham.ac.uk <br>
 - Jamie Vickers <br>
-psyjv3@exmail.nottingham.ac.uk <br>
+    - psyjv3@exmail.nottingham.ac.uk <br>
 - Yizhan Huang <br>
-scyyh11@exmail.nottingham.ac.uk <br>
+    - scyyh11@exmail.nottingham.ac.uk <br>
 - Hyanggi Lee <br>
-psyhl8@exmail.nottingham.ac.uk <br>
+    - psyhl8@exmail.nottingham.ac.uk <br>
 - Wenfei Qi <br>
-scywq1@exmail.nottingham.ac.uk <br>
+    - scywq1@exmail.nottingham.ac.uk <br>
 - Luke Whitfield <br>
-psylw1@exmail.nottingham.ac.uk
+    - psylw1@exmail.nottingham.ac.uk
 
 <br><br>
 
