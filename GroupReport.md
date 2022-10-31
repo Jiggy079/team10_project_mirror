@@ -13,7 +13,9 @@
 [insert image of table from word/teams here]
 <br>
 
+
 #### Meeting Minutes 
+
 
 <details><summary> </summary>
 
