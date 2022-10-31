@@ -13,7 +13,7 @@
 [insert image of table from word/teams here]
 
 
-#### Minutes
+####Meeting Minutes
 
 <details><summary> </summary>
 
