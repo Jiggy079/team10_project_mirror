@@ -16,32 +16,27 @@
 
 ## Specification 
 
-|Contents|
-|--------|
-|[Textual Analysis](###textual_analysis)|
-|[Use Case Diagram ](###use_case)|
-|[Personas](###personas)|
-|[User Stories](###user_stories)|
-
 #### Textual Analysis 
+<details>
+
 
 [photo of textual analysis]<br>
 [notes]
-
+</details>
 #### Use Case 
-
+<details>
 [photo of use case]<br>
 [context and justification of building a use case diagram]<br>
 [questions and assumptions formed]
-
+</details>
 #### Personas 
-
+<details>
 [photo of personas]<br>
 [context and justification of making personas]<br>
 [questions and assumptions formed]
-
+</details>
 #### User Stories 
-
+<details>
 ##### User Name
 
 
@@ -52,5 +47,5 @@
 
 [ context and justification of making user stories] <br>
 [questions and assumptions formed]
-
+</details>
 ## Requirements 
