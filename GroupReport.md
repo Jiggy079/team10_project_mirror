@@ -18,10 +18,10 @@
 
 |Contents|
 |--------|
-|[Textual Analysis](textual_analysis)|
-|[Use Case Diagram ](use_case)|
-|[Personas](personas)|
-|[User Stories](user_stories)|
+|[Textual Analysis](###textual_analysis)|
+|[Use Case Diagram ](###use_case)|
+|[Personas](###personas)|
+|[User Stories](###user_stories)|
 
 #### Textual Analysis 
 
