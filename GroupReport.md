@@ -14,6 +14,7 @@
 [insert image of table from word/teams here]
 [insert image of table from word/teams of kanban]
 [insert image of table from word/teams of when tasks where set/completed]
+[image of meetings on a calender]
 
 [sub team descriptions, reasoning for sub team allocations]
 
