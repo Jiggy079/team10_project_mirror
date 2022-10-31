@@ -2,8 +2,8 @@
 |Contents|
 |--------|
 |[Team Management](#team-management)|
-|[Jump to Specification](#specification)|
 |[Jump to Property Requirements:](#requirements)|
+|[Jump to Specification](#specification)|
 
 
 
@@ -21,7 +21,7 @@
 
 </details>
 
-## Specification 
+## Requirements
 
 #### Textual Analysis 
 
