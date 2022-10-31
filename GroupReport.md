@@ -11,13 +11,13 @@
 
 ## Team Management 
 <details><summary> </summary>
-[insert image of table from word/teams here]
-[insert image of table from word/teams of kanban]
-[insert image of table from word/teams of when tasks where set/completed]
-[image of meetings on a calender]
-
-[sub team descriptions, reasoning for sub team allocations]
-
+[insert image of table from word/teams here] <br>
+[insert image of table from word/teams of kanban]<br>
+[insert image of table from word/teams of when tasks where set/completed]<br>
+[image of meetings on a calender]<br>
+<br>
+[sub team descriptions, reasoning for sub team allocations]<br>
+<br>
 [resource links as specified to do in the marking rubric]
 
 #### Meeting Minutes
