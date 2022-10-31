@@ -15,16 +15,21 @@
 #### Project Contributors 
 - Zhening Zhu <br>
 scyzz7@exmail.nottingham.ac.uk <br>
+<br>
 - Nita Krasniqi <br>
 psynk8@nottingham.ac.uk <br>
+<br>
 - Jamie Vickers <br>
 psyjv3@exmail.nottingham.ac.uk <br>
+<br>
 - Yizhan Huang <br>
 scyyh11@exmail.nottingham.ac.uk <br>
-- Hyanggi Lee
+<br>
+- Hyanggi Lee <br>
 psyhl8@exmail.nottingham.ac.uk <br>
 - Wenfei Qi <br>
 scywq1@exmail.nottingham.ac.uk <br>
+<br>
 - Luke Whitfield <br>
 psylw1@exmail.nottingham.ac.uk
 
