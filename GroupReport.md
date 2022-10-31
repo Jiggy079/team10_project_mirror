@@ -11,7 +11,7 @@
 ## Team Management 
 
 [insert image of table from word/teams here]
-<br>
+
 
 #### Minutes
 
