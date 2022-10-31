@@ -4,14 +4,20 @@
 |[Team Management](#team-management)|
 |[Jump to Requirements:](#requirements)|
 |[Jump to Specification](#specification)|
+|[Jump to Testing](#test_plan)|
 
 
 
 
 ## Team Management 
-
+<details><summary> </summary>
 [insert image of table from word/teams here]
+[insert image of table from word/teams of kanban]
+[insert image of table from word/teams of when tasks where set/completed]
 
+[sub team descriptions, reasoning for sub team allocations]
+
+[resource links as specified to do in the marking rubric]
 
 #### Meeting Minutes
 
@@ -19,6 +25,7 @@
 
 [insert meeting minutes here]
 
+</details>
 </details>
 
 ## Requirements
@@ -78,8 +85,29 @@
 
 </details>
 
+
 #### Prototype
 
 <details><summary> </summary>
+
+</details>
+
+
+## Test Plan 
+
+<details><summary> </summary>
+
+|Test|Reason|Inputs|Expected Outcome|Pass/Fail|Notes|
+|----|---------------|------|----------------|-------|------|
+| | | | | | |
+
+<details><summary>Code Fixes</summary>
+ 
+
+| Test | Why it failed | What changed to make them pass |
+| ------ | ------------ | ------ |
+| | | |
+</details>
+
 
 </details>
