@@ -115,7 +115,7 @@
 
 </details>
 
-</details>
+
 <details><summary>Thursday 6th October 2022</summary>
 
 ### Location & Time: DLRC Group Study Room 2 9.30am
