@@ -404,18 +404,41 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | Create an GroupReport.md in gitlab | Nita |
 | Create an Trello on the teams | Nita |
 | Create an TeamManagement docs on teams | Nita |
-| Fill in the PreliminaryEthics form | Everyone |
-| Upload the PreliminaryEthics from | Hyanggi |
+| Fill in the PreliminaryEthics form and upload | Hyanggi |
 
 </details>
 
 <details><summary> Tuesday 1st Nobember - With Supervisor</summary>
 
-### Location and Time: ... @ 3pm
+### Location and Time: CS Atrium @ 3pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+- discuss about project(Use Of Colour For Data Visualisation)
+
+### Points Discussed:
+- what to Prepare for the project
+- detail instruction of the Project
+
+### Meeting Take-Aways/To-Dos:
 
 
-</details>
-
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Prepare short presentation about every list of technologies for next meeting with supervisor | Everyone |
+| Labelling Ideas for the project | Everyone |
+| Textual Analysis + usecase diagram | Everyone |
+| Sequence + Activity Diagram | Everyone |
+| Prepare for the prototype | Everyone |
 
 </details>
 </details>
