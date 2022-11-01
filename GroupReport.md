@@ -156,7 +156,7 @@
 | Questions and assumptions for client for Automata Simulation Kit| Everyone | 
 
 </details>
-</details>
+
 
 <details><summary>Monday 10th October 2022</summary>
 
