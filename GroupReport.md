@@ -41,9 +41,6 @@
 
 #### Meeting Minutes
 
-<details><summary> </summary>
-
-# Meeting Minutes 
 
 <details><summary>Wednesday 28th September 2022</summary>
 
