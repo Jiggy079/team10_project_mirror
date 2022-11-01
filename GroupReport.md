@@ -43,7 +43,367 @@
 
 <details><summary> </summary>
 
-[insert meeting minutes here]
+# Meeting Minutes 
+
+<details><summary>Wednesday 28th September 2022</summary>
+
+
+### Location & Time: George Green Library Group Study Room C06 1pm
+
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V| N |
+|Yizhan H| Y (on teams) |
+| Nita K| Y|
+|Wenfei Q| Y (on teams) |
+|Luke W| Y |
+
+
+### Agenda:
+
+- Discuss team leadership roles 
+- Discuss individual strengths and weaknesses/ programming skills 
+- Review projects, create rough shortlist 
+
+### Points Discussed:
+- Nita chosen as team leader
+- Hyanggi chosen as team admin 
+- Luke chosen as git leader 
+
+### Meeting Take-Aways/To-Dos:
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| complete admin form | Hyanggi |
+| create form for ranking projects| Nita|
+| complete form to rank favourite projects| Everyone|
+
+</details>
+<details><summary>Monday 3rd October 2022</summary>
+
+### Location & Time: DLRC Group Study Room 3 2.30pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V| Y |
+|Yizhan H| Y |
+| Nita K| Y|
+|Wenfei Q| Y|
+|Luke W| Y |
+
+### Agenda:
+- Review results of form for ranking projects
+- Create and agree on ranked shortlist 
+- Re-review our skills in relation to project 
+
+### Points Discussed:
+- first choice, second choice .... for projects
+
+### Meeting Take-Aways/To-Dos:
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Register interest in project 04-10| Hyanggi |
+| Register interest in project 05-10| Hyanggi|
+| Register interest in project| Hyanggi|
+| Get CVs ready for next meeting to peer review | Everyone|
+
+
+</details>
+
+</details>
+<details><summary>Thursday 6th October 2022</summary>
+
+### Location & Time: DLRC Group Study Room 2 9.30am
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V| Y |
+|Yizhan H| Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| N |
+
+### Agenda:
+- Review projects assigned 
+- Start writing EoI
+- Pitch ideas and plans 
+- Review each other's CV's
+
+### Points Discussed:
+- Skills related to 3 assigned projects
+- start to upload CV draft in group teams
+- start to plan for pitch/EOI - more details in next week lecture
+### Meeting Take-Aways/To-Dos:
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Complete with fill in the EOI form about interests/skills with bullet points for - Visual Field Test | Everyone |
+| Complete with fill in the EOI form about interests/skills with bullet points for - use of colour for data | Everyone | 
+| Complete with fill in the EOI form about interests/skills with bullet points for - Automata Simulation Kit | Everyone |
+| start to upload CV draft to teams for next meeting | Everyone | 
+| Textual Analysis and Use Case Diagram for Visual Field Test | Nita |
+| Questions and Assumptions for client of Visual Field Test | Everyone |
+| Textual Analysis and Use Case Diagram for use of colour for data | Nita|
+| Questions and assumptions for client for use of colour for data | Everyone | 
+| Textual Analysis and Use Case Diagram for Automata Simulation Kit| Nita|
+| Questions and assumptions for client for Automata Simulation Kit| Everyone | 
+
+</details>
+
+<details><summary>Monday 10th October 2022</summary>
+
+### Location & Time: DLRC Group Study Room 2 at 2pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda:
+- Discuss rough plan outline for each project
+- Review EoIs
+- Pitch plans 
+- Final CV draft reviews
+- Questions and Assumptions for clients
+
+### Points Discussed:
+- how to rewrite EOI after EOI preparation lecture
+- pitch idea/plan for script
+- Discuss rough plan 
+- start to peer review for CV
+
+### Meeting Take-Aways/To-Dos:
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Review EOI and re-do(Finalize) | Everyone |
+| Write Pitch script | Everyone |
+| Peer Review CV| Everyone |
+| fill in EoI for Use of Colour| Yizhan |
+| fill in for EoI for automata | Jamie |
+| help in all of them and KL2C too| Everyone |
+
+</details>
+<details><summary>Thursday 13rd October 2022</summary>
+
+### Location & Time: DLRC Group Study Room 3 1:00pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | N (Covid) |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| N |
+|Luke W| Y |
+
+### Agenda:
+- Peer review CVs
+- Pitch script & ppt plan
+- Discuss when we finish pitch ppt & ppt
+- evidence that we needs
+
+### Points Discussed:
+- Hyanggi -> make presentation for visual field test
+- Jamie -> make presentation for Automata presentation
+- Wenfei, Yizhan -> make presentation for use of Colour
+- Hyanggi -> Upload reversi game demo video
+- Jamie -> Upload Jamie example
+- Nita, Yizhan, Zhening -> design examples (look in design paragraph of EOI)
+- Nita -> Upload use of colour prototype
+- Luke -> Databases and Interfaces
+- Zhening -> WeChat example of work
+- Upload other work experience (Photo/ demo videos)
+
+### Meeting Take-Aways/To-Dos:
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| make presentation for pitch by Saturday(next meeting) | Everyone |
+| make script for pitch by Saturday (next meeting) | Everyone |
+| take record in next meeting | Everyone |
+| upload resources that needs for ppt | Everyone |
+
+</details>
+
+<details><summary>Saturday 15th October 2022</summary>
+
+### Location & Time: DLRC Group Study Room02 @ 3pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda:
+- Filming Pitch Video
+
+### Points Discussed:
+- n\a
+
+### Meeting Take-Aways/To-Dos:
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Upload Powerpoint Materials | Zhening , Yizhan, Luke |
+| Upload video materials from todays meeting | Wenfei| 
+| Upload demo video for Reversi game| Hyanggi |
+| Upload video speaking about own experience | Jamie , Luke , Zhening |
+
+
+</details>
+
+<details><summary>Monday 17th October 2022</summary>
+
+### Location & Time: Groundfloor in cs building 3 2:30pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda:
+- Peer review CVs
+- finalize for the pitch video
+
+### Points Discussed:
+- Nita, Zhening, Luke, Jamie needs to upload video
+- Hyanggi needs to upload retake for reversi game demo video
+- Questions we have for clients to ask in meeting
+
+### Meeting Take-Aways/To-Dos:
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| retake video for finalize pitch video | (everyone) |
+| Continue editing 3 pitch videos | Nita |
+| Upload intro / outro videos | Luke |
+| Upload team experience and leadership videos | Nita| 
+| Continue to add questions for clients in the document | everyone |
+
+</details>
+<details><summary>Tuesday 18th October 2022</summary>
+
+### Location & Time: Hub room in cs building 3 12:00pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| N |
+
+### Agenda:
+- finalize everything for pitch, Eol, CV
+- finalize for the pitch video
+
+### Points Discussed:
+- Finalize for what should we need to edit more for the pitch
+
+### Meeting Take-Aways/To-Dos:
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Create additional background slides | Yizhan, Zhening |
+| Make Final Pitch Video Edits | Nita |
+| upload CV, pitch, EOI | Hyanggi(Team admin) |
+| upload CV individually | Everyone |
+
+</details>
+
+<details><summary> Tuesday 25th October </summary>
+
+### Location and Time: Room A26 Business South Building @ 2pm 
+
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+
+- Q&A with clients
+
+
+### Points Discussed:
+
+
+- First, second and third choice for projects
+
+
+### Meeting Take-Aways/To-Dos:
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Submit order of preference | Hyanggi |
+
+
+</details>
+
+<details><summary> Tuesday 1st November </summary>
+
+### Location and Time: Group Study Room 02 DLRC @ 10am
+
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| N |
+
+### Agenda
+- Prepare for the meeting with Supervisor
+
+### Points Discussed:
+- 
+
+</details>
+
+<details><summary> Tuesday 1st Nobember - With Supervisor</summary>
+
+### Location and Time: ... @ 3pm
+
+
+</details>
+
 
 </details>
 </details>
