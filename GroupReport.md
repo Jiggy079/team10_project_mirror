@@ -392,7 +392,19 @@
 - Prepare for the meeting with Supervisor
 
 ### Points Discussed:
-- 
+- create an report for supervisor meeting
+ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
+
+### Meeting Take-Aways/To-Dos:
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Create an GroupReport.md in gitlab | Nita |
+| Create an Trello on the teams | Nita |
+| Create an TeamManagement docs on teams | Nita |
+| Fill in the PreliminaryEthics form | Everyone |
+| Upload the PreliminaryEthics from | Hyanggi |
 
 </details>
 
