@@ -455,7 +455,26 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 |Yizhan H|  Y |
 | Nita K| Y |
 |Wenfei Q| Y |
-|Luke W| Y |
+|Luke W| N |
+
+### Agenda
+- technologies presentations 
+- Q&A with each other 
+- Decide which technologies are most suitable for our project 
+
+### Points Discussed:
+- most useful front-end technology
+- most useful back-end technology 
+- most useful web hosting technology 
+- questions for supervisor 
+
+### Meeting Take-Aways/To-Dos:
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Email project supervisor questions | Zhening |
+| Integrate all individual powerpoints into one, ready for Tuesday Meeting | Everyone |
 
 </details>
 </details>
