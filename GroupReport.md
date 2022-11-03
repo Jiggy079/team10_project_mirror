@@ -477,6 +477,24 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | Integrate all individual powerpoints into one, ready for Tuesday Meeting | Everyone |
 
 </details>
+
+<details><summary>Tuesday 8th November 2022 - With Supervisor</summary>
+
+### Location and Time : ... @ 2pm
+
+</details>
+
+<details><summary> Tuesday 8th November 2022</summary>
+
+### Location and Time : CS The Hub @ when supervisor meeting ends
+
+<details>
+
+<details><summary>Thursday 10th November 2022 </summary>
+
+### Location and Time : Business South Library Group Study Room @ 2pm
+
+</details>
 </details>
 
 ## Requirements
