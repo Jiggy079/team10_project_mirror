@@ -442,6 +442,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 
 </details>
+
 <details><summary> Thursday 3rd Nobemberr</summary>
 
 ### Location and Time: Dearing Building A30 @ 2pm-4pm
@@ -455,6 +456,8 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | Nita K| Y |
 |Wenfei Q| Y |
 |Luke W| Y |
+
+</details>
 
 ## Requirements
 
