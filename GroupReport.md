@@ -486,7 +486,9 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 <details><summary> Tuesday 8th November 2022</summary>
 
+
 ### Location and Time : CS The Hub @ when supervisor meeting ends
+
 
 </details>
 
