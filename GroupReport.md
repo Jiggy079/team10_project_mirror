@@ -246,7 +246,7 @@
 
 | Attendees | Attended |
 |-----------|--------------|
-| Hyanggi L | N |
+| Hyanggi L | Y (on teams) |
 |Zhening Z | Y |
 |Jamie V|  Y |
 |Yizhan H|  Y |
@@ -440,8 +440,21 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | Sequence + Activity Diagram | Everyone |
 | Prepare for the prototype | Everyone |
 
+
 </details>
-</details>
+<details><summary> Thursday 3rd Nobemberr</summary>
+
+### Location and Time: Dearing Building A30 @ 2pm-4pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y(on teams) |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
 
 ## Requirements
 
