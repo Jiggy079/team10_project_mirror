@@ -338,7 +338,7 @@
 
 </details>
 
-<details><summary> Tuesday 25th October </summary>
+<details><summary> Tuesday 25th October 2022</summary>
 
 ### Location and Time: Room A26 Business South Building @ 2pm 
 
@@ -374,7 +374,7 @@
 
 </details>
 
-<details><summary> Tuesday 1st November </summary>
+<details><summary> Tuesday 1st November 2022 </summary>
 
 ### Location and Time: Group Study Room 02 DLRC @ 10am
 
@@ -408,7 +408,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 
-<details><summary> Tuesday 1st Nobember - With Supervisor</summary>
+<details><summary> Tuesday 1st November 2022 - With Supervisor</summary>
 
 ### Location and Time: CS Atrium @ 3pm
 
@@ -443,7 +443,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 
-<details><summary> Thursday 3rd Nobemberr</summary>
+<details><summary> Thursday 3rd November 2022</summary>
 
 ### Location and Time: Dearing Building A30 @ 2pm-4pm
 
