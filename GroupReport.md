@@ -482,6 +482,16 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 ### Location and Time : ... @ 2pm
 
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
 </details>
 
 
