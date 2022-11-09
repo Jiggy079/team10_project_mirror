@@ -79,6 +79,7 @@
 | complete admin form | Hyanggi |
 | create form for ranking projects| Nita|
 | complete form to rank favourite projects| Everyone|
+| Update meeting minutes | Hyanggi |
 
 </details>
 <details><summary>Monday 3rd October 2022</summary>
@@ -111,6 +112,7 @@
 | Register interest in project 05-10| Hyanggi|
 | Register interest in project| Hyanggi|
 | Get CVs ready for next meeting to peer review | Everyone|
+| Update meeting minutes | Hyanggi |
 
 
 </details>
@@ -154,6 +156,7 @@
 | Questions and assumptions for client for use of colour for data | Everyone | 
 | Textual Analysis and Use Case Diagram for Automata Simulation Kit| Nita|
 | Questions and assumptions for client for Automata Simulation Kit| Everyone | 
+| Update meeting minutes | Hyanggi |
 
 </details>
 
@@ -195,6 +198,7 @@
 | fill in EoI for Use of Colour| Yizhan |
 | fill in for EoI for automata | Jamie |
 | help in all of them and KL2C too| Everyone |
+| Update meeting minutes | Hyanggi |
 
 </details>
 <details><summary>Thursday 13rd October 2022</summary>
@@ -237,6 +241,7 @@
 | make script for pitch by Saturday (next meeting) | Everyone |
 | take record in next meeting | Everyone |
 | upload resources that needs for ppt | Everyone |
+| Update meeting minutes | Hyanggi |
 
 </details>
 
@@ -268,6 +273,7 @@
 | Upload video materials from todays meeting | Wenfei| 
 | Upload demo video for Reversi game| Hyanggi |
 | Upload video speaking about own experience | Jamie , Luke , Zhening |
+| Update meeting minutes | Hyanggi |
 
 
 </details>
@@ -304,6 +310,7 @@
 | Upload intro / outro videos | Luke |
 | Upload team experience and leadership videos | Nita| 
 | Continue to add questions for clients in the document | everyone |
+| Update meeting minutes | Hyanggi |
 
 </details>
 <details><summary>Tuesday 18th October 2022</summary>
@@ -335,6 +342,7 @@
 | Make Final Pitch Video Edits | Nita |
 | upload CV, pitch, EOI | Hyanggi(Team admin) |
 | upload CV individually | Everyone |
+| Update meeting minutes | Hyanggi |
 
 </details>
 
@@ -370,6 +378,7 @@
 |To-Do| Assigned To:|
 |--------------------------------------|-------------------|
 | Submit order of preference | Hyanggi |
+| Update meeting minutes | Hyanggi |
 
 
 </details>
@@ -405,6 +414,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | Create an Trello on the teams | Nita |
 | Create an TeamManagement docs on teams | Nita |
 | Fill in the PreliminaryEthics form and upload | Hyanggi |
+| Update meeting minutes | Hyanggi |
 
 </details>
 
@@ -439,6 +449,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | Textual Analysis + usecase diagram | Everyone |
 | Sequence + Activity Diagram | Everyone |
 | Prepare for the prototype | Everyone |
+| Update meeting minutes | Hyanggi |
 
 
 </details>
@@ -475,6 +486,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 |--------------------------------------|-------------------|
 | Email project supervisor questions | Zhening |
 | Integrate all individual powerpoints into one, ready for Tuesday Meeting | Everyone |
+| Update meeting minutes | Nita |
 
 </details>
 
@@ -488,9 +500,31 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 |Zhening Z | Y |
 |Jamie V|  Y |
 |Yizhan H|  Y |
-| Nita K| Y |
+| Nita K| Y(on teams) |
 |Wenfei Q| Y |
 |Luke W| Y |
+
+### Agenda
+- technologies presentations 
+- Q&A with each other 
+- talk about how the project is going for next step
+
+### Points Discussed:
+- presentation about technologies
+- about middleware
+- about backend
+- about web hosting
+
+### Meeting Take-Aways/To-Dos:
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| making textual analysis + user case + personas for this week | Everyone |
+| builds our own "Hello world" web page | Everyone |
+| update meeting minutes | Hyanggi |
+| Fill the preliminary form and submit | Hyanggi |
+
 
 </details>
 
