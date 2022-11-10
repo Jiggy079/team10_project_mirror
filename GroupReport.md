@@ -529,14 +529,6 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 </details>
 
 
-<details><summary>Thursday 10th November 2022 </summary>
-
-### Location and Time : Business South Library Group Study Room @ 2pm
-
-</details>
-
-</details>
-
 ## Requirements
 
 #### Textual Analysis 
