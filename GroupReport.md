@@ -36,9 +36,9 @@
 [insert image of table from word/teams here] <br>
 
 
-** Trello - Kanban Board:** 
+##### Trello - Kanban Board:
 
-<br>
+
 
 ![trello QR](/Documents/trello_QR.png)
 
