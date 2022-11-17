@@ -578,15 +578,20 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 <details><summary> </summary>
 
+![textual analysis](/Documents/textual_team10.png)
 
-[photo of textual analysis]<br>
-[notes]
+** Questions and Assumptions**
+ 
+- Q1: Who is the user? 
+
 </details>
 
 #### Use Case 
 
 <details><summary> </summary>
-[photo of use case]<br>
+
+![use case](/Documents/usecase_team10.png)
+
 [context and justification of building a use case diagram]<br>
 [questions and assumptions formed]
 </details>
