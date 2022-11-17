@@ -39,7 +39,7 @@
 
 <br>
 
-![trello QR](/Documents/trello_QR)
+![trello QR](/Documents/trello_QR.png)
 
 <br>
 
