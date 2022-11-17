@@ -11,6 +11,7 @@
 
 ## Team Management 
 
+<details><summary> expand details </summary>
 
 #### Project Contributors 
 - Zhening Zhu <br>
@@ -30,7 +31,7 @@
 
 <br><br>
 
-<details><summary> </summary>
+
 
 [insert image of table from word/teams here] <br>
 [insert image of table from word/teams of kanban]<br>
@@ -45,7 +46,6 @@
 
 #### Meeting Minutes 
 
-<details>
 
 
 <details><summary>Wednesday 28th September 2022</summary>
