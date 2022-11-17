@@ -618,12 +618,16 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 [context and justification of making personas]<br>
 [questions and assumptions formed]
 
+| Persona | Photo | Name | Job Title | Demogrpahics | Goals and Tasks | Environment | 
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| | | | | | | | 
+
 ##### User Name
 
 
 | Requirement | Acceptance Criteria | Priority | 
 | ------------------ | -------------------- | ----- |
-| As an x, I want to y... | | | 
+|  | | | 
 |  |  | | 
 
 [ context and justification of making user stories] <br>
