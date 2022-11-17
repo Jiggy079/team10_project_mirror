@@ -527,6 +527,43 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 
 </details>
+<details><summary>Tuesday 15th November 2022 - With Supervisor</summary>
+
+### Location and Time : CS Atrium @ 2pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+- Hello World website checking
+- Q&A with each other 
+- talk about how the project is going for next step
+
+### Points Discussed:
+- what should we have to do for next step
+- Mern (includes all front-end libraries)
+- Express.js (backend)
+- Netlify
+- Amazon AWS
+- Google is not a good choice for web hosting the color annotator
+- Vercel
+
+### Meeting Take-Aways/To-Dos:
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| make another website with two buttons on it | Everyone |
+| Choose a web host: Netlify, Amazon AWS, or Vercel (all 3 must be covered amongst the team) | Everyone |
+| Choose a front-end framework: Vue.js, React.js,  a third front-end library is welcome (all must be covered amongst the team) | Everyone |
+
 
 
 ## Requirements
