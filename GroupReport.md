@@ -716,8 +716,9 @@ The use case is brief as there is not any communication between users through th
 
 | Requirement | Acceptance Criteria | Priority | 
 | ------------------ | -------------------- | ----- |
-| As a student , I want a user manual so that I can understand how to use the software and keep up with my course and can learn how to use the tools as quickly as possible | The web tools should have an explanation section on how they are used | 2 | 
+| As a student , I want a user manual so that I can understand how to use the software and keep up with my course and can learn how to use the tools as quickly as possible | The web tools should have an explanation section on how they are used | 1 | 
 | As an new to the subject student, I want the tools to have a simple interface so that I can focus on the content I am trying to learn rather than figuring out the web app | The web app should have a simplified to look to it so as to not scare the students and have them thinking its complicated. Clear and simple images can be used instead of long messy looking words, that they can clic on when using the tools  | 2 | 
+| As a student taking the use of colour for data visulisation module, I want to be able to build an aesthetically pleasing graph from the data i collect through annotating so that I can submit it for my coursework and get a good grade| the tool that allows a user to explore the colour properties over time can be a graph option | 1 | 
 
 
 <br>
