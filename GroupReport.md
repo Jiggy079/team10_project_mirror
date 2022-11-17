@@ -33,8 +33,14 @@
 
 
 
-[insert image of table from word/teams here] <br>
+##### Project Management / Task Split
 
+[image of table from word]
+[sub team descriptions, reasoning for sub team allocations]<br>
+<br>
+
+[image of meetings on a calender]<br>
+<br>
 
 ##### Trello - Kanban Board:
 
@@ -49,12 +55,7 @@ or use link: https://trello.com/b/BfxyxiJn
 <br>
 
 
-[insert image of table from word/teams of when tasks where set/completed]<br>
-[image of meetings on a calender]<br>
-<br>
-[sub team descriptions, reasoning for sub team allocations]<br>
-<br>
-[resource links as specified to do in the marking rubric]
+
 
 
 
