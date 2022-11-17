@@ -623,7 +623,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 | Requirement | Acceptance Criteria | Priority | 
 | ------------------ | -------------------- | ----- |
-|  | | | 
+| As an x, I want to y... | | | 
 |  |  | | 
 
 [ context and justification of making user stories] <br>
