@@ -564,6 +564,8 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | Choose a web host: Netlify, Amazon AWS, or Vercel (all 3 must be covered amongst the team) | Everyone |
 | Choose a front-end framework: Vue.js, React.js,  a third front-end library is welcome (all must be covered amongst the team) | Everyone |
 
+</details>
+</details>
 
 
 ## Requirements
