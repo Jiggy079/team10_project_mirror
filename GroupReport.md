@@ -34,7 +34,20 @@
 
 
 [insert image of table from word/teams here] <br>
-[insert image of table from word/teams of kanban]<br>
+
+** Trello - Kanban Board:** 
+
+<br>
+
+![trello QR](/Documents/trello_QR)
+
+<br>
+
+or use link: https://trello.com/b/BfxyxiJn
+
+<br>
+
+
 [insert image of table from word/teams of when tasks where set/completed]<br>
 [image of meetings on a calender]<br>
 <br>
