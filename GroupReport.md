@@ -584,8 +584,37 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | Choose a front-end framework: Vue.js, React.js,  a third front-end library is welcome (all must be covered amongst the team) | Everyone |
 
 </details>
-</details>
-</details>
+
+<details><summary> Thursday 17th November 2022</summary>
+
+### Location and Time : CS Atrium @ 2pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+- discuss about the requirements (textual analysis, use case, persona, user stories, activity diagram, sequence diagram)
+- discuss about the idea for persona + user stories
+
+### Points Discussed:
+- How to write persona + user stories
+- Provide the idea together for persona
+
+### Meeting Take-Aways/To-Dos:
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Textual anaylsis + use case diagram (already done) | Nita |
+| Do the persona + user stories | Everyone |
+
 
 ## Requirements
 
