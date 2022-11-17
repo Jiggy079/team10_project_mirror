@@ -632,7 +632,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 | Requirement | Acceptance Criteria | Priority | 
 | ------------------ | -------------------- | ----- |
-|  | | | 
+| As a [user], I want [functionality] so that [benefit] | | | 
 |  |  | | 
 
 [ context and justification of making user stories] <br>
