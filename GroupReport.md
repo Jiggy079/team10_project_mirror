@@ -629,7 +629,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 ##### Questions and Assumptions
  
 - Q1: Who is the user? 
-
+<br><br>
 - A1 relates to Q1: researchers, students, professors will be the target users of this web app 
 - A2: the tools will be linked to eachother, so they can be used simultaneously 
 
@@ -647,7 +647,7 @@ The use case is brief as there is not any communication between users through th
 
 - Q1: is there only 1 single goal all users would like to acheive? 
 - Q2: is the annotation tool done byy the web app using colour recognition or manually by the user?
-
+<br><br>
 - A1: the tools will be linked to eachother, so they can be used simultaneously and they use eachothers data collected to perform
 - A2 relates to Q1 : all users have the same goal and experience with the web app 
 - A3 relates to Q2: the user manually annotates images using the tool we provide
@@ -724,6 +724,8 @@ The use case is brief as there is not any communication between users through th
 We decided to use personas and user stories as part of our requirements gathering as it helped visualise a way in which different people, of different inent and technological ability would be able to utilise the web app. Although the app is made for 3 distinct tasks contributing to 1 end goal, it was essential for us to see how to incorparate different levels of skill to make a coherent interface suitable for all users. As use of colour is a niche topic, you might assume that people using the web app would not need much simplification added to it as these people would already be skilled in this topic, however there are not many tools that are like our web app for these people to use so it is something new. Furthermore, even those with wide knowledge on the subject, may not have technological logic and there are people who are new to the topic that we have to consider, so therefore personas and user stories allow us to take these viewpoints into account.
 
 ##### Questions and Assumptions:
+
+- Q1: can this web app be used together with a university course module? 
 
 </details>
 
