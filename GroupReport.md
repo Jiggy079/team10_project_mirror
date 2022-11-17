@@ -620,7 +620,12 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 | Persona | Photo | Name | Job Title | Demogrpahics | Goals and Tasks | Environment | 
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-| | | | | | | | 
+| Jamie - biology undergrad student who has general interest in use of colour | | | | | | | 
+| Yizhan - elderly researcher who is used to doing work. manually not with computer | | | | | | | 
+| Sellena - professor who is profficient with technology| | | | | | | 
+| Luke - phd student Lobert| | | | | | | 
+| Zhening - someone who attends use of colour conferences | | | | | | | 
+
 
 ##### User Name
 
