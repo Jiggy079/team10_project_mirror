@@ -617,8 +617,6 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 [photo of personas]<br>
 [context and justification of making personas]<br>
 [questions and assumptions formed]
-</details>
-
 
 ##### User Name
 
