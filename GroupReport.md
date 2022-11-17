@@ -669,7 +669,7 @@ The use case is brief as there is not any communication between users through th
 | Zhening - someone who attends use of colour conferences | | | | | | | 
 | Undergraduate Data Analytics Student at LSE  | ![persona photo](/Documents/Maya.png) | Maya Gomez | International First Year Student | - 18 years old <br> - Moved to UK for university<br> - has interest in economics and data analytics <br> - is good at learning english but is improving level of skill by taking the course in english | is very new to the subject and is not so sure of how interested they are in it. Wants to acheive good grades in the use of colour for data visualisation module. | Is skilled when it comes to technology including building graphs. Can pickup new software quite quickly as long as there is a manual or guidance. | 
 
-#### User Stories
+#### User Stories:
 
 ##### biology -undergrad name ...
 
