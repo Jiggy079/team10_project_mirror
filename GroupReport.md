@@ -611,7 +611,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 [questions and assumptions formed]
 </details>
 
-#### Personas 
+#### Personas + User Stories
 
 <details><summary> </summary>
 [photo of personas]<br>
@@ -619,9 +619,6 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 [questions and assumptions formed]
 </details>
 
-#### User Stories 
-
-<details><summary> </summary>
 
 ##### User Name
 
