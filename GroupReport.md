@@ -578,6 +578,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 <details><summary> </summary>
 
+![textual analysis](/Documents/textual_team10.png)
 
 [photo of textual analysis]<br>
 [notes]
