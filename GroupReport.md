@@ -687,6 +687,38 @@ The use case is brief as there is not any communication between users through th
 | As a [user], I want [functionality] so that [benefit] | | | 
 |  |  | | 
 
+##### name ...
+
+
+| Requirement | Acceptance Criteria | Priority | 
+| ------------------ | -------------------- | ----- |
+| As a [user], I want [functionality] so that [benefit] | | | 
+|  |  | | 
+
+##### name ...
+
+
+| Requirement | Acceptance Criteria | Priority | 
+| ------------------ | -------------------- | ----- |
+| As a [user], I want [functionality] so that [benefit] | | | 
+|  |  | | 
+
+##### name ...
+
+
+| Requirement | Acceptance Criteria | Priority | 
+| ------------------ | -------------------- | ----- |
+| As a [user], I want [functionality] so that [benefit] | | | 
+|  |  | | 
+
+##### User - Maya Gomez : 
+
+
+| Requirement | Acceptance Criteria | Priority | 
+| ------------------ | -------------------- | ----- |
+| As a student , I want a user manual so that I can understand how to use the software and keep up with my course and can learn how to use the tools as quickly as possible | The web tools should have an explanation section on how they are used | 2 | 
+| As an new to the subject student, I want the tools to have a simple interface so that I can focus on the content I am trying to learn rather than figuring out the web app | The web app should have a simplified to look to it so as to not scare the students and have them thinking its complicated. Clear and simple images can be used instead of long messy looking words, that they can clic on when using the tools  | 2 | 
+
 
 <br>
 We decided to use personas and user stories as part of our requirements gathering as it helped visualise a way in which different people, of different inent and technological ability would be able to utilise the web app. Although the app is made for 3 distinct tasks contributing to 1 end goal, it was essential for us to see how to incorparate different levels of skill to make a coherent interface suitable for all users. As use of colour is a niche topic, you might assume that people using the web app would not need much simplification added to it as these people would already be skilled in this topic, however there are not many tools that are like our web app for these people to use so it is something new. Furthermore, even those with wide knowledge on the subject, may not have technological logic and there are people who are new to the topic that we have to consider, so therefore personas and user stories allow us to take these viewpoints into account.
