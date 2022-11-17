@@ -10,7 +10,7 @@
 
 
 ## Team Management 
-<details><summary> </summary>
+
 
 #### Project Contributors 
 - Zhening Zhu <br>
@@ -30,6 +30,8 @@
 
 <br><br>
 
+<details><summary> </summary>
+
 [insert image of table from word/teams here] <br>
 [insert image of table from word/teams of kanban]<br>
 [insert image of table from word/teams of when tasks where set/completed]<br>
@@ -41,7 +43,9 @@
 
 
 
-#### Meeting Minutes
+#### Meeting Minutes 
+
+<details>
 
 
 <details><summary>Wednesday 28th September 2022</summary>
@@ -566,7 +570,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 </details>
-
+</details>
 
 ## Requirements
 
