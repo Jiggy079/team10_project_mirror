@@ -615,6 +615,8 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | Textual anaylsis + use case diagram (already done) | Nita |
 | Do the persona + user stories | Everyone |
 
+</details>
+</details>
 
 ## Requirements
 
