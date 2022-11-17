@@ -708,6 +708,11 @@ We decided to use personas and user stories as part of our requirements gatherin
 
 </details>
 
+#### Requirements and Specifications Document 
+
+<details><summary> expand details </summary>
+
+</details>
 
 #### Prototype
 
