@@ -663,7 +663,7 @@ The use case is brief as there is not any communication between users through th
 
 | Persona | Photo | Name | Job Title | Demographics | Goals and Tasks | Environment | 
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-| Jamie - biology undergrad student who has general interest in use of colour | ![Isaac's image](/Documents/Isaac.jpg) | Isaac Jordan | Second Year Biology Student | - 20 years old<br> - Born in South East England, moved further north for university<br> - Studied Biology, Physics and History at A-Level with good grades in all three | Isaac is interested in discovering more about data visualisation and its evolution, especially since he wants to do well in his dissertation next year. He thinks understanding data visualisation in more depth will help him achieve this and allow him to represent concepts and key points in a clear and concise manner. He also finds the field intriguing simply due to its relevance and relationship with the sciences and other subjects that he enjoys the most. | Has lots of experience with interpreting and creating graphs and charts, but mostly by hand and not as much with technology. However, he is comfortable using technology for everyday things like social media and instant messaging. Might struggle with learning software unless it has a simplistic and intuitive UI. | 
+| Biology undergrad student who has general interest in use of colour | ![Isaac's image](/Documents/Isaac.jpg) | Isaac Jordan | Second Year Biology Student | - 20 years old<br> - Born in South East England, moved further north for university<br> - Studied Biology, Physics and History at A-Level with good grades in all three | Isaac is interested in discovering more about data visualisation and its evolution, especially since he wants to do well in his dissertation next year. He thinks understanding data visualisation in more depth will help him achieve this and allow him to represent concepts and key points in a clear and concise manner. He also finds the field intriguing simply due to its relevance and relationship with the sciences and other subjects that he enjoys the most. | Has lots of experience with interpreting and creating graphs and charts, but mostly by hand and not as much with technology. However, he is comfortable using technology for everyday things like social media and instant messaging. Might struggle with learning software unless it has a simplistic and intuitive UI. | 
 | Yizhan - elderly researcher who is used to doing work. manually not with computer | | | | | | | 
 | Sellena - professor who is profficient with technology| | | | | | | 
 | Luke - phd student Lobert| | | | | | | 
@@ -672,13 +672,14 @@ The use case is brief as there is not any communication between users through th
 
 #### User Stories:
 
-##### biology -undergrad name ...
+##### Isacc Jordan - Biology Student
 
 
 | Requirement | Acceptance Criteria | Priority | 
 | ------------------ | -------------------- | ----- |
-| As a [user], I want [functionality] so that [benefit] | | | 
-|  |  | | 
+| As Isac, I want the UI to be flat and intuitive so that I can understand how to use the tools quickly | The UI for each tool should be simplistic and avoid layers of menus where possible | 2 | 
+| As Isaac, I want to have useful and relevant search filters for the exploration tool so that I can make comparisons and derive meaningful conclusions from the data | The exploration tool should support a wide range of useful filters and apply them accurately | 2 | 
+
 
 ##### elderly researcher name ...
 
