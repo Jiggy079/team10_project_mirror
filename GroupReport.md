@@ -668,7 +668,7 @@ The use case is brief as there is not any communication between users through th
 | Sellena - professor who is profficient with technology| | | | | | | 
 | Luke - phd student Lobert| | | | | | | 
 | Zhening - someone who attends use of colour conferences | | | | | | | 
-| Meteorologist Prof.Pearson||Pearson Morris| Meteorologist, specialise in tornado | - 33 years old<br> - Live in America<br>|||
+| Meteorologist Prof.Pearson| ![Pearson's image](/Documents/Pearson_Morris.jpg) |Pearson Morris| Meteorologist, specialise in tornado | - 33 years old<br> - Live in America<br>|||
 | Undergraduate Data Analytics Student at LSE  | ![persona photo](/Documents/Maya.png) | Maya Gomez | International First Year Student | - 18 years old <br> - Moved to UK for university<br> - has interest in economics and data analytics  | is very new to the subject and is not so sure of how interested they are in it. Wants to acheive good grades in the use of colour for data visualisation module. | Is skilled when it comes to technology including building graphs. Can pickup new software quite quickly as long as there is a manual or guidance. | 
 
 #### User Stories:
