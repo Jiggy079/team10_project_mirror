@@ -678,8 +678,8 @@ The use case is brief as there is not any communication between users through th
 
 | Requirement | Acceptance Criteria | Priority | 
 | ------------------ | -------------------- | ----- |
-| As someone who mostly uses technology in the context of phones, I want the UI to be flat and intuitive so that I can understand how to use the tools quickly | The UI for each tool should be simplistic and avoid layers of menus where possible | 2 | 
-| As a student, I want to have useful and relevant search filters for the exploration tool so that I can make comparisons and derive meaningful conclusions from the data | The exploration tool should support a wide range of useful filters and apply them accurately | 2 | 
+| As Isac, I want the UI to be flat and intuitive so that I can understand how to use the tools quickly | The UI for each tool should be simplistic and avoid layers of menus where possible | 2 | 
+| As Isaac, I want to have useful and relevant search filters for the exploration tool so that I can make comparisons and derive meaningful conclusions from the data | The exploration tool should support a wide range of useful filters and apply them accurately | 2 | 
 
 
 ##### Uncle Chan - Elderly Researcher
@@ -691,13 +691,13 @@ The use case is brief as there is not any communication between users through th
 | As an elderly, I might make mistakes when doing annotiation, I want to be able to change my previous annotations | The annotation can be edited at any time. | 2 | 
 | As a researcher, I want a easy way to sort annotated images | The annotation and images can be easily sorted using keywords and displayed properly. | 1 | 
 
-##### name ...
+##### Prof.Pearson Morris - Meteorologist
 
 
 | Requirement | Acceptance Criteria | Priority | 
 | ------------------ | -------------------- | ----- |
-| As a [user], I want [functionality] so that [benefit] | | | 
-|  |  | | 
+| As a researcher, I want the UI to be easy and convenient to use, so that I can work in high efficiency. | The UI should be clear and not confusing, each with clear functions. | 1 | 
+| As a well-known Meteorologist, I can't afford make mistakes, so the annotation should be able to save to local machine and the format should be wildly accepted. | I want my annotation can be changed at any time. | 2 | 
 
 ##### name ...
 
