@@ -667,7 +667,7 @@ The use case is brief as there is not any communication between users through th
 | Elderly researcher Uncle Chan used to doing work manually not with computer | ![Chan's image](/Documents/Chan.jpg) | Uncle Chan | Researcher in data visualization | - 60 years old<br> - Born in England<br> - Not familiar with new technologies<br> - Get data visualization images from academic journals<br> | Uncle Chan is an elderly researcher whose research topics mainly focus on data visualization. One of his research work is to analyze characteristics of different kinds of data visualization images in various papers. He needs to get different data visualization images in papers first and annotate their characteristics. He wants a better way to annotate images instead of using pen and paper. He wants to sort different genre of images and colors been used among all annotated pictures | Used to use notebooks to do documentation and it's not easy to sort. Additionally, he had to repeatively writing same words when annotate same kinds of pictures. | 
 | Sellena - professor who is profficient with technology| | | | | | | 
 | Luke - phd student Lobert| | | | | | | 
-| Zhening - someone who attends use of colour conferences | | | | | | | 
+| Information designer who attends data visualisation conferences | ![Weiss's image](/Documents/Weiss.jpg) | Weiss Jones | Top information designer in a global tech company | - 46 years old <br> - Lives and works in London <br> - Studied art and graphics <br> - Does research on data visulisation | Weiss Jones creates graphics for her company to make information accessible and transparent. She needs to get more inspiration and pay close attention to the development of data visualisation. Therefore, she wants some tools to explore and analyze images based on different properties. | Has been producing graphics, charts and maps for more than 20 years in the industry. Went from hand-drawn to fully digital creating procedure during the evolution of graphics, and gradually became a famous expert in this field. Was often invited to attend the visualisation conferences. | 
 | Meteorologist Prof.Pearson| ![Pearson's image](/Documents/Pearson_Morris.jpg) |Pearson Morris| Meteorologist, specialise in tornado | - 33 years old<br> - Live in America<br>|||
 | Undergraduate Data Analytics Student at LSE  | ![persona photo](/Documents/Maya.png) | Maya Gomez | International First Year Student | - 18 years old <br> - Moved to UK for university<br> - has interest in economics and data analytics  | is very new to the subject and is not so sure of how interested they are in it. Wants to acheive good grades in the use of colour for data visualisation module. | Is skilled when it comes to technology including building graphs. Can pickup new software quite quickly as long as there is a manual or guidance. | 
 
@@ -707,13 +707,13 @@ The use case is brief as there is not any communication between users through th
 | As a [user], I want [functionality] so that [benefit] | | | 
 |  |  | | 
 
-##### name ...
+##### Weiss Jones - Information designer
 
 
 | Requirement | Acceptance Criteria | Priority | 
 | ------------------ | -------------------- | ----- |
-| As a [user], I want [functionality] so that [benefit] | | | 
-|  |  | | 
+| As an information designer, I want to search by tag or keyword in existing graphics so that I can come up with better ideas | The annotation should be precise, and the exploration tool should support searching | 2 | 
+| As a researcher, I want to filter out different properties when browsing image database in data visualization so that I can look into the evolution and analyze | The exploration tool should support multiple filters and allow selection on time | 2 | 
 
 ##### User - Maya Gomez : 
 
