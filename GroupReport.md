@@ -678,8 +678,8 @@ The use case is brief as there is not any communication between users through th
 
 | Requirement | Acceptance Criteria | Priority | 
 | ------------------ | -------------------- | ----- |
-| As Isac, I want the UI to be flat and intuitive so that I can understand how to use the tools quickly | The UI for each tool should be simplistic and avoid layers of menus where possible | 2 | 
-| As Isaac, I want to have useful and relevant search filters for the exploration tool so that I can make comparisons and derive meaningful conclusions from the data | The exploration tool should support a wide range of useful filters and apply them accurately | 2 | 
+| As someone who mostly uses technology in the context of phones, I want the UI to be flat and intuitive so that I can understand how to use the tools quickly | The UI for each tool should be simplistic and avoid layers of menus where possible | 2 | 
+| As a student, I want to have useful and relevant search filters for the exploration tool so that I can make comparisons and derive meaningful conclusions from the data | The exploration tool should support a wide range of useful filters and apply them accurately | 2 | 
 
 
 ##### Uncle Chan - Elderly Researcher
