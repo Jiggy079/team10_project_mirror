@@ -699,13 +699,14 @@ The use case is brief as there is not any communication between users through th
 | As a researcher, I want the UI to be easy and convenient to use, so that I can work in high efficiency. | The UI should be clear and not confusing, each with clear functions. | 1 | 
 | As a well-known Meteorologist, I can't afford make mistakes, so the annotation should be able to save to local machine and the format should be wildly accepted. | I want my annotation can be changed at any time. | 2 | 
 
-##### name ...
+##### Prof.Chris Bob - Professor who is profficient with technology
 
 
 | Requirement | Acceptance Criteria | Priority | 
 | ------------------ | -------------------- | ----- |
 | As a [user], I want [functionality] so that [benefit] | | | 
-|  |  | | 
+| As a technology professor, I want the UI and web application to be successful project so that I can teach students more beneficially and they also can work efficiently. | I want my project result can be different but surely success to students.   | 1 | 
+| As a researcher, I want to explore the UI and web application project more deeply with database visualisation(technology) so that I can prove and predict the result of the project(success). | The technology web application should be clearly successful result and not mix it(complicated). | 2 |
 
 ##### Weiss Jones - Information designer
 
