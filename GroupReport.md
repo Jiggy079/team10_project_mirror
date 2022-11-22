@@ -617,6 +617,42 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | Do the persona + user stories | Everyone |
 
 </details>
+
+<details><summary> Tuesday 22nd November - with supervisor</summary>
+
+### Location and Time : CS Atrium @ 2pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+- review the task set by Bob, individually making a website that flicks through 5 images, using different front end and web services
+- talk about the next documentation steps
+
+### Points Discussed:
+- what to improve on the websites we made
+- the general uses of the colour annotation tools 
+
+### Meeting Take-Aways/To-Dos:
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Activity Diagram for tool 1| Nita |
+| Activity Diagram for tool 2| Jamie | 
+| Activity Diagram for tool 3 | Nita |
+| Sequence Diagram | Zhening | 
+| Individually create webiste that can navigate through all of the ohio database photos | Everyone |
+
+</details>
+
 </details>
 
 ## Requirements
