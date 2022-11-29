@@ -791,11 +791,13 @@ We decided to use personas and user stories as part of our requirements gatherin
 
 ##### Tool 1 (Annotation):
 
+![activity diagram tool 1](/Documents/sequencediagram-tool1.png)
+
 ##### Tool 2 (Verification):
 
 ##### Tool 3 (Exploration):
 
-![activity diagram tool 2](/Documents/sequencediagram-tool3.png)
+![activity diagram tool 3](/Documents/sequencediagram-tool3.png)
 
 </details>
 
