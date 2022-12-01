@@ -653,8 +653,6 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 
-</details>
-
 <details><summary> Tuesday 29th November - with supervisor</summary>
 
 ### Location and Time : CS Atrium @ 2pm
@@ -679,6 +677,12 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 |To-Do| Assigned To:|
 |--------------------------------------|-------------------|
 | make website for everyone with add 6 questions to interface | Everyone |
+
+</details>
+
+
+
+</details>
 
 ## Requirements
 
