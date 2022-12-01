@@ -655,6 +655,31 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 
+<details><summary> Tuesday 29th November - with supervisor</summary>
+
+### Location and Time : CS Atrium @ 2pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+- keep talking about the project for next documentation step
+
+### Points Discussed:
+- talk about the things that we need to improve on the websites for the next step
+- the general uses of the colour annotation tools 
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| make website for everyone with add 6 questions to interface | Everyone |
+
 ## Requirements
 
 #### Textual Analysis 
