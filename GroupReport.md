@@ -680,6 +680,34 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 
+<details><summary> Thursday 1st December</summary>
+
+### Location and Time : CS Atrium @ 2pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+- what style would we like to have on our website 
+- what library we can use to help us 
+
+### Points Discussed:
+- we have got aws to work now 
+- using MUI core
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| make website for everyone with add 6 questions to interface | Everyone |
+
+</details>
+
 
 
 </details>
