@@ -33,16 +33,6 @@
 <br><br>
 
 
-
-##### Project Management / Task Split
-
-[image of table from word]
-[sub team descriptions, reasoning for sub team allocations]<br>
-<br>
-
-[image of meetings on a calender]<br>
-<br>
-
 ##### Trello - Kanban Board:
 
 
@@ -54,9 +44,6 @@
 or use link: https://trello.com/b/BfxyxiJn
 
 <br>
-
-
-
 
 
 
@@ -737,9 +724,9 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 
-<details><summary> Tuesday 6th December - with supervisor</summary>
+<details><summary> Tuesday 6th December</summary>
 
-### Location and Time : CS Atrium @ 2pm
+### Location and Time : CS Atrium @ 4pm
 
 | Attendees | Attended |
 |-----------|--------------|
