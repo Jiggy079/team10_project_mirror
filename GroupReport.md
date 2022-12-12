@@ -707,7 +707,69 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | make website for everyone with add 6 questions to interface | Everyone |
 
 </details>
+<details><summary> Tuesday 6th December - with supervisor</summary>
 
+### Location and Time : CS Atrium @ 2pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| N |
+
+### Agenda
+
+- discuss remaining features to annotation tool 
+
+### Points Discussed:
+
+- who marks the interim report
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Save annotation results, you can choose how: database, CSV, flat file + finishing touches to annotation tool | Everyone |
+| Change background colour to webpage | Jamie + Nita |
+
+</details>
+
+<details><summary> Tuesday 6th December - with supervisor</summary>
+
+### Location and Time : CS Atrium @ 2pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| N |
+
+### Agenda
+
+- discuss interim report structure 
+
+### Points Discussed:
+
+- the structure we want is : project brief, requirements, research into technolgoies, group split, adim and reflection
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Write own paragraph for group split | Everyone |
+| Write section to project brief  | Zhening |
+| Write section to requirements | Zhening |
+| Write section to technologies | Jamie |
+| Write section to admin | Nita |
+| Write section to reflection | Nita 
+
+</details>
 
 
 </details>
