@@ -904,6 +904,16 @@ The use case is brief as there is not any communication between users through th
 | As an new to the subject student, I want the tools to have a simple interface so that I can focus on the content I am trying to learn rather than figuring out the web app | The web app should have a simplified to look to it so as to not scare the students and have them thinking its complicated. Clear and simple images can be used instead of long messy looking words, that they can clic on when using the tools  | 2 | 
 | As a student taking the use of colour for data visulisation module, I want to be able to build an aesthetically pleasing graph from the data i collect through annotating so that I can submit it for my coursework and get a good grade| the tool that allows a user to explore the colour properties over time can be a graph option | 1 | 
 
+<br>
+
+##### User - Lobert Raramee
+
+| Requirement | Acceptance Criteria | Priority | 
+| ------------------ | -------------------- | ----- |
+| As a resarcher, I want to be able to have tools that allow me to quickly and efficently anaylise large data sets that are I am working on. Furthermore, I want to be able to provide these tools to my studetns to aide them with their own work and resarch projects. | The web app should provide a simple to use and all the tools should be easy to understand to those who are less skilled in data anyalsis | 1 | 
+| Since I am working on large datasets with many complicated tasks, I would like to have "one size fits all" tool so that I can use this app for possible projects. | While still be simple to use, the app should provide a finely detailed and large ammount of possible tools and labeling options, so as to get the most possible value towards it.  | 1 | 
+| While writing papers, I would want to be able to include graphical representations of my anyalsis to provide an ease of understanding. | The app can create graphs, plotting the various aspects and labels of the data sets. | 2 |
+
 
 <br>
 We decided to use personas and user stories as part of our requirements gathering as it helped visualise a way in which different people, of different inent and technological ability would be able to utilise the web app. Although the app is made for 3 distinct tasks contributing to 1 end goal, it was essential for us to see how to incorparate different levels of skill to make a coherent interface suitable for all users. As use of colour is a niche topic, you might assume that people using the web app would not need much simplification added to it as these people would already be skilled in this topic, however there are not many tools that are like our web app for these people to use so it is something new. Furthermore, even those with wide knowledge on the subject, may not have technological logic and there are people who are new to the topic that we have to consider, so therefore personas and user stories allow us to take these viewpoints into account.
