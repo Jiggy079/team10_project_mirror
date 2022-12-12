@@ -758,6 +758,44 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 
+<details><summary> Monday 12th December</summary>
+
+### Location and Time : CS Atrium @ 2pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+
+- discuss if meeting with supervisor tomrrow 
+- merge git branches 
+- finishing interim report 
+- add 1 point to brief 
+- add 1 point to technologies 
+
+### Points Discussed:
+
+- reviewing each other's paragraphs on the interim report 
+- finishing the annotation tool before friday for supervisor 
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Peer review | Everyone |
+| Submit interim report| Hyanggi | 
+| Merge branches on git | Luke | 
+
+
+</details>
+
+
 
 </details>
 
