@@ -914,7 +914,7 @@ We decided to use personas and user stories as part of our requirements gatherin
 
 <details><summary> </summary>
 
-![prototype tool 1](/Documents/Prototype_tool1_wenfei)
+![prototype tool 1](/Documents/Prototype_tool1_wenfei.jpeg)
 
 </details>
 
