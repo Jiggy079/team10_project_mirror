@@ -796,8 +796,55 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 </details>
 
 
+<details><summary> Tuesday 7th Feburary 2023</summary>
+
+### Location and Time: CS Atrium @ 12pm 
+
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V|  N |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+
+- discuss for meeting time with supervisor
+- discuss about progress with prototype
+
+### Points Discussed:
+
+- helping with team members together for making prototype with next step
+- working with group as a team
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Try to get an annotation prototype working that can store results -completing the task from 6 Dec 2022| Everyone |
+
 
 </details>
+
+<details><summary> Tuesday 7th Feburary 2023</summary>
+
+### Location and Time: CS building @ 10am 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y(on teams-online) |
+|Zhening Z |  |
+|Jamie V|   |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q|  |
+|Luke W|  |
+
+
+
 
 ## Requirements
 
