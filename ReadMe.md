@@ -836,14 +836,14 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | Attendees | Attended |
 |-----------|--------------|
 | Hyanggi L | Y(on teams-online) |
-|Zhening Z |  |
-|Jamie V|   |
+|Zhening Z | Y |
+|Jamie V| N |
 |Yizhan H|  Y |
 | Nita K| Y |
-|Wenfei Q|  |
-|Luke W|  |
+|Wenfei Q| Y |
+|Luke W| N |
 
-
+</details>
 
 
 ## Requirements
