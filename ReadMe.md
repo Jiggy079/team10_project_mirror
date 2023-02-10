@@ -829,7 +829,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 
-<details><summary> Tuesday 7th Feburary 2023</summary>
+<details><summary> Tuesday 10th Feburary 2023</summary>
 
 ### Location and Time: CS building @ 10am 
 
