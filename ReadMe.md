@@ -796,7 +796,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 </details>
 
 
-<details><summary> Tuesday 7th Feburary 2023</summary>
+<details><summary> Tuesday 7th Feburary with supervisor 2023</summary>
 
 ### Location and Time: CS Atrium @ 12pm 
 
@@ -829,7 +829,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 
-<details><summary> Tuesday 10th Feburary 2023</summary>
+<details><summary> Friday 10th Feburary 2023</summary>
 
 ### Location and Time: CS building @ 10am 
 
@@ -843,8 +843,35 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 |Wenfei Q| Y |
 |Luke W| N |
 
+### Agenda
+- discuss for next step (development for second semester with teams /feedback)
+- discuss for project
+
+### Points Discussed:
+
+- review the feedback about last term final report
+- discuss about the tool for the project
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| annotate the tool | Everyone |
+
 </details>
 
+<details><summary> Tuesday 14th Feburary with supervisor2023</summary>
+
+### Location and Time: CS atrium @ 10am 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y(on teams-online + flu) |
+|Zhening Z | Y |
+|Jamie V| Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
 
 ## Requirements
 
