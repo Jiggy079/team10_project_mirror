@@ -798,7 +798,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 <details><summary> Tuesday 7th Feburary with supervisor 2023</summary>
 
-### Location and Time: CS Atrium @ 12pm 
+### Location and Time: CS Atrium @ 10am 
 
 
 | Attendees | Attended |
@@ -835,7 +835,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 | Attendees | Attended |
 |-----------|--------------|
-| Hyanggi L | Y(on teams-online) |
+| Hyanggi L | N |
 |Zhening Z | Y |
 |Jamie V| N |
 |Yizhan H|  Y |
@@ -858,8 +858,197 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | annotate the tool | Everyone |
 
 </details>
+
+<details> <summary> Tuesday 14th February - with supervisor </summary>
+
+### Location and Time: Atrium @ 10am 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V| Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+- discuss group split 
+- review progress on tools 
+
+### Points Discussed:
+
+- improvements to be made on each prototype 
+- once everyone completes these final fixes then we can begin to work on one prototype
+- will work from Zhening's prototpye 
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| update GUI to display results saved | Jamie |
+| store results in databse  | Wenfei, Luke & Yizhan |
+| add username to store results | Nita & Zhening |
+
 </details>
 
+<details> <summary> Friday 17th February </summary>
+
+### Location and Time: CS Building @ 10am 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V| Y |
+|Yizhan H|  Y |
+| Nita K| N |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+- discuss group split 
+- assign teams 
+
+### Points Discussed:
+
+- will work from Zhening's prototpye 
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Set up annotations | Zhening |
+
+
+</details>
+
+<details> <summary> Tuesday 21st February - with supervisor </summary>
+
+### Location and Time: Atrium @ 10am 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V| Y |
+|Yizhan H|  Y |
+| Nita K| N |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+- reviewing annotations 
+
+### Points Discussed:
+
+- Zhening completing the annotation training 
+- next week Jamie will complete annotation training 
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| update annotations on your account to be the same as Zhening's | Everyone | 
+
+
+</details>
+
+<details> <summary> Friday 24th February </summary>
+
+### Location and Time: CS Building @ 10am 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V| Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+- discuss group split 
+- approach to the two tools 
+- interface of the tools 
+
+### Points Discussed:
+
+- team validation: Zhening, Wenfei, Luke, Sellena 
+- team exploration: Jamie, Nita , Yizhan 
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| annotate 50 more images | Everyone |
+</details>
+
+<details><summary> Tuesday 28th February - with supervisor </summary>
+
+### Location and Time: Atrium @ 10am 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V| Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+- review annotations
+
+### Points Discussed:
+
+- Jamie completed annotation training 
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| update annotation results to the same as Jamie's | Everyone |
+| show annotation results of 1 user  | Team Validation |
+| show all annotated images | Team Exploration |
+| Use “Update Button” if results are already there and are being updated, Automatic update if the user hits “next” | Zhening |
+| Annotate 50 more images | Everyone | 
+
+
+
+</details>
+
+<details><summary> Friday 3rd March </summary>
+
+### Location and Time: CS Buildinh @ 10am 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V| Y |
+|Yizhan H|  N |
+| Nita K| Y |
+|Wenfei Q| N |
+|Luke W| N |
+
+### Agenda
+- split tasks between group 
+- approach to tasks
+
+### Points Discussed:
+
+- does Bob want the exploration tool in the final prototype to display all annotated images or only validated ones? 
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| create the photo grid | Jamie |
+| create drop down menu for filtering the images | Nita |
+| style the exploration tool page | Yizhan|
+| Complete the validation tool task | Zhening |
+| set up github organisation | Luke | 
+
+
+
+</details>
+
+
+</details>
 ## Requirements
 
 #### Textual Analysis 
