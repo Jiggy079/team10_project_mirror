@@ -858,7 +858,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | annotate the tool | Everyone |
 
 </details>
-
+</details>
 
 ## Requirements
 
