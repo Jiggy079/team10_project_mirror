@@ -859,19 +859,6 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 
-<details><summary> Tuesday 14th Feburary with supervisor2023</summary>
-
-### Location and Time: CS atrium @ 10am 
-
-| Attendees | Attended |
-|-----------|--------------|
-| Hyanggi L | Y(on teams-online + flu) |
-|Zhening Z | Y |
-|Jamie V| Y |
-|Yizhan H|  Y |
-| Nita K| Y |
-|Wenfei Q| Y |
-|Luke W| Y |
 
 ## Requirements
 
