@@ -1049,6 +1049,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 
 </details>
+
 ## Requirements
 
 #### Textual Analysis 
