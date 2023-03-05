@@ -1,3 +1,12 @@
+# Deployments
+The deployment URLs for each branch are:
+
+Main: https://team10-project-mirror.vercel.app/
+<br>
+Exploration: https://team10-project-mirror-exploration.vercel.app/
+<br>
+Verification: https://team10-project-mirror-sdum.vercel.app/
+
 # Create React App
 
 This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
