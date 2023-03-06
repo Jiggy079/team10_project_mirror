@@ -12,7 +12,8 @@ class ImageExplorer extends React.Component {
 			annotationList: null,
 			imageList: null
 		};
-		this.getAnnotations = this.bind.getAnnotations;
+		this.getAnnotations = this.getAnnotations.bind(this);
+		this.getImages = this.getImages.bind(this);
 	}
 
 	getAnnotations() {
