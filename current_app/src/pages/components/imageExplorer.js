@@ -69,6 +69,7 @@ class ImageExplorer extends React.Component {
 			);
 		} else {
 			let annotatedImages = this.getAnnotatedImages();
+			console.log(annotatedImages);
 
 			return (
 				<div id="imageExplorerContainer">
