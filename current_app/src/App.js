@@ -9,7 +9,7 @@ class App extends React.Component {
         return (
             <div>
                 <Routes>
-                    <Route exact path = "/" element = {<Annotation />} />
+                   { /* <Route exact path = "/" element = {<Annotation />} /> */ }
                     <Route exact path= "/exploration" element = {<Exploration />} />
                 </Routes>
             </div>
