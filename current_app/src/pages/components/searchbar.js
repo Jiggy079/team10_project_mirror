@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-/* function BasicMenu() {
+function BasicMenu() {
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const open = Boolean(anchorEl);
 	const handleClick = (event) => {
@@ -39,6 +39,6 @@ import MenuItem from '@mui/material/MenuItem';
 		</Menu>
 	  </div>
 	);
-  } */
+  }
 
 export default BasicMenu;
