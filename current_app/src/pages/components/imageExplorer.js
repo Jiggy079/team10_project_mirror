@@ -21,7 +21,7 @@ class ImageExplorer extends React.Component {
 	getAnnotations() {
 		fetch("https://express-backend-vfm5.onrender.com/annotation")
 			.then(res => res.json())
-			.then((res) => this.setState({imageList: res},
+			.then((res) => this.setState({annotationList: res},
 				() => {this.setState({annotationsLoaded: true})}))
 	}
 
