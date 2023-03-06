@@ -21,16 +21,14 @@ class ImageExplorer extends React.Component {
 	getAnnotations() {
 		fetch("https://express-backend-vfm5.onrender.com/annotation")
 			.then(res => res.json())
-			.then((res) => this.setState({annotationList: res},
-				() => {this.setState({annotationsLoaded: true})}))
+			.then((res) => this.setState({annotationList: res, annotationsLoaded: true}))
 	}
 
 	getImages() {
 		fetch("https://files.catbox.moe/7dvpgw.json")
 			.then(res => res.json())
 			.then((res) => {
-				this.setState({imageList: res},
-					() => {this.setState({imagesLoaded: true})})
+				this.setState({imageList: res, imagesLoaded: true})
 			});
 	}
 
