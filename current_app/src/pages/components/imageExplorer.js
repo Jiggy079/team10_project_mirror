@@ -16,6 +16,7 @@ class ImageExplorer extends React.Component {
 		};
 		this.getAnnotations = this.getAnnotations.bind(this);
 		this.getImages = this.getImages.bind(this);
+		this.getAnnotatedImages = this.getAnnotatedImages.bind(this);
 	}
 
 	getAnnotations() {
@@ -30,6 +31,24 @@ class ImageExplorer extends React.Component {
 			.then((res) => {
 				this.setState({imageList: res, imagesLoaded: true})
 			});
+	}
+
+	getAnnotatedImages() {
+		let result = [];
+
+		// for each image, if there is any element in annotationList with the same id (i.e. if the image has any
+		// annotations), then append it to `result`
+		for (let i = 0; i < this.state.imageList.length; i++) {
+			for (let j = 0; j < this.state.annotationList.length; j++) {
+				if (this.state.imageList[i]["imageId"] === this.state.annotationList[j]["id"].toString()) {
+					// check if we have already found an annotation for this image to avoid duplicates before adding to `result`
+					if (result.some((e) => e["id"] !== this.state.annotationList[j]["id"].toString())) {
+						result.push(this.state.imageList[i]);
+					}
+				}
+			}
+		}
+		return result;
 	}
 
 	render() {
@@ -49,17 +68,19 @@ class ImageExplorer extends React.Component {
 				</div>
 			);
 		} else {
+			let annotatedImages = this.getAnnotatedImages();
+
 			return (
 				<div id="imageExplorerContainer">
 					<ImageList sx={{ width: "100%", height: "100%"}}>
-						{this.state.annotationList.map((item) => (
-							<ImageListItem key={this.state.imageList["in"][item.id]["url"]}>
+						{annotatedImages.map((item) => (
+							<ImageListItem key={item["url"]}>
 								<img
-									src={this.state.imageList["in"][item.id]["url"]}
+									src={item["url"]}
 									alt="Image"
 									loading="lazy"/>
 								<ImageListItemBar
-									title={this.state.imageList["in"][item.id]["name"]}
+									title={item["name"]}
 									position={"below"}
 								/>
 							</ImageListItem>
