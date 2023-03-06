@@ -34,7 +34,7 @@ class ImageExplorer extends React.Component {
 		this.getAnnotations();
 		this.getImages();
 
-		if (this.state.annotationList != null && this.state.imageList != null) {
+		if (this.state.annotationList == null || this.state.imageList == null) {
 			return (
 				<div id="imageExplorerContainer">
 					<Box sx={{width: "100%", height: "100%"}}>
