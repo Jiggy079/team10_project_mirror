@@ -1,4 +1,7 @@
 import React from "react";
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
 
 class ImageExplorer extends React.Component {
 	constructor(props) {
@@ -7,7 +10,9 @@ class ImageExplorer extends React.Component {
 
 	render() {
 		return (
-			<span>Image grid goes here</span>
+			<div id="imageExplorerContainer">
+				<span>hello</span>
+			</div>
 		);
 	}
 }
