@@ -10,7 +10,9 @@ class ImageExplorer extends React.Component {
 		super(props);
 		this.state = {
 			annotationList: null,
-			imageList: null
+			annotationsLoaded: false,
+			imageList: null,
+			imagesLoaded: false
 		};
 		this.getAnnotations = this.getAnnotations.bind(this);
 		this.getImages = this.getImages.bind(this);
@@ -19,22 +21,28 @@ class ImageExplorer extends React.Component {
 	getAnnotations() {
 		fetch("https://express-backend-vfm5.onrender.com/annotation")
 			.then(res => res.json())
-			.then((res) => this.setState({imageList: res}))
+			.then((res) => this.setState({imageList: res},
+				() => {this.setState({annotationsLoaded: true})}))
 	}
 
 	getImages() {
 		fetch("https://files.catbox.moe/7dvpgw.json")
 			.then(res => res.json())
 			.then((res) => {
-				this.setState({imageList: res})
+				this.setState({imageList: res},
+					() => {this.setState({imagesLoaded: true})})
 			});
 	}
 
 	render() {
-		this.getAnnotations();
-		this.getImages();
+		if (!this.state.annotationsLoaded) {
+			this.getAnnotations();
+		}
+		if (!this.state.imagesLoaded) {
+			this.getImages();
+		}
 
-		if (this.state.annotationList == null || this.state.imageList == null) {
+		if (this.state.imagesLoaded === false || this.state.annotationsLoaded === false) {
 			return (
 				<div id="imageExplorerContainer">
 					<Box sx={{width: "100%", height: "100%"}}>
