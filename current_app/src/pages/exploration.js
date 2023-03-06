@@ -10,6 +10,7 @@ class Exploration extends React.Component {
 	}
 
 	render () {
+		document.title = "Exploration Tool";
 		return (
 			<div>
 				<MenuBar />
