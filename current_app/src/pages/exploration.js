@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-function BasicMenu() {
+{/* function BasicMenu() {
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const open = Boolean(anchorEl);
 	const handleClick = (event) => {
@@ -39,7 +39,7 @@ function BasicMenu() {
 		</Menu>
 	  </div>
 	);
-  }
+  } */}
 
 class Exploration extends React.Component {
 	constructor(props) {
@@ -51,7 +51,7 @@ class Exploration extends React.Component {
 			<div>
 				<h1>Hello World</h1>
 				{/* menu bar */}
-				
+				BasicMenu(); 
 			</div>
 		);
 	}
