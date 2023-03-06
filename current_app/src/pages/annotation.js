@@ -28,7 +28,7 @@ class Annotation extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://files.catbox.moe/cnlqci.json") // all images: https://files.catbox.moe/7dvpgw.json // 50: https://files.catbox.moe/oggcjf.json
+        fetch("https://files.catbox.moe/aumoxt.json") // all images: https://files.catbox.moe/7dvpgw.json // 50: https://files.catbox.moe/oggcjf.json
             .then(res => res.json())
             .then((res) => {
                 this.setState({
@@ -68,7 +68,7 @@ class Annotation extends React.Component {
 
     changeFigure(increment) {
         if (increment === true) {
-            if (this.state.currentFigureIndex === 99) {
+            if (this.state.currentFigureIndex === 149) {
                 this.setState({currentFigureIndex: 0});
                 this.fetchAnnotation(1, this.state.user);
             } else {
@@ -77,14 +77,23 @@ class Annotation extends React.Component {
             }
         } else {
             if (this.state.currentFigureIndex === 0) {
-                this.setState({currentFigureIndex: 99});
-                this.fetchAnnotation(100, this.state.user);
+                this.setState({currentFigureIndex: 149});
+                this.fetchAnnotation(150, this.state.user);
             } else {
                 this.setState({currentFigureIndex: this.state.currentFigureIndex - 1});
                 this.fetchAnnotation(this.state.currentFigureIndex, this.state.user);
             }
         }
+    }
 
+    jumpTo(index) {
+        if (index >= 1 && index <= 150) {
+            this.setState({currentFigureIndex: index - 1});
+            this.fetchAnnotation(index, this.state.user);
+        }
+    }
+
+    submitAnnotation() { 
         const newAnnotation = {
             id: this.state.currentFigureIndex + 1,
             user: this.state.user,
@@ -114,8 +123,7 @@ class Annotation extends React.Component {
                 body: JSON.stringify(newAnnotation),
             })
         }
-
-        console.log("New annotation added.")
+        this.setState({annotated: true});
     }
 
     getFigureInfo(index) {
@@ -146,9 +154,11 @@ class Annotation extends React.Component {
         .then((res) => {
             if (res === null) {
                 console.log("res is null");
+                this.setState({annotated: false});
                 return;
             } else {
                 this.setState({
+                    annotated: true,
                     colour: res.colour,
                     use: res.use,
                     legend: res.legend,
@@ -167,7 +177,7 @@ class Annotation extends React.Component {
 
     render() {
         if (this.state.user !== "") {
-            document.title = "Figure Viewer";
+            document.title = "Annotation tool";
             let figureInfo = this.getFigureInfo(this.state.currentFigureIndex);
             return (
                 <div className="App">
@@ -193,8 +203,15 @@ class Annotation extends React.Component {
                                 </div>
                                 <div className="bar">
                                     <Button size="small" onClick={() => this.changeFigure(false)}>Prev</Button>
-                                        {this.state.currentFigureIndex + 1} / 100   
-                                    <Button size="small" onClick={() => this.changeFigure(true)}>Next</Button>
+                                        <input className="indexInput" value={this.state.currentFigureIndex + 1} 
+                                            onChange={(e) => this.jumpTo(e.target.value)} />
+                                         / 150
+                                    <Button size="small" onClick={() => this.changeFigure(true)}>Next</Button>                        
+                                    {this.state.annotated === true ? (
+                                        <Button variant="contained" onClick={() => this.submitAnnotation()}>UPDATE</Button>
+                                    ) : (
+                                        <Button variant="contained" onClick={() => this.submitAnnotation()}>ANNOTATE</Button>
+                                    )}
                                 </div>
                             </Card>
                         </Grid>
@@ -279,9 +296,18 @@ class Annotation extends React.Component {
                                         <Card>
                                         <div className="ques-box">
                                             <h3>Q5. How many colour values are used?</h3>
-                                            <TextField value={this.state.number} onChange={(e) => this.setState({number: e.target.value})}
-                                                id="outlined-basic" variant="outlined" />
-                                            <FormControlLabel value="NA" control={<Radio />} label="Not applicable/many" />
+                                        <RadioGroup
+                                            row
+                                            aria-labelledby="number"
+                                            name="row-radio-buttons-group"
+                                            value={this.state.number}
+                                            >
+                                            
+                                                    <TextField value={this.state.number} onChange={(e) => this.setState({number: e.target.value})}
+                                                        id="outlined-basic" variant="outlined" />
+                                                
+                                                <FormControlLabel value="NA" control={<Radio />} label="Not applicable/many" onChange={(e) => this.setState({number: "NA"})} />
+                                            </RadioGroup>
                                         </div>
                                         </Card>
                                     </Grid>
