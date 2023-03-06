@@ -22,7 +22,7 @@ function BasicMenu() {
 		  aria-expanded={open ? 'true' : undefined}
 		  onClick={handleClick}
 		>
-		  Dashboard
+		  Filter
 		</Button>
 		<Menu
 		  id="basic-menu"
@@ -33,9 +33,9 @@ function BasicMenu() {
 			'aria-labelledby': 'basic-button',
 		  }}
 		>
-		  <MenuItem onClick={handleClose}>Profile</MenuItem>
-		  <MenuItem onClick={handleClose}>My account</MenuItem>
-		  <MenuItem onClick={handleClose}>Logout</MenuItem>
+		  <MenuItem onClick={handleClose}>Colour</MenuItem>
+		  <MenuItem onClick={handleClose}>Black and White</MenuItem>
+		  <MenuItem onClick={handleClose}>Greyscale</MenuItem>
 		</Menu>
 	  </div>
 	);
