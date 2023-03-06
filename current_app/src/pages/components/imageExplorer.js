@@ -41,10 +41,8 @@ class ImageExplorer extends React.Component {
 		for (let i = 0; i < this.state.imageList.length; i++) {
 			for (let j = 0; j < this.state.annotationList.length; j++) {
 				if (this.state.imageList[i]["imageId"] === this.state.annotationList[j]["id"].toString()) {
-					// check if we have already found an annotation for this image to avoid duplicates before adding to `result`
-					if (result.some((e) => e["id"] !== this.state.annotationList[j]["id"].toString())) {
-						result.push(this.state.imageList[i]);
-					}
+					result.push(this.state.imageList[i]);
+					break;
 				}
 			}
 		}
