@@ -42,7 +42,7 @@ class ImageExplorer extends React.Component {
 		console.log(this.state.annotationList.length);
 		for (let i = 0; i < this.state.imageList.length; i++) {
 			for (let j = 0; j < this.state.annotationList.length; j++) {
-				if (this.state.imageList[i]["imageId"] === this.state.annotationList[j]["id"].toString()) {
+				if (this.state.imageList[i]["imageId"] === this.state.annotationList[j]["id"]) {
 					result.push(this.state.imageList[i]);
 					break;
 				}
@@ -69,7 +69,6 @@ class ImageExplorer extends React.Component {
 			);
 		} else {
 			let annotatedImages = this.getAnnotatedImages();
-			console.log(annotatedImages);
 
 			return (
 				<div id="imageExplorerContainer">
