@@ -34,9 +34,9 @@ function BasicMenu() {
 			'aria-labelledby': 'basic-button',
 		  }}
 		>
-		  <MenuItem onClick={handleClose}><Checkbox {...label} />Colour</MenuItem>
-		  <MenuItem onClick={handleClose}><Checkbox {...label} />Black and White</MenuItem>
-		  <MenuItem onClick={handleClose}><Checkbox {...label} />Greyscale</MenuItem>
+		  <MenuItem onClick={handleClose}>Colour</MenuItem>
+		  <MenuItem onClick={handleClose}>Black and White</MenuItem>
+		  <MenuItem onClick={handleClose}>Greyscale</MenuItem>
 		</Menu>
 	  </div>
 	);
