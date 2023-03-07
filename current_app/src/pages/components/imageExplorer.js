@@ -29,7 +29,7 @@ class ImageExplorer extends React.Component {
 		fetch("https://files.catbox.moe/7dvpgw.json")
 			.then(res => res.json())
 			.then((res) => {
-				this.setState({imageList: res, imagesLoaded: true})
+				this.setState({imageList: res["in"], imagesLoaded: true})
 			});
 	}
 
@@ -73,7 +73,7 @@ class ImageExplorer extends React.Component {
 			return (
 				<div id="imageExplorerContainer">
 					<ImageList sx={{ width: "100%", height: "100%"}}>
-						{annotatedImages.map((item) => (
+						{this.state.imageList.map((item) => (
 							<ImageListItem key={item["url"]}>
 								<img
 									src={item["url"]}
