@@ -26,7 +26,7 @@ class ImageExplorer extends React.Component {
 	}
 
 	getImages() {
-		fetch("https://files.catbox.moe/7dvpgw.json")
+		fetch("https://files.catbox.moe/cnlqci.json")
 			.then(res => res.json())
 			.then((res) => {
 				this.setState({imageList: res["in"], imagesLoaded: true})
@@ -39,7 +39,6 @@ class ImageExplorer extends React.Component {
 		// for each image, if there is any element in annotationList with the same id (i.e. if the image has any
 		// annotations), then append it to `result`
 		for (let i = 0; i < this.state.imageList.length; i++) {
-			console.log(this.state.imageList[i]);
 			for (let j = 0; j < this.state.annotationList.length; j++) {
 				if (this.state.imageList[i]["imageId"] === this.state.annotationList[j]["id"].toString()) {
 					result.push(this.state.imageList[i]);
