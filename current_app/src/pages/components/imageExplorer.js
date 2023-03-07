@@ -50,8 +50,7 @@ class ImageExplorer extends React.Component {
 				result.push(this.state.imageList[i]);
 			}
 		}
-		console.log(annotatedIDs);
-		console.log(result);
+
 		return result;
 	}
 
