@@ -1,8 +1,7 @@
 import React from "react";
 import MenuBar from "./components/menubar";
-import BasicMenu from "./components/searchbar";
 import ImageExplorer from "./components/imageExplorer";
-import CheckboxesTags from "./components/filterbar";
+import CheckboxesTags from "./components/Yearsfilterbar";
 import "./exploration.css";
 
 class Exploration extends React.Component {
@@ -15,9 +14,9 @@ class Exploration extends React.Component {
 		return (
 			<div>
 				<MenuBar />
-				<BasicMenu />
-				<ImageExplorer />
 				<CheckboxesTags/>
+				<ImageExplorer />
+
 			</div>
 		);
 	}

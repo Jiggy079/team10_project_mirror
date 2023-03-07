@@ -39,7 +39,6 @@ function CheckboxesTags() {
 
 export default CheckboxesTags;
 
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const years = [
   { title: '1990' },
   { title: '1991'},
