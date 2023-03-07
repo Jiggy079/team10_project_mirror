@@ -39,8 +39,8 @@ class ImageExplorer extends React.Component {
 
 		// for all annotations, push its id value to annotatedIDs if not already present
 		for (let i = 0; i < this.state.annotationList.length; i++) {
-			if (!annotatedIDs.includes(this.state.annotationList[i]["id"])) {
-				annotatedIDs.push(this.state.annotationList[i]["id"]);
+			if (!annotatedIDs.includes(this.state.annotationList[i]["imageId"])) {
+				annotatedIDs.push(this.state.annotationList[i]["imageId"]);
 			}
 		}
 
@@ -50,6 +50,8 @@ class ImageExplorer extends React.Component {
 				result.push(this.state.imageList[i]);
 			}
 		}
+		console.log(annotatedIDs);
+		console.log(result);
 		return result;
 	}
 
