@@ -85,37 +85,37 @@ class Annotation extends React.Component {
             }
         }
 
-        const newAnnotation = {
-            id: this.state.currentFigureIndex + 1,
-            user: this.state.user,
-            imageId: this.state.figures["in"][this.state.currentFigureIndex]["imageID"],
-            colour: this.state.colour,
-            use: this.state.use,
-            legend: this.state.legend,
-            maptype: this.state.maptype,
-            number: this.state.number,
-            difficulty: this.state.difficulty,
-        }
+        // const newAnnotation = {
+        //     id: this.state.currentFigureIndex + 1,
+        //     user: this.state.user,
+        //     imageId: this.state.figures["in"][this.state.currentFigureIndex]["imageID"],
+        //     colour: this.state.colour,
+        //     use: this.state.use,
+        //     legend: this.state.legend,
+        //     maptype: this.state.maptype,
+        //     number: this.state.number,
+        //     difficulty: this.state.difficulty,
+        // }
         
-        if (this.state.annotated) {
-            fetch(`https://express-backend-vfm5.onrender.com/update/${newAnnotation.id.toString()}/${newAnnotation.user.toString()}`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(newAnnotation),
-            })
-        } else {
-            fetch(`https://express-backend-vfm5.onrender.com/add/`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(newAnnotation),
-            })
-        }
+        // if (this.state.annotated) {
+        //     fetch(`https://express-backend-vfm5.onrender.com/update/${newAnnotation.id.toString()}/${newAnnotation.user.toString()}`, {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json",
+        //         },
+        //         body: JSON.stringify(newAnnotation),
+        //     })
+        // } else {
+        //     fetch(`https://express-backend-vfm5.onrender.com/add/`, {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json",
+        //         },
+        //         body: JSON.stringify(newAnnotation),
+        //     })
+        // }
 
-        console.log("New annotation added.")
+        // console.log("New annotation added.")
     }
 
     getFigureInfo(index) {
