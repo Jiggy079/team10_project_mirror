@@ -26,7 +26,7 @@ class ImageExplorer extends React.Component {
 	}
 
 	getImages() {
-		fetch("https://files.catbox.moe/cnlqci.json")
+		fetch("https://files.catbox.moe/aumoxt.json")
 			.then(res => res.json())
 			.then((res) => {
 				this.setState({imageList: res["in"], imagesLoaded: true})
