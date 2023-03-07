@@ -38,7 +38,10 @@ class ImageExplorer extends React.Component {
 
 		// for each image, if there is any element in annotationList with the same id (i.e. if the image has any
 		// annotations), then append it to `result`
+		console.log(this.state.imageList.length);
+		console.log(this.state.annotationList.length);
 		for (let i = 0; i < this.state.imageList.length; i++) {
+
 			for (let j = 0; j < this.state.annotationList.length; j++) {
 				if (this.state.imageList[i]["imageId"] === this.state.annotationList[j]["id"].toString()) {
 					result.push(this.state.imageList[i]);
@@ -67,12 +70,11 @@ class ImageExplorer extends React.Component {
 			);
 		} else {
 			let annotatedImages = this.getAnnotatedImages();
-			console.log(annotatedImages);
 
 			return (
 				<div id="imageExplorerContainer">
 					<ImageList sx={{ width: "100%", height: "100%"}}>
-						{this.state.imageList.map((item) => (
+						{annotatedImages.map((item) => (
 							<ImageListItem key={item["url"]}>
 								<img
 									src={item["url"]}
