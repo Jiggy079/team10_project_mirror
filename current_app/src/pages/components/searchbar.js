@@ -2,6 +2,7 @@ import React from "react";
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Checkbox from '@mui/material/Checkbox';
 
 function BasicMenu() {
 	const [anchorEl, setAnchorEl] = React.useState(null);
@@ -33,9 +34,9 @@ function BasicMenu() {
 			'aria-labelledby': 'basic-button',
 		  }}
 		>
-		  <MenuItem onClick={handleClose}>Colour</MenuItem>
-		  <MenuItem onClick={handleClose}>Black and White</MenuItem>
-		  <MenuItem onClick={handleClose}>Greyscale</MenuItem>
+		  <MenuItem onClick={handleClose}><Checkbox {...label} />Colour</MenuItem>
+		  <MenuItem onClick={handleClose}><Checkbox {...label} />Black and White</MenuItem>
+		  <MenuItem onClick={handleClose}><Checkbox {...label} />Greyscale</MenuItem>
 		</Menu>
 	  </div>
 	);
