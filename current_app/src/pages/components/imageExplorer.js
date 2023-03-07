@@ -35,17 +35,19 @@ class ImageExplorer extends React.Component {
 
 	getAnnotatedImages() {
 		let result = [];
+		let annotatedIDs = [];
 
-		// for each image, if there is any element in annotationList with the same id (i.e. if the image has any
-		// annotations), then append it to `result`
-		console.log(this.state.imageList.length);
-		console.log(this.state.annotationList.length);
+		// for all annotations, push its id value to annotatedIDs if not already present
+		for (let i = 0; i < this.state.annotationList.length; i++) {
+			if (!annotatedIDs.includes(this.state.annotationList[i]["id"])) {
+				annotatedIDs.push(this.state.annotationList[i]["id"]);
+			}
+		}
+
+		// for all images, push to result if its id is present in annotatedIDs
 		for (let i = 0; i < this.state.imageList.length; i++) {
-			for (let j = 0; j < this.state.annotationList.length; j++) {
-				if (this.state.imageList[i]["imageID"] === this.state.annotationList[j]["id"]) {
-					result.push(this.state.imageList[i]);
-					break;
-				}
+			if (annotatedIDs.includes(this.state.imageList[i]["imageID"])) {
+				result.push(this.state.imageList[i]);
 			}
 		}
 		return result;
