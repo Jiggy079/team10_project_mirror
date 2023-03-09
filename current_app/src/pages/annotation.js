@@ -28,7 +28,7 @@ class Annotation extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://files.catbox.moe/aumoxt.json") // all images: https://files.catbox.moe/7dvpgw.json // 50: https://files.catbox.moe/oggcjf.json
+        fetch("https://files.catbox.moe/7p1agi.json") // all images: https://files.catbox.moe/7dvpgw.json // 50: https://files.catbox.moe/oggcjf.json
             .then(res => res.json())
             .then((res) => {
                 this.setState({
@@ -68,7 +68,7 @@ class Annotation extends React.Component {
 
     changeFigure(increment) {
         if (increment === true) {
-            if (this.state.currentFigureIndex === 149) {
+            if (this.state.currentFigureIndex === 199) {
                 this.setState({currentFigureIndex: 0});
                 this.fetchAnnotation(1, this.state.user);
             } else {
@@ -77,7 +77,7 @@ class Annotation extends React.Component {
             }
         } else {
             if (this.state.currentFigureIndex === 0) {
-                this.setState({currentFigureIndex: 149});
+                this.setState({currentFigureIndex: 199});
                 this.fetchAnnotation(150, this.state.user);
             } else {
                 this.setState({currentFigureIndex: this.state.currentFigureIndex - 1});
@@ -87,7 +87,7 @@ class Annotation extends React.Component {
     }
 
     jumpTo(index) {
-        if (index >= 1 && index <= 150) {
+        if (index >= 1 && index <= 200) {
             this.setState({currentFigureIndex: index - 1});
             this.fetchAnnotation(index, this.state.user);
         }
@@ -205,7 +205,7 @@ class Annotation extends React.Component {
                                     <Button size="small" onClick={() => this.changeFigure(false)}>Prev</Button>
                                         <input className="indexInput" value={this.state.currentFigureIndex + 1} 
                                             onChange={(e) => this.jumpTo(e.target.value)} />
-                                         / 150
+                                         / 200
                                     <Button size="small" onClick={() => this.changeFigure(true)}>Next</Button>                        
                                     {this.state.annotated === true ? (
                                         <Button variant="contained" onClick={() => this.submitAnnotation()}>UPDATE</Button>
@@ -249,7 +249,8 @@ class Annotation extends React.Component {
                                                     onChange={(e) => this.setState({use: e.target.value})}
                                                 >
                                                     <FormControlLabel value="aesthetics" control={<Radio />} label="Aesthetics" />
-                                                    <FormControlLabel value="data-vis" control={<Radio />} label="Data Visualisation" />
+                                                    <FormControlLabel value="colour-mapping" control={<Radio />} label="Colour mapping" />
+                                                    <FormControlLabel value="depth-perception" control={<Radio />} label="Depth perception" />
                                                     <FormControlLabel value="uncertain" control={<Radio />} label="Not sure" />
                                                     <FormControlLabel value="NA" control={<Radio />} label="Not applicable" />
                                             </RadioGroup>

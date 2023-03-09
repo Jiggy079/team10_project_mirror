@@ -48,13 +48,16 @@ class Validation extends React.Component {
 
     groupAnnotationsById() {
         const annotationsById = {};
+        console.log(this.state.annotations);
         this.state.annotations.forEach(annotation => {
             if (!annotationsById[parseInt(annotation.id)]) {
                 annotationsById[parseInt(annotation.id)] = [];
+                annotationsById[parseInt(annotation.id)].push(annotation);
             } else {
                 annotationsById[parseInt(annotation.id)].push(annotation);
             }
         })
+        console.log(annotationsById);
         return annotationsById;
     }
 
@@ -105,7 +108,7 @@ class Validation extends React.Component {
                             <Card>
                                 <FormGroup sx={{ ml: 3 }} row>
                                 {allUser.map((item) => (
-                                <FormControlLabel control={<Checkbox checked onChange={(e) => this.modifyUser(e.target.checked, item)}/>} label={item}/>
+                                <FormControlLabel control={<Checkbox onChange={(e) => this.modifyUser(e.target.checked, item)}/>} label={item}/>
                                 ))}
                                 </FormGroup>
                             </Card>
@@ -132,12 +135,18 @@ class Validation extends React.Component {
                                             {/* modify annotation here */}
                                             {annotations.map((annotation) => (
                                                 <div>
-                                                <h6>{annotation["user"]}</h6>
-                                                colour type: {annotation["colour"]}, 
-                                                colour use: {annotation["use"]}, 
-                                                colour legend: {annotation["legend"]}, 
-                                                colour mapping: {annotation["maptype"]}, 
-                                                num of colours: {annotation["number"]}.
+                                                    {this.state.users.includes(annotation["user"]) ? (
+                                                        <div> 
+                                                            <h6>{annotation["user"]}</h6>                                             
+                                                        colour type: {annotation["colour"]}, 
+                                                        colour use: {annotation["use"]}, 
+                                                        colour legend: {annotation["legend"]}, 
+                                                        colour mapping: {annotation["maptype"]}, 
+                                                        num of colours: {annotation["number"]}.
+                                                        </div>
+                                                    ):(
+                                                        <div></div>
+                                                    )}
                                                 </div>
                                             ))}
     
