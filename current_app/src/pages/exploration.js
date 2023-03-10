@@ -15,7 +15,7 @@ class Exploration extends React.Component {
 		return (
 			<div>
 				<MenuBar />
-				<CheckboxesTags/>
+				{/*<CheckboxesTags/>*/}
 				<YearSlider/>
 				<ImageExplorer />
 
