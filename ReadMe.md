@@ -1048,6 +1048,80 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 </details>
 
 
+<details><summary> Tuesday 7th March - with supervisor </summary>
+
+### Location and Time: CS Buildinh @ 10am 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V| Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+
+- discuss exploration orogress
+- discuss validation progress 
+- review annotations
+
+### Points Discussed:
+
+- sub team leader for validation is Zhening 
+- sub team leader for exploration is Jamie 
+- Nita has completed annotation training
+- Luke will be the annotation trainee next week 
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Choose which years to show of the images. Start date and end date | Exploration Team |
+| User can choose whose images to display along with their annotations | Validiation Team |
+| Update Q2: Replace “Data Visualization” with two new options: “Color Mapping” and “Depth Perception” | Zhening |
+| For the previous annotations where “Data Visualization” is checked map that to “Color Mapping” | Everyone |
+| Update your annotations 101-150 to correspond with Nita's | everyone | 
+| annotate images 151-200 | everyone| 
+
+
+
+</details>
+
+
+<details><summary> Friday 10th March </summary>
+
+### Location and Time: CS Buildinh @ 10am 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | N |
+|Jamie V| Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| N |
+|Luke W| N |
+
+### Agenda
+
+- approach to team exploration task, what needs to be done for it to be acheived 
+- group split for team exploration 
+
+
+### Points Discussed:
+
+- only team exploration has met because Zhening has finished all of team validation's work 
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| make a slider to choose the years, start date and end date | Nita |
+| get the values that the slider returns to be able to use in the code to filter  | Jamie |
+| write code, if statement, to filter the correct years from the slider | Yizhan|
+
+</details>
+
+
 </details>
 
 ## Requirements
