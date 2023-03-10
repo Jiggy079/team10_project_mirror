@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 
 function valuetext(value) {
-  return `${value}°C`;
+  return `${value}`;
 }
 
 const marks = [
@@ -30,7 +30,7 @@ export default function YearSlider() {
     <Stack sx={{ width: 300 }} spacing={1} direction="row">
       <Slider
         orientation = "horizontal"
-        getAriaLabel={() => 'Filter the years'}
+        getAriaLabel={() => 'valuetext'}
         getAriaValueText={valuetext}
         defaultValue={[1990, 2020]}
         valueLabelDisplay="auto"
