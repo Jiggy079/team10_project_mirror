@@ -27,7 +27,7 @@ class Exploration extends React.Component {
 				<MenuBar />
 
 				{/*<CheckboxesTags/>*/}
-				{/* The callback function can be called with the syntax props.yearFilterCallback(params) */}
+				{/* The callback function can be called with the syntax props.callback(params) */}
 				<YearSlider callback={this.yearFilterCallback}/>
 
 				{/* Render ImageExplorer component with the min and max year of images it should display respectively */}
