@@ -30,11 +30,11 @@ export default function VerticalSlider() {
     <Stack sx={{ width : 300 }} spacing={1} direction="row">
       <Slider
         getAriaLabel={() => 'Temperature'}
-        orientation="vertical"
         getAriaValueText={valuetext}
         defaultValue={[1990, 2020]}
         valueLabelDisplay="auto"
         marks={marks}
+        colour = "light blue"
       />
     </Stack>
   );
