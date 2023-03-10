@@ -12,25 +12,25 @@ const marks = [
     label: '1990',
   },
   {
-    value: 2000,
+    value: 20,
     label: '2000',
   },
   {
-    value: 2010,
+    value: 37,
     label: '2010',
   },
   {
-    value: 2020,
+    value: 100,
     label: '2020',
   },
 ];
 
-export default function YearSlider() {
+export default function VerticalSlider() {
   return (
-    <Stack sx={{ width: 300 }} spacing={1} direction="row">
+    <Stack sx={{ width : 300 }} spacing={1} direction="row">
       <Slider
-        orientation = "horizontal"
-        getAriaLabel={() => 'valuetext'}
+        getAriaLabel={() => 'Temperature'}
+        orientation="vertical"
         getAriaValueText={valuetext}
         defaultValue={[1990, 2020]}
         valueLabelDisplay="auto"
