@@ -12,15 +12,15 @@ const marks = [
     label: '1990',
   },
   {
-    value: 20,
+    value: 2000,
     label: '2000',
   },
   {
-    value: 37,
+    value: 2010,
     label: '2010',
   },
   {
-    value: 100,
+    value: 2020,
     label: '2020',
   },
 ];
