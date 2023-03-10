@@ -32,9 +32,12 @@ export default function VerticalSlider() {
         getAriaLabel={() => 'Temperature'}
         getAriaValueText={valuetext}
         defaultValue={[1990, 2020]}
+        min={1990}
+        max={2020}
         valueLabelDisplay="auto"
+        step={1}
         marks={marks}
-        colour = "light blue"
+        colour = "primary"
       />
     </Stack>
   );
