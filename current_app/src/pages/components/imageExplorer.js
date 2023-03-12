@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import bus from '../../utils/bus';
 
 class ImageExplorer extends React.Component {
 	constructor(props) {
@@ -12,7 +13,9 @@ class ImageExplorer extends React.Component {
 			annotationList: null,
 			annotationsLoaded: false,
 			imageList: null,
-			imagesLoaded: false
+			imagesLoaded: false,
+			showedImage: null,
+			selectedYears:[]
 		};
 		this.getAnnotations = this.getAnnotations.bind(this);
 		this.getImages = this.getImages.bind(this);
@@ -29,7 +32,7 @@ class ImageExplorer extends React.Component {
 		fetch("https://files.catbox.moe/aumoxt.json")
 			.then(res => res.json())
 			.then((res) => {
-				this.setState({imageList: res["in"], imagesLoaded: true})
+				this.setState({imageList: res["in"], imagesLoaded: true, showedImage: res["in"]})
 			});
 	}
 
@@ -54,6 +57,30 @@ class ImageExplorer extends React.Component {
 		return result;
 	}
 
+	componentDidMount() {
+		bus.on('yearRange',
+			data =>{
+				this.setState({selectedYears:data})
+
+				let temp = this.getAnnotatedImages()
+				let filtered = []
+
+				for (let index in temp) {
+					for (let i = data[0]; i <= data[1]; i++) {
+						if (temp[index]["name"].includes(i)) {
+							if(!filtered.includes(this.state.imageList[index]))
+								filtered.push(this.state.imageList[index])
+						}
+					}
+				}
+				this.setState(
+					() => {
+						return {showedImage: filtered}
+					}
+				)
+			})
+	}
+
 	render() {
 		if (!this.state.annotationsLoaded) {
 			this.getAnnotations();
@@ -71,12 +98,12 @@ class ImageExplorer extends React.Component {
 				</div>
 			);
 		} else {
-			let annotatedImages = this.getAnnotatedImages();
+			// let annotatedImages = this.getAnnotatedImages();
 
 			return (
 				<div id="imageExplorerContainer">
 					<ImageList sx={{ width: "100%", height: "100%"}}>
-						{annotatedImages.map((item) => (
+						{this.state.showedImage.map((item) => (
 							<ImageListItem key={item["url"]}>
 								<img
 									src={item["url"]}
