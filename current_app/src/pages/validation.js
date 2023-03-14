@@ -15,16 +15,18 @@ class Validation extends React.Component {
             figures : [],
             users: [],
             annotations: [],
+            figuresLoaded: true,
             annotationLoaded: false,
         };
     }
 
     componentDidMount() {
-        fetch("https://files.catbox.moe/aumoxt.json") // all images: https://files.catbox.moe/7dvpgw.json
+        fetch("https://files.catbox.moe/7p1agi.json") // all images: https://files.catbox.moe/7dvpgw.json
             .then(res => res.json())
             .then((res) => {
                 this.setState({
                     figures: res["in"],
+                    figuresLoaded: true,
                 })
             })
         fetch(`https://express-backend-vfm5.onrender.com/annotation/`)
@@ -95,7 +97,7 @@ class Validation extends React.Component {
             "YH",
             "ZZ",
         ];
-        if (this.state.annotationLoaded) {
+        if (this.state.annotationLoaded && this.state.figuresLoaded) {
             const annotationsById = this.groupAnnotationsById();
             return (
                 <div className="App">
