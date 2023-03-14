@@ -67,7 +67,7 @@ class ImageExplorer extends React.Component {
 
 				for (let index in temp) {
 					for (let i = data[0]; i <= data[1]; i++) {
-						if (temp[index]["name"].includes(i)) {
+						if (temp[index]["year"]===i) {
 							if(!filtered.includes(this.state.imageList[index]))
 								filtered.push(this.state.imageList[index])
 						}
