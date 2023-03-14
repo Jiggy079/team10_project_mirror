@@ -7,11 +7,10 @@ GET https://express-backend-vfm5.onrender.com/annotation
 ```
 
 
-- Get: by user
+- Get: by user 
 ```
 GET https://express-backend-vfm5.onrender.com/annotation/:user
 ```
-e.g.: https://express-backend-vfm5.onrender.com/annotation/YH
 
 
 - Get: by image
@@ -21,8 +20,6 @@ GET https://express-backend-vfm5.onrender.com/image/:id
 
 
 - Get: one annotation
-```
-GET - Get: by user
 ```
 GET https://express-backend-vfm5.onrender.com/annotation/:id/:user
 ```
