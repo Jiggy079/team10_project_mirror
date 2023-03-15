@@ -15,7 +15,7 @@ class Validation extends React.Component {
             figures : [],
             users: [],
             annotations: [],
-            figuresLoaded: true,
+            figuresLoaded: false,
             annotationLoaded: false,
         };
     }
@@ -48,19 +48,29 @@ class Validation extends React.Component {
         this.setState({users: this.currentUserList});
     }
 
-    groupAnnotationsById() {
-        const annotationsById = {};
-        console.log(this.state.annotations);
-        this.state.annotations.forEach(annotation => {
-            if (!annotationsById[parseInt(annotation.id)]) {
-                annotationsById[parseInt(annotation.id)] = [];
-                annotationsById[parseInt(annotation.id)].push(annotation);
-            } else {
-                annotationsById[parseInt(annotation.id)].push(annotation);
-            }
-        })
-        console.log(annotationsById);
-        return annotationsById;
+    filterByUser() {
+        const userAnnotations = {};
+        if (this.state.users.length === 1) {
+            return {};
+        }
+        if (this.state.users !== []) {
+            this.state.annotations.forEach(annotation => {
+                if (this.state.users.includes(annotation.user)) {
+                    if (!userAnnotations[parseInt(annotation.id)]) {
+                        userAnnotations[parseInt(annotation.id)] = [];
+                        userAnnotations[parseInt(annotation.id)].push(annotation);
+                    } else {
+                        userAnnotations[parseInt(annotation.id)].push(annotation);
+                    }
+                }
+            })
+            Object.keys(userAnnotations).forEach(key => {
+                if (userAnnotations[key].length !== this.state.users.length) {
+                    delete userAnnotations[key];
+                }
+            })
+        }
+        return userAnnotations;
     }
 
     updateAnnotation() { 
@@ -98,7 +108,7 @@ class Validation extends React.Component {
             "ZZ",
         ];
         if (this.state.annotationLoaded && this.state.figuresLoaded) {
-            const annotationsById = this.groupAnnotationsById();
+            const annotationsById = this.filterByUser();
             return (
                 <div className="App">
                     <Grid container spacing={2}>
@@ -115,23 +125,21 @@ class Validation extends React.Component {
                                 </FormGroup>
                             </Card>
     
-    
                             <ImageList cols={4} gap={10}>
-                            {Object.entries(annotationsById).map(([id, annotations], index) => (
-                                
+                            {Object.entries(annotationsById).map(([id, annotations]) => (
                                 <Card>
                                     <div className="card">
-                                        <ImageListItem variant="woven" key={this.state.figures[index]["url"]}>
+                                        <ImageListItem variant="woven" key={this.state.figures[id-1]["url"]}>
                                             <div className="figure">
                                                 <img
-                                                src={this.state.figures[index]["url"]}
-                                                alt={this.state.figures[index]["name"]}
+                                                src={this.state.figures[id-1]["url"]}
+                                                alt={this.state.figures[id-1]["name"]}
                                                 loading="lazy"
                                                 />
                                             </div>
                                         <ImageListItemBar
-                                            title={this.state.figures[index]["name"]}
-                                            subtitle={<span>{this.state.figures[index]["year"]}</span>}
+                                            title={this.state.figures[id-1]["name"]}
+                                            subtitle={<span>{this.state.figures[id-1]["year"]}</span>}
                                             position="below"
                                         />
                                             {/* modify annotation here */}
