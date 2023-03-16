@@ -12,9 +12,14 @@
 
 img {
   max-height: 520px;
-  max-width: 620px;
+  max-width: 100%;
   width: auto;
   object-fit: cover;
+}
+
+.indexInput {
+  width: 30px;
+  margin: 5px;
 }
 
 .button {
