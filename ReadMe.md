@@ -1015,7 +1015,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 <details><summary> Friday 3rd March </summary>
 
-### Location and Time: CS Buildinh @ 10am 
+### Location and Time: CS Building @ 10am 
 
 | Attendees | Attended |
 |-----------|--------------|
@@ -1050,7 +1050,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 <details><summary> Tuesday 7th March - with supervisor </summary>
 
-### Location and Time: CS Buildinh @ 10am 
+### Location and Time: CS Building @ 10am 
 
 | Attendees | Attended |
 |-----------|--------------|
@@ -1091,7 +1091,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 <details><summary> Friday 10th March </summary>
 
-### Location and Time: CS Buildinh @ 10am 
+### Location and Time: CS Building @ 10am 
 
 | Attendees | Attended |
 |-----------|--------------|
@@ -1118,6 +1118,81 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | make a slider to choose the years, start date and end date | Nita |
 | get the values that the slider returns to be able to use in the code to filter  | Jamie |
 | write code, if statement, to filter the correct years from the slider | Yizhan|
+
+</details>
+
+
+
+<details><summary> Tuesday 14th March - with supervisor </summary>
+
+### Location and Time: CS Building @ 10am 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | Y |
+|Zhening Z | Y |
+|Jamie V| Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| N |
+
+### Agenda
+
+- review progress 
+- Luke's training images 
+- new tasks to be set 
+
+
+### Points Discussed:
+
+- layout of the validation tool 
+- to have supervisor meetings in the CS Hub from now on  
+- Wenfei will complete the training session next week
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Make year labels more visible, Move slider away from edge of page, Use the annotated images as your dataset, User Option: image size, Make default image sizes the same as the original explorer tool | Team Exploration |
+| Show empty set when a user is chosen that has not done any labeling/annotation, It should be possible to select two users and then show only the images that those two users annotated | Team Validation |
+
+
+</details>
+
+
+
+<details><summary> Wednesday 15th March </summary>
+
+### Location and Time: CS The Hub @ 2pm 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V| Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| Y |
+
+### Agenda
+
+- ideas on approaching this week's validation tool task 
+- splitting the work for exploration tool  
+
+
+### Points Discussed:
+
+- Zhening and Jamie found a way to complete the validation tool, it is difficult 
+- it is difficult to split the work for team validation
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| Complete Bob's set task for team validation | Zhening |
+| Fix image sizing  | Jamie |
+| Fix style of year slider | Nita | 
+| Complete the css for exploration tool | Yizhan | 
+
 
 </details>
 
