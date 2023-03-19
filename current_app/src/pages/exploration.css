@@ -11,12 +11,7 @@
 
 #YearSliderContainer {
 
-    border: 2px slategrey;
-    border-radius: 3px;
-    margin: 20px 10px 10px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    position : top;
     color: lightblue;
 
 }
