@@ -16,7 +16,8 @@ class ImageExplorer extends React.Component {
 			imageList: null,
 			imagesLoaded: false,
 			showedImage: null,
-			selectedYears:[]
+			selectedYears:[],
+			picturePerline: 4,
 		};
 		this.getAnnotations = this.getAnnotations.bind(this);
 		this.getImages = this.getImages.bind(this);
@@ -80,6 +81,11 @@ class ImageExplorer extends React.Component {
 					}
 				)
 			})
+		bus.on('picPerline',
+				data =>{
+					this.setState({picturePerline:data})
+				}
+			)
 	}
 
 	render() {
@@ -104,7 +110,8 @@ class ImageExplorer extends React.Component {
 			return (
 				<StyledEngineProvider injectFirst>
 					<div id="imageExplorerContainer">
-						<ImageList sx={{ width: 1850 }} cols={2}>
+						{/*<ImageList sx={{ width: 1850 }} cols={4}>*/}
+						<ImageList cols={this.state.picturePerline}>
 							{this.state.showedImage.map((item) => (
 								<ImageListItem key={item["url"]}>
 									<img

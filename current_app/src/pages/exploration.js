@@ -1,7 +1,7 @@
 import React from "react";
 import MenuBar from "./components/menubar";
 import ImageExplorer from "./components/imageExplorer";
-import CheckboxesTags from "./components/filterbar";
+import NumberChooser from "./components/numberchooser";
 import YearSlider from "./components/yearslider";
 import "./exploration.css";
 
@@ -29,7 +29,7 @@ class Exploration extends React.Component {
 				{/*<CheckboxesTags/>*/}
 				{/* The callback function can be called with the syntax props.callback(params) */}
 				<YearSlider callback={this.yearFilterCallback}/>
-
+				<NumberChooser />
 				{/* Render ImageExplorer component with the min and max year of images it should display respectively */}
 				{/* These values can be accessed within ImageExplorer via its props object, e.g. props.minYear */}
 				<ImageExplorer minYear={this.state.minYear} maxYear={this.state.maxYear} />
