@@ -5,6 +5,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import bus from '../../utils/bus';
+import { StyledEngineProvider } from '@mui/material/styles';
 
 class ImageExplorer extends React.Component {
 	constructor(props) {
@@ -101,22 +102,24 @@ class ImageExplorer extends React.Component {
 			// let annotatedImages = this.getAnnotatedImages();
 
 			return (
-				<div id="imageExplorerContainer">
-					<ImageList sx={{ width: "100%", height: "100%"}}>
-						{this.state.showedImage.map((item) => (
-							<ImageListItem key={item["url"]}>
-								<img
-									src={item["url"]}
-									alt="Image"
-									loading="lazy"/>
-								<ImageListItemBar
-									title={item["name"]}
-									position={"below"}
-								/>
-							</ImageListItem>
-						))}
-					</ImageList>
-				</div>
+				<StyledEngineProvider injectFirst>
+					<div id="imageExplorerContainer">
+						<ImageList sx={{ width: 1850 }} cols={2}>
+							{this.state.showedImage.map((item) => (
+								<ImageListItem key={item["url"]}>
+									<img
+										src={item["url"]}
+										alt="Figure"
+										loading="lazy"/>
+									<ImageListItemBar
+										title={item["name"]}
+										position={"below"}
+									/>
+								</ImageListItem>
+							))}
+						</ImageList>
+					</div>
+				</StyledEngineProvider>
 			);
 		}
 	}

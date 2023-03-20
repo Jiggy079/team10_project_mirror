@@ -15,3 +15,7 @@
     color: lightblue;
 
 }
+
+img.MuiImageListItem-img {
+	object-fit: contain !important;
+}
