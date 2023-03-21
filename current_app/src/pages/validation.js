@@ -21,7 +21,7 @@ class Validation extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://files.catbox.moe/7p1agi.json") // all images: https://files.catbox.moe/7dvpgw.json
+        fetch("https://files.catbox.moe/7dvpgw.json") // all images: https://files.catbox.moe/7dvpgw.json
             .then(res => res.json())
             .then((res) => {
                 this.setState({
@@ -50,9 +50,6 @@ class Validation extends React.Component {
 
     filterByUser() {
         const userAnnotations = {};
-        if (this.state.users.length === 1) {
-            return {};
-        }
         if (this.state.users !== []) {
             this.state.annotations.forEach(annotation => {
                 if (this.state.users.includes(annotation.user)) {
@@ -70,6 +67,7 @@ class Validation extends React.Component {
                 }
             })
         }
+        console.log(userAnnotations);
         return userAnnotations;
     }
 
