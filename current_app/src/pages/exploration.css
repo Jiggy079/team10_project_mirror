@@ -9,11 +9,8 @@
 
 }
 
-#YearSliderContainer {
-
-    position : right;
-    color: lightblue;
-
+#YearSlider {
+    position: right;
 }
 
 img.MuiImageListItem-img {
