@@ -9,11 +9,6 @@
 
 }
 
-#YearSlider {
-    position: right;
-    color: lightblue; 
-}
-
 img.MuiImageListItem-img {
 	object-fit: contain !important;
 }
