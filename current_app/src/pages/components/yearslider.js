@@ -2,6 +2,7 @@ import * as React from 'react';
 import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 import bus from  '../../utils/bus';
+import { lightBlue } from '@material-ui/core/colors';
 
 function valuetext(value) {
   return `${value}`;
@@ -11,18 +12,22 @@ const marks = [
   {
     value: 1990,
     label: '1990',
+    colour:  lightBlue,
   },
   {
     value: 2000,
     label: '2000',
+    colour:  lightBlue,
   },
   {
     value: 2010,
     label: '2010',
+    colour:  lightBlue,
   },
   {
     value: 2020,
     label: '2020',
+    colour:  lightBlue,
   },
 ];
 
