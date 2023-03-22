@@ -2,7 +2,7 @@ import * as React from 'react';
 import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 import bus from  '../../utils/bus';
-import { lightBlue } from '@material-ui/core/colors';
+import { lightBlue } from '@mui/material/colors';
 
 function valuetext(value) {
   return `${value}`;
