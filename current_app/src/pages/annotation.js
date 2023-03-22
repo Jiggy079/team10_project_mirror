@@ -28,7 +28,7 @@ class Annotation extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://files.catbox.moe/jarvkj.json") // all images: https://files.catbox.moe/7dvpgw.json
+        fetch("https://files.catbox.moe/9j21gm.json") // all images in original order: https://files.catbox.moe/7dvpgw.json
             .then(res => res.json())
             .then((res) => {
                 this.setState({
@@ -68,7 +68,7 @@ class Annotation extends React.Component {
 
     changeFigure(increment) {
         if (increment === true) {
-            if (this.state.currentFigureIndex === 249) {
+            if (this.state.currentFigureIndex === 29685) {
                 this.setState({currentFigureIndex: 0});
                 this.fetchAnnotation(1, this.state.user);
             } else {
@@ -77,8 +77,8 @@ class Annotation extends React.Component {
             }
         } else {
             if (this.state.currentFigureIndex === 0) {
-                this.setState({currentFigureIndex: 249});
-                this.fetchAnnotation(150, this.state.user);
+                this.setState({currentFigureIndex: 29685});
+                this.fetchAnnotation(29686, this.state.user);
             } else {
                 this.setState({currentFigureIndex: this.state.currentFigureIndex - 1});
                 this.fetchAnnotation(this.state.currentFigureIndex, this.state.user);
@@ -87,7 +87,7 @@ class Annotation extends React.Component {
     }
 
     jumpTo(index) {
-        if (index >= 1 && index <= 250) {
+        if (index >= 1 && index <= 29687) {
             this.setState({currentFigureIndex: index - 1});
             this.fetchAnnotation(index, this.state.user);
         }
@@ -205,7 +205,7 @@ class Annotation extends React.Component {
                                     <Button size="small" onClick={() => this.changeFigure(false)}>Prev</Button>
                                         <input className="indexInput" value={this.state.currentFigureIndex + 1} 
                                             onChange={(e) => this.jumpTo(e.target.value)} />
-                                         / 250
+                                         / 29686
                                     <Button size="small" onClick={() => this.changeFigure(true)}>Next</Button>                        
                                     {this.state.annotated === true ? (
                                         <Button variant="contained" onClick={() => this.submitAnnotation()}>UPDATE</Button>
