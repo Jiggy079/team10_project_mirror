@@ -21,7 +21,7 @@ class Validation extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://files.catbox.moe/7dvpgw.json") // all images: https://files.catbox.moe/7dvpgw.json
+        fetch("https://files.catbox.moe/9j21gm.json") // all images: https://files.catbox.moe/7dvpgw.json
             .then(res => res.json())
             .then((res) => {
                 this.setState({
@@ -48,6 +48,24 @@ class Validation extends React.Component {
         this.setState({users: this.currentUserList});
     }
 
+    countAnnotations() {
+        const allUser = [
+            "RL",
+            "HL",
+            "JV",
+            "LW",
+            "NK",
+            "WQ",
+            "YH",
+            "ZZ",
+        ];
+        const annotationCnt = [0,0,0,0,0,0,0,0];
+        this.state.annotations.forEach(annotation => {
+            annotationCnt[allUser.indexOf(annotation.user)]++;
+        })
+        return annotationCnt;
+    }
+
     filterByUser() {
         const userAnnotations = {};
         if (this.state.users !== []) {
@@ -55,10 +73,8 @@ class Validation extends React.Component {
                 if (this.state.users.includes(annotation.user)) {
                     if (!userAnnotations[parseInt(annotation.id)]) {
                         userAnnotations[parseInt(annotation.id)] = [];
-                        userAnnotations[parseInt(annotation.id)].push(annotation);
-                    } else {
-                        userAnnotations[parseInt(annotation.id)].push(annotation);
                     }
+                    userAnnotations[parseInt(annotation.id)].push(annotation);
                 }
             })
             Object.keys(userAnnotations).forEach(key => {
@@ -107,6 +123,7 @@ class Validation extends React.Component {
         ];
         if (this.state.annotationLoaded && this.state.figuresLoaded) {
             const annotationsById = this.filterByUser();
+            const annotationCnt = this.countAnnotations();
             return (
                 <div className="App">
                     <Grid container spacing={2}>
@@ -117,8 +134,8 @@ class Validation extends React.Component {
                             {/* add user selection here */}
                             <Card>
                                 <FormGroup sx={{ ml: 3 }} row>
-                                {allUser.map((item) => (
-                                <FormControlLabel control={<Checkbox onChange={(e) => this.modifyUser(e.target.checked, item)}/>} label={item}/>
+                                {allUser.map((item, index) => (
+                                <FormControlLabel control={<Checkbox onChange={(e) => this.modifyUser(e.target.checked, item)}/>} label={item + ": " + annotationCnt[index]}/>
                                 ))}
                                 </FormGroup>
                             </Card>
