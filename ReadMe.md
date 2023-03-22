@@ -1196,6 +1196,72 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 
+<details><summary> Tuesday 21st March - with supervisor</summary>
+
+### Location and Time : CS The Hub @ 10am
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| N |
+
+### Agenda
+- review progress 
+- Wenfei's image training 
+- tasks to be set 
+
+### Points Discussed:
+- better styling is needed
+- automatic detection of black and white images 
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| annotate 50 images | Yizhan |
+| annotate 200 images | Wenfei, Zhening, Jamie, Nita |
+| fix navigation button | annotation tool - Wenfei |
+| Add a visual indicator next to each username showing how many images they have annotated, User option: Select one user and then show only the images that one user annotated, User option: Select two users and then show only the images that two users annotated | Team Validation - Zhening & Wenfei |
+| Make user options and year labels more visible, Move slider away from edge of page, Use the annotated images as your dataset, Make default image sizes the same as the original explorer tool, The users options are all filter by question/answer | Team Exploration - Nita, Jamie, Yizhan |
+
+</details>
+
+<details><summary> Wednesday 22nd March </summary>
+
+### Location and Time : CS Atrium @ 2pm
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V|  Y |
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| N |
+
+### Agenda
+- group split 
+- approaches to Bob's set task
+
+### Points Discussed:
+- how the images will be shown on the annotation tool for up to 1100 images 
+- how we could do automatic black and white detection of images 
+- how to add more filters for the exploration tool
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| css for exploration tool & changing the number of images per column filter to a slider | Yizhan |
+| Add filter for black and white images, colour images and categorical/continuous images | Jamie |
+| Add the remaining 4 filters | Nita  |
+| Fix Bob's feedback for validation tooll | Wenfei & Zhening | 
+
+
+</details>
 
 </details>
 
