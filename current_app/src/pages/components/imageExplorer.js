@@ -45,14 +45,39 @@ class ImageExplorer extends React.Component {
 		// for all annotations, push its id value to annotatedIDs if not already present
 		for (let i = 0; i < this.state.annotationList.length; i++) {
 			if (!annotatedIDs.includes(this.state.annotationList[i]["imageId"])) {
-				annotatedIDs.push(this.state.annotationList[i]["imageId"]);
+				if (this.props.filters !== null) {
+					// iterate over each filter
+					let fitsFilters = true;
+					for (const filter in this.props.filters) {
+						// if current filter is not set to "none" i.e. there is one applied
+						if (this.props.filters[filter] !== "none") {
+							// if the annotation value for current filter does not match filter value, set fitsFilters false
+							if (this.state.annotationList[i][filter] !== this.props.filters[filter]) {
+								fitsFilters = false;
+							}
+						}
+					}
+					// only push to annotated ids if all filters were matched
+					if (fitsFilters) {
+						annotatedIDs.push(this.state.annotationList[i]["imageId"]);
+					}
+				// if filters is still null then just push all annotations normally
+				} else {
+					annotatedIDs.push(this.state.annotationList[i]["imageId"]);
+				}
 			}
 		}
 
-		// for all images, push to result if its id is present in annotatedIDs
+		// for all images, push to result if its id is present in annotatedIDs and it matches year filter
 		for (let i = 0; i < this.state.imageList.length; i++) {
 			if (annotatedIDs.includes(this.state.imageList[i]["imageID"])) {
-				result.push(this.state.imageList[i]);
+				if (this.state.selectedYears.length > 0) {
+					if (this.state.imageList[i]["year"] >= this.state.selectedYears[0] && this.state.imageList[i]["year"] <= this.state.selectedYears[1]) {
+						result.push(this.state.imageList[i]);
+					}
+				} else {
+					result.push(this.state.imageList[i]);
+				}
 			}
 		}
 
@@ -88,6 +113,13 @@ class ImageExplorer extends React.Component {
 			)
 	}
 
+	componentDidUpdate(prevProps, prevState, snapshot) {
+		// tell component to forcefully update to apply filters if they change
+		if (prevProps.filters !== this.props.filters) {
+			this.setState({annotationsLoaded: false, imagesLoaded: false});
+		}
+	}
+
 	render() {
 		if (!this.state.annotationsLoaded) {
 			this.getAnnotations();
@@ -105,14 +137,14 @@ class ImageExplorer extends React.Component {
 				</div>
 			);
 		} else {
-			// let annotatedImages = this.getAnnotatedImages();
+			let annotatedImages = this.getAnnotatedImages();
 
 			return (
 				<StyledEngineProvider injectFirst>
 					<div id="imageExplorerContainer">
 						{/*<ImageList sx={{ width: 1850 }} cols={4}>*/}
 						<ImageList cols={this.state.picturePerline}>
-							{this.state.showedImage.map((item) => (
+							{annotatedImages.map((item) => (
 								<ImageListItem key={item["url"]}>
 									<img
 										src={item["url"]}

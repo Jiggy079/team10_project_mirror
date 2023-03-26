@@ -36,7 +36,7 @@ class NumberChooser extends React.Component{
                     }}
                     id="combo-box-demo"
                     options={numberofpics}
-                    defaultValue={{ label: '4', no: 4 }}
+                    // defaultValue={{ label: '4', no: 4 }}
                     sx={{ width: 300 }}
                     renderInput={(params) => <TextField {...params} label="Number of Images" />}
                 />
