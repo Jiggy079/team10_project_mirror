@@ -64,7 +64,7 @@ class Filters extends React.Component {
                 <Select
                     value={this.state.use}
                     label="Colour Use..."
-                    onChange={this.updateCategory}
+                    onChange={this.updateUse}
                 >
                     <MenuItem value={"none"}>None</MenuItem>
                     <MenuItem value={"aesthetics"}>Aesthetics</MenuItem>
