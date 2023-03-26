@@ -17,6 +17,7 @@ class Filters extends React.Component {
         this.updateFilters = this.updateFilters.bind(this);
         this.updateType = this.updateType.bind(this);
         this.updateCategory = this.updateCategory.bind(this);
+        this.updateUse = this.updateCategory.bind(this);
     }
 
     updateFilters () {
@@ -29,6 +30,10 @@ class Filters extends React.Component {
 
     updateCategory (event) {
         this.setState({maptype: event.target.value}, this.updateFilters);
+    }
+
+    updateUse (event) {
+        this.setState({use: event.target.value}, this.updateFilters);
     }
 
     render () {
@@ -54,6 +59,17 @@ class Filters extends React.Component {
                     <MenuItem value={"continuous"}>Continuous</MenuItem>
                     <MenuItem value={"categorical"}>Categorical</MenuItem>
                     <MenuItem value={"both"}>Both</MenuItem>
+                </Select>
+
+                <Select
+                    value={this.state.use}
+                    label="Colour Use..."
+                    onChange={this.updateCategory}
+                >
+                    <MenuItem value={"none"}>None</MenuItem>
+                    <MenuItem value={"aesthetics"}>Continuous</MenuItem>
+                    <MenuItem value={"colour mapping"}>Categorical</MenuItem>
+                    <MenuItem value={"depth perception"}>Both</MenuItem>
                 </Select>
             </div>
         );
