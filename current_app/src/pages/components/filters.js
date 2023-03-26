@@ -68,7 +68,7 @@ class Filters extends React.Component {
                 >
                     <MenuItem value={"none"}>None</MenuItem>
                     <MenuItem value={"aesthetics"}>Aesthetics</MenuItem>
-                    <MenuItem value={"colour mapping"}>Colour Mapping</MenuItem>
+                    <MenuItem value={"colour-mapping"}>Colour Mapping</MenuItem>
                     <MenuItem value={"depth perception"}>Depth Perception</MenuItem>
                 </Select>
             </div>
