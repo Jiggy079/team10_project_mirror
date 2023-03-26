@@ -67,9 +67,9 @@ class Filters extends React.Component {
                     onChange={this.updateCategory}
                 >
                     <MenuItem value={"none"}>None</MenuItem>
-                    <MenuItem value={"aesthetics"}>Continuous</MenuItem>
-                    <MenuItem value={"colour mapping"}>Categorical</MenuItem>
-                    <MenuItem value={"depth perception"}>Both</MenuItem>
+                    <MenuItem value={"aesthetics"}>Aesthetics</MenuItem>
+                    <MenuItem value={"colour mapping"}>Colour Mapping</MenuItem>
+                    <MenuItem value={"depth perception"}>Depth Perception</MenuItem>
                 </Select>
             </div>
         );
