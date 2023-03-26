@@ -17,7 +17,7 @@ class Filters extends React.Component {
         this.updateFilters = this.updateFilters.bind(this);
         this.updateType = this.updateType.bind(this);
         this.updateCategory = this.updateCategory.bind(this);
-        this.updateUse = this.updateCategory.bind(this);
+        this.updateUse = this.updateUse.bind(this);
     }
 
     updateFilters () {
