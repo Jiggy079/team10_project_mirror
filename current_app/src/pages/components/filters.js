@@ -25,12 +25,10 @@ class Filters extends React.Component {
 
     updateType (event) {
         this.setState({colour: event.target.value}, this.updateFilters);
-        this.updateFilters();
     }
 
     updateCategory (event) {
         this.setState({maptype: event.target.value}, this.updateFilters);
-
     }
 
     render () {
