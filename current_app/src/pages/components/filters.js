@@ -18,6 +18,9 @@ class Filters extends React.Component {
         this.updateType = this.updateType.bind(this);
         this.updateCategory = this.updateCategory.bind(this);
         this.updateUse = this.updateUse.bind(this);
+        this.updateLegend = this.updateLegend.bind(this);
+        this.updateDifficulty = this.updateDifficulty.bind(this);
+        this.updateNumber = this.updateNumber.bind(this);
     }
 
     updateFilters () {
@@ -34,6 +37,18 @@ class Filters extends React.Component {
 
     updateUse (event) {
         this.setState({use: event.target.value}, this.updateFilters);
+    }
+
+    updateLegend (event) {
+        this.setState({legend: event.target.value}, this.updateFilters);
+    }
+
+    updateDifficulty (event) {
+        this.setState({difficulty: event.target.value}, this.updateFilters);
+    }
+
+    updateNumber (event) {
+        this.setState({number: event.target.value}, this.updateFilters);
     }
 
     render () {
@@ -70,6 +85,50 @@ class Filters extends React.Component {
                     <MenuItem value={"aesthetics"}>Aesthetics</MenuItem>
                     <MenuItem value={"colour-mapping"}>Colour Mapping</MenuItem>
                     <MenuItem value={"depth perception"}>Depth Perception</MenuItem>
+                </Select>
+
+                <Select
+                    value={this.state.legend}
+                    label="Legend..."
+                    onChange={this.updateLegend}
+                >
+                    <MenuItem value={"none"}>None</MenuItem>
+                    <MenuItem value={"n-"}>No</MenuItem>
+                    <MenuItem value={"legend"}>Legend</MenuItem>
+                </Select>
+
+                <Select
+                    value={this.state.difficulty}
+                    label="Difficulty Level..."
+                    onChange={this.updateDifficulty}
+                >
+                    <MenuItem value={"none"}>None</MenuItem>
+                    <MenuItem value={"1"}>1</MenuItem>
+                    <MenuItem value={"2"}>2</MenuItem>
+                    <MenuItem value={"3"}>3</MenuItem>
+                    <MenuItem value={"4"}>4</MenuItem>
+                    <MenuItem value={"5"}>5</MenuItem>
+                </Select>
+
+                <Select
+                    value={this.state.number}
+                    label="No. of colours..."
+                    onChange={this.updateNumber}
+                >
+                    <MenuItem value={"none"}>None</MenuItem>
+                    <MenuItem value={"NA"}>NA</MenuItem>
+                    <MenuItem value={"1"}>1</MenuItem>
+                    <MenuItem value={"2"}>2</MenuItem>
+                    <MenuItem value={"3"}>3</MenuItem>
+                    <MenuItem value={"4"}>4</MenuItem>
+                    <MenuItem value={"5"}>5</MenuItem>
+                    <MenuItem value={"6"}>6</MenuItem>
+                    <MenuItem value={"7"}>7</MenuItem>
+                    <MenuItem value={"8"}>8</MenuItem>
+                    <MenuItem value={"9"}>9</MenuItem>
+                    <MenuItem value={"10"}>10</MenuItem>
+                    <MenuItem value={"11"}>11</MenuItem>
+                    <MenuItem value={"12"}>12</MenuItem>
                 </Select>
             </div>
         );
