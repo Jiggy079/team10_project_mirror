@@ -11,17 +11,9 @@ class Exploration extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			minYear: null,
-			maxYear: null,
 			filters: null
 		}
-		this.yearFilterCallback = this.yearFilterCallback.bind(this);
 		this.filtersCallback = this.filtersCallback.bind(this);
-	}
-
-	// this function is passed to YearSlider and should be called in its onChange function with the min and max year as parameters
-	yearFilterCallback(value1, value2) {
-		this.setState({minYear: value1, maxYear: value2});
 	}
 
 	filtersCallback(filters) {
@@ -35,7 +27,6 @@ class Exploration extends React.Component {
 				<MenuBar />
 
 				{/*<CheckboxesTags/>*/}
-				{/* The callback function can be called with the syntax props.callback(params) */}
 				<Card>
 					<div className={"filter"}>
 						<div className={"slider"}>
@@ -44,14 +35,15 @@ class Exploration extends React.Component {
 								<NumberChooser />
 							</div>
 						</div>
+						<div id="titlebar-container">
+							<h3>Filters</h3>
+						</div>
 						<div className={"annotation"}>
 							<Filters callback={this.filtersCallback} />
 						</div>
 					</div>
 				</Card>
-				{/* Render ImageExplorer component with the min and max year of images it should display respectively */}
-				{/* These values can be accessed within ImageExplorer via its props object, e.g. props.minYear */}
-				<ImageExplorer minYear={this.state.minYear} maxYear={this.state.maxYear} filters={this.state.filters}/>
+				<ImageExplorer filters={this.state.filters}/>
 			</div>
 		);
 	}

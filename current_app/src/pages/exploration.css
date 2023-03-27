@@ -34,3 +34,19 @@
 img.MuiImageListItem-img {
 	object-fit: contain !important;
 }
+
+#filters-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.filters-select {
+    display: flex;
+    flex-direction: column;
+}
+
+#titlebar-container {
+    display: flex;
+    justify-content: center;
+}

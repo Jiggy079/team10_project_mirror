@@ -1,6 +1,7 @@
 import React from "react";
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+import FormHelperText from '@mui/material/FormHelperText';
 
 class Filters extends React.Component {
     constructor(props) {
@@ -54,82 +55,100 @@ class Filters extends React.Component {
     render () {
         return (
             <div id="filters-container">
-                <Select
-                    value={this.state.colour}
-                    label="Colour type..."
-                    onChange={this.updateType}
+                <div className="filters-select">
+                    <Select
+                        value={this.state.colour}
+                        label="Colour type..."
+                        onChange={this.updateType}
+                        >
+                        <MenuItem value={"none"}>None</MenuItem>
+                        <MenuItem value={"black and white"}>Black and white</MenuItem>
+                        <MenuItem value={"grey"}>Greyscale</MenuItem>
+                        <MenuItem value={"colour"}>Colour</MenuItem>
+                    </Select>
+                    <FormHelperText>Colour</FormHelperText>
+                </div>
+
+                <div className="filters-select">
+                    <Select
+                        value={this.state.maptype}
+                        label="Colour category..."
+                        onChange={this.updateCategory}
                     >
-                    <MenuItem value={"none"}>None</MenuItem>
-                    <MenuItem value={"black and white"}>Black and white</MenuItem>
-                    <MenuItem value={"grey"}>Greyscale</MenuItem>
-                    <MenuItem value={"colour"}>Colour</MenuItem>
-                </Select>
+                        <MenuItem value={"none"}>None</MenuItem>
+                        <MenuItem value={"continuous"}>Continuous</MenuItem>
+                        <MenuItem value={"categorical"}>Categorical</MenuItem>
+                        <MenuItem value={"both"}>Both</MenuItem>
+                    </Select>
+                    <FormHelperText>Colour mapping</FormHelperText>
+                </div>
 
-                <Select
-                    value={this.state.maptype}
-                    label="Colour category..."
-                    onChange={this.updateCategory}
-                >
-                    <MenuItem value={"none"}>None</MenuItem>
-                    <MenuItem value={"continuous"}>Continuous</MenuItem>
-                    <MenuItem value={"categorical"}>Categorical</MenuItem>
-                    <MenuItem value={"both"}>Both</MenuItem>
-                </Select>
+                <div className="filters-select">
+                    <Select
+                        value={this.state.use}
+                        label="Colour Use..."
+                        onChange={this.updateUse}
+                    >
+                        <MenuItem value={"none"}>None</MenuItem>
+                        <MenuItem value={"aesthetics"}>Aesthetics</MenuItem>
+                        <MenuItem value={"colour-mapping"}>Colour Mapping</MenuItem>
+                        <MenuItem value={"depth perception"}>Depth Perception</MenuItem>
+                    </Select>
+                    <FormHelperText>Colour usage</FormHelperText>
+                </div>
 
-                <Select
-                    value={this.state.use}
-                    label="Colour Use..."
-                    onChange={this.updateUse}
-                >
-                    <MenuItem value={"none"}>None</MenuItem>
-                    <MenuItem value={"aesthetics"}>Aesthetics</MenuItem>
-                    <MenuItem value={"colour-mapping"}>Colour Mapping</MenuItem>
-                    <MenuItem value={"depth perception"}>Depth Perception</MenuItem>
-                </Select>
+                <div className="filters-select">
+                    <Select
+                        value={this.state.legend}
+                        label="Legend..."
+                        onChange={this.updateLegend}
+                    >
+                        <MenuItem value={"none"}>None</MenuItem>
+                        <MenuItem value={"n-"}>No</MenuItem>
+                        <MenuItem value={"legend"}>Legend</MenuItem>
+                    </Select>
+                    <FormHelperText>Colour legend</FormHelperText>
+                </div>
 
-                <Select
-                    value={this.state.legend}
-                    label="Legend..."
-                    onChange={this.updateLegend}
-                >
-                    <MenuItem value={"none"}>None</MenuItem>
-                    <MenuItem value={"n-"}>No</MenuItem>
-                    <MenuItem value={"legend"}>Legend</MenuItem>
-                </Select>
+                <div className="filters-select">
+                    <Select
+                        value={this.state.difficulty}
+                        label="Difficulty Level..."
+                        onChange={this.updateDifficulty}
+                    >
+                        <MenuItem value={"none"}>None</MenuItem>
+                        <MenuItem value={"1"}>1</MenuItem>
+                        <MenuItem value={"2"}>2</MenuItem>
+                        <MenuItem value={"3"}>3</MenuItem>
+                        <MenuItem value={"4"}>4</MenuItem>
+                        <MenuItem value={"5"}>5</MenuItem>
+                    </Select>
+                    <FormHelperText>Difficulty</FormHelperText>
+                </div>
 
-                <Select
-                    value={this.state.difficulty}
-                    label="Difficulty Level..."
-                    onChange={this.updateDifficulty}
-                >
-                    <MenuItem value={"none"}>None</MenuItem>
-                    <MenuItem value={"1"}>1</MenuItem>
-                    <MenuItem value={"2"}>2</MenuItem>
-                    <MenuItem value={"3"}>3</MenuItem>
-                    <MenuItem value={"4"}>4</MenuItem>
-                    <MenuItem value={"5"}>5</MenuItem>
-                </Select>
-
-                <Select
-                    value={this.state.number}
-                    label="No. of colours..."
-                    onChange={this.updateNumber}
-                >
-                    <MenuItem value={"none"}>None</MenuItem>
-                    <MenuItem value={"NA"}>NA</MenuItem>
-                    <MenuItem value={"1"}>1</MenuItem>
-                    <MenuItem value={"2"}>2</MenuItem>
-                    <MenuItem value={"3"}>3</MenuItem>
-                    <MenuItem value={"4"}>4</MenuItem>
-                    <MenuItem value={"5"}>5</MenuItem>
-                    <MenuItem value={"6"}>6</MenuItem>
-                    <MenuItem value={"7"}>7</MenuItem>
-                    <MenuItem value={"8"}>8</MenuItem>
-                    <MenuItem value={"9"}>9</MenuItem>
-                    <MenuItem value={"10"}>10</MenuItem>
-                    <MenuItem value={"11"}>11</MenuItem>
-                    <MenuItem value={"12"}>12</MenuItem>
-                </Select>
+                <div className="filters-select">
+                    <Select
+                        value={this.state.number}
+                        label="No. of colours..."
+                        onChange={this.updateNumber}
+                    >
+                        <MenuItem value={"none"}>None</MenuItem>
+                        <MenuItem value={"NA"}>NA</MenuItem>
+                        <MenuItem value={"1"}>1</MenuItem>
+                        <MenuItem value={"2"}>2</MenuItem>
+                        <MenuItem value={"3"}>3</MenuItem>
+                        <MenuItem value={"4"}>4</MenuItem>
+                        <MenuItem value={"5"}>5</MenuItem>
+                        <MenuItem value={"6"}>6</MenuItem>
+                        <MenuItem value={"7"}>7</MenuItem>
+                        <MenuItem value={"8"}>8</MenuItem>
+                        <MenuItem value={"9"}>9</MenuItem>
+                        <MenuItem value={"10"}>10</MenuItem>
+                        <MenuItem value={"11"}>11</MenuItem>
+                        <MenuItem value={"12"}>12</MenuItem>
+                    </Select>
+                    <FormHelperText>No. colours</FormHelperText>
+                </div>
             </div>
         );
     }
