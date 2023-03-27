@@ -93,12 +93,6 @@ class Annotation extends React.Component {
         }
     }
 
-    onkeyup = (e) =>{
-		if (e.keyCode === 13) {
-			this.jumpTo(e.target.value);
-		}
-    }
-
     submitAnnotation() { 
         const newAnnotation = {
             id: this.state.currentFigureIndex + 1,
@@ -210,7 +204,7 @@ class Annotation extends React.Component {
                                 <div className="bar">
                                     <Button size="small" onClick={() => this.changeFigure(false)}>Prev</Button>
                                         <input className="indexInput" type='text' value={this.state.currentFigureIndex + 1} 
-                                            onKeyUp={(e) => this.onkeyup(e)} />
+                                            onChange={(e) => this.jumpTo(e.target.value)} />
                                          / 29686
                                     <Button size="small" onClick={() => this.changeFigure(true)}>Next</Button>                        
                                     {this.state.annotated === true ? (
