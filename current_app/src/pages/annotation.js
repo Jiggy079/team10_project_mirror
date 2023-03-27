@@ -203,7 +203,7 @@ class Annotation extends React.Component {
                                 </div>
                                 <div className="bar">
                                     <Button size="small" onClick={() => this.changeFigure(false)}>Prev</Button>
-                                        <input className="indexInput" value={this.state.currentFigureIndex + 1} 
+                                        <input className="indexInput" type='text' value={this.state.currentFigureIndex + 1} 
                                             onChange={(e) => this.jumpTo(e.target.value)} />
                                          / 29686
                                     <Button size="small" onClick={() => this.changeFigure(true)}>Next</Button>                        
