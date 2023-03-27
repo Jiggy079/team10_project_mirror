@@ -3,7 +3,9 @@ import './annotation.css';
 import { Grid, Card, Typography } from '@mui/material';
 import MenuBar from './components/menubar';
 
-class Cover extends React.Component {
+// where we can add team info and user manual
+
+class Home extends React.Component {
 
     render() {
         document.title = "CO1OUR";
@@ -13,23 +15,19 @@ class Cover extends React.Component {
                     <Grid sx={{ flexGrow: 1 }} item xs={12}>
                         <MenuBar handleLogOut={null}/>
                     </Grid>
-                    {/* <Grid item xs={8}>
+                    <Grid item xs={12}>
                         <Card>
                             <div className="card">
-                                <Typography variant="h4" gutterBottom>
-                                Use of colour
-                                </Typography>
-                                <Typography variant="body1" >
-                                Use of colour for data vis. ...
-                                </Typography>
+                                <h1>Use of colour for data vis</h1>
+                                <p>This project is based on VIS30k.</p>
+                                <p>User manual can be added here.</p>
                             </div>
-
                         </Card>
-                    </Grid> */}
+                    </Grid>
                 </Grid>
             </div>
         )
     }
 }
 
-export default Cover;
+export default Home;

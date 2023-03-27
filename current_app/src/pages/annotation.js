@@ -12,6 +12,7 @@ class Annotation extends React.Component {
         this.state = {
             figures : [],
             currentFigureIndex: 0,
+            currentIndex: 1,
             figuresLoaded: false,
             annotated: false,
             user: "",
@@ -70,24 +71,32 @@ class Annotation extends React.Component {
         if (increment === true) {
             if (this.state.currentFigureIndex === 29685) {
                 this.setState({currentFigureIndex: 0});
+                this.setState({currentIndex: 1});
                 this.fetchAnnotation(1, this.state.user);
             } else {
                 this.setState({currentFigureIndex: this.state.currentFigureIndex + 1});
+                this.setState({currentIndex: this.state.currentFigureIndex + 2});
                 this.fetchAnnotation(this.state.currentFigureIndex + 2, this.state.user);
             }
         } else {
             if (this.state.currentFigureIndex === 0) {
                 this.setState({currentFigureIndex: 29685});
+                this.setState({currentIndex: 29686});
                 this.fetchAnnotation(29686, this.state.user);
             } else {
                 this.setState({currentFigureIndex: this.state.currentFigureIndex - 1});
+                this.setState({currentIndex: this.state.currentFigureIndex});
                 this.fetchAnnotation(this.state.currentFigureIndex, this.state.user);
             }
         }
     }
 
     jumpTo(index) {
+        if (index === '') {
+            this.setState({currentIndex: ''});
+        }
         if (index >= 1 && index <= 29687) {
+            this.setState({currentIndex: index});
             this.setState({currentFigureIndex: index - 1});
             this.fetchAnnotation(index, this.state.user);
         }
@@ -203,7 +212,7 @@ class Annotation extends React.Component {
                                 </div>
                                 <div className="bar">
                                     <Button size="small" onClick={() => this.changeFigure(false)}>Prev</Button>
-                                        <input className="indexInput" type='text' value={this.state.currentFigureIndex + 1} 
+                                        <input className="indexInput" value={this.state.currentIndex} 
                                             onChange={(e) => this.jumpTo(e.target.value)} />
                                          / 29686
                                     <Button size="small" onClick={() => this.changeFigure(true)}>Next</Button>                        
