@@ -6,6 +6,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import bus from '../../utils/bus';
 import { StyledEngineProvider } from '@mui/material/styles';
+import {Card} from "@mui/material";
 
 class ImageExplorer extends React.Component {
 	constructor(props) {
@@ -143,18 +144,20 @@ class ImageExplorer extends React.Component {
 				<StyledEngineProvider injectFirst>
 					<div id="imageExplorerContainer">
 						{/*<ImageList sx={{ width: 1850 }} cols={4}>*/}
-						<ImageList cols={this.state.picturePerline}>
+						<ImageList cols={this.state.picturePerline} gap={5}>
 							{annotatedImages.map((item) => (
-								<ImageListItem key={item["url"]}>
-									<img
-										src={item["url"]}
-										alt="Figure"
-										loading="lazy"/>
-									<ImageListItemBar
-										title={item["name"]}
-										position={"below"}
-									/>
-								</ImageListItem>
+								<Card>
+									<ImageListItem key={item["url"]}>
+										<img
+											src={item["url"]}
+											alt="Figure"
+											loading="lazy"/>
+										<ImageListItemBar
+											title={item["name"]}
+											position={"below"}
+										/>
+									</ImageListItem>
+								</Card>
 							))}
 						</ImageList>
 					</div>

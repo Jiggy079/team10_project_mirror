@@ -9,6 +9,28 @@
 
 }
 
+.filter{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.slider{
+    display: flex;
+    justify-content: center;
+}
+
+.annotation{
+    margin-top: 5px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.number_chooser{
+    margin-left: 50px;
+}
+
 img.MuiImageListItem-img {
 	object-fit: contain !important;
 }

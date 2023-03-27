@@ -5,6 +5,7 @@ import NumberChooser from "./components/numberchooser";
 import YearSlider from "./components/yearslider";
 import Filters from "./components/filters.js";
 import "./exploration.css";
+import {Card} from "@mui/material";
 
 class Exploration extends React.Component {
 	constructor(props) {
@@ -35,9 +36,19 @@ class Exploration extends React.Component {
 
 				{/*<CheckboxesTags/>*/}
 				{/* The callback function can be called with the syntax props.callback(params) */}
-				<YearSlider callback={this.yearFilterCallback}/>
-				<NumberChooser />
-				<Filters callback={this.filtersCallback} />
+				<Card>
+					<div className={"filter"}>
+						<div className={"slider"}>
+							<YearSlider callback={this.yearFilterCallback}/>
+							<div className={"number_chooser"}>
+								<NumberChooser />
+							</div>
+						</div>
+						<div className={"annotation"}>
+							<Filters callback={this.filtersCallback} />
+						</div>
+					</div>
+				</Card>
 				{/* Render ImageExplorer component with the min and max year of images it should display respectively */}
 				{/* These values can be accessed within ImageExplorer via its props object, e.g. props.minYear */}
 				<ImageExplorer minYear={this.state.minYear} maxYear={this.state.maxYear} filters={this.state.filters}/>
