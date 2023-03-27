@@ -133,7 +133,7 @@ class Filters extends React.Component {
                         onChange={this.updateNumber}
                     >
                         <MenuItem value={"none"}>None</MenuItem>
-                        <MenuItem value={"NA"}>NA</MenuItem>
+                        <MenuItem value={"NA"}>Many/50+</MenuItem>
                         <MenuItem value={"1"}>1</MenuItem>
                         <MenuItem value={"2"}>2</MenuItem>
                         <MenuItem value={"3"}>3</MenuItem>
