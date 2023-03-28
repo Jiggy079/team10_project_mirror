@@ -1289,6 +1289,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 - potentially add a demo video to the home page 
 - why some filters on exploration tool don't work 
 - notes category in the validation tool 
+- next supervisor meeting will be in May
 
 
 |To-Do| Assigned To:|
@@ -1328,6 +1329,32 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 ### Points Discussed:
 
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| |  |
+
+</details>
+
+<details><summary> Tuesday 2nd May 2023 - with supervisor </summary>
+
+### Location and Time: 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V| Y|
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| N |
+
+### Agenda
+
+
+### Points Discussed:
 
 
 |To-Do| Assigned To:|
