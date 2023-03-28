@@ -1296,7 +1296,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 |--------------------------------------|-------------------|
 | fix the incorrect filtering on the exploration tool | team exploration |
 | expand image when clicked | team exploration |
-| when two users are chosen, idnicate how many images in common they have annotated | team validation | 
+| when two users are chosen, indicate how many images in common they have annotated | team validation | 
 | add visual indicator to show how many images have been annotated, contribution split to the annotations | team validation | 
 | add icons for each annotation option and then visual indicators of which choice each user selected during the annotation | team validation | 
 | support users in updating their annotations if/when they see inconcistencies | team validation |
@@ -1329,11 +1329,28 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 ### Points Discussed:
 
+- demo video after easter holiday 
+- adding multi choice for filters on exploration 
+- using a cookie instead of state to jump from the validation tool to annotation tool 
+
 
 
 |To-Do| Assigned To:|
 |--------------------------------------|-------------------|
-| |  |
+| software manual | zhening, yizhan, wenfei  |
+| group report | jamie, nita | 
+| user manual | jamie, nita  |
+| fix the incorrect filtering on the exploration tool - check people's annotation first | jamie |
+| expand image when clicked | jamie | 
+| multi choice for filters on exploration if you have time | Yizhan |
+| indicate how many images in common for users | nita |
+| initials and colour icons on validation tool | wenfei |
+| icons for each question on validation tool | zhening | 
+| pie chart for contributions | nita |
+| annotate 200 more images | wenfei, yizhan, jamie , zhening, nita | 
+| text input for how many colours on exploration tool filter | yizhan | 
+| link to annotation tool from validation tool | zhening |
+| notes section on validation - if you have time | zhening | 
 
 </details>
 
