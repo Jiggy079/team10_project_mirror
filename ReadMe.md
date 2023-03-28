@@ -1298,6 +1298,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | when two users are chosen, idnicate how many images in common they have annotated | team validation | 
 | add visual indicator to show how many images have been annotated, contribution split to the annotations | team validation | 
 | add icons for each annotation option and then visual indicators of which choice each user selected during the annotation | team validation | 
+| support users in updating their annotations if/when they see inconcistencies | team validation |
 
 </details>
 
