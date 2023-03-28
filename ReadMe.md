@@ -1263,6 +1263,78 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 
+<details><summary> Tuesday 28th March 2023 - with supervisor </summary>
+
+### Location and Time: CS building @ 10am 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V| Y|
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| N |
+
+### Agenda
+
+- reviewing progress
+- yizhan to complete training 
+
+### Points Discussed:
+
+- exploration tool progress ; user options more viewable, more filters added 
+- home page added with user manual 
+- potentially add a demo video to the home page 
+- why some filters on exploration tool don't work 
+- notes category in the validation tool 
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| fix the incorrect filtering on the exploration tool | team exploration |
+| expand image when clicked | team exploration |
+| when two users are chosen, idnicate how many images in common they have annotated | team validation | 
+| add visual indicator to show how many images have been annotated, contribution split to the annotations | team validation | 
+| add icons for each annotation option and then visual indicators of which choice each user selected during the annotation | team validation | 
+
+</details>
+
+<details><summary> Tuesday 28th March 2023 </summary>
+
+### Location and Time: CS building @ 1.30pm 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V| Y|
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| N |
+
+### Agenda
+
+- group split for reports and demo videos 
+- changing group admin
+- talk about adding AND/OR buttons over Easter 
+- talk about the num of colours filter, change to input text 
+- group split for todays set supervisor tasks 
+- new features we can add to the tools to impress Bob when we come back from Easter holiday eg. creating graphs at the exploration tool 
+- notes category in the validation tool 
+
+### Points Discussed:
+
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| |  |
+
+</details>
+
 </details>
 
 ## Requirements
