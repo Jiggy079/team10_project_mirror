@@ -210,7 +210,7 @@ class Annotation extends React.Component {
                                          / 29686
                                     <Button size="small" onClick={() => this.changeFigure(true)}>Next</Button>
                                     {this.state.user === "Guest" ? (
-                                        <Button variant="contained" disabled>ANNOTATE</Button>
+                                        <div><Button variant="contained" disabled>ANNOTATE</Button></div>
                                     ) : (
                                         <div>
                                             {this.state.annotated === true ? (
