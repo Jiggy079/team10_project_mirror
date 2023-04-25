@@ -1,11 +1,6 @@
 # Deployments
-The deployment URLs for each branch are:
 
-Main: https://team10-project-mirror.vercel.app/
-<br>
-Exploration: https://team10-project-mirror-exploration.vercel.app/
-<br>
-Verification: https://team10-project-mirror-sdum.vercel.app/
+Main URL: https://team10-project-mirror.vercel.app/
 
 The mirror on github is [here](https://github.com/Jiggy079/team10_project_mirror) if anyone needs it.
 
