@@ -1,7 +1,6 @@
 import React from 'react';
 import './annotation.css';
 import Figure from './components/figure';
-import Login from './components/login';
 import { Grid, Card, Button, RadioGroup, FormControlLabel, Radio, TextField, CircularProgress } from '@mui/material';
 import { Stack } from '@mui/system';
 import MenuBar from './components/menubar';
@@ -15,7 +14,7 @@ class Annotation extends React.Component {
             currentIndex: 1,
             figuresLoaded: false,
             annotated: false,
-            user: "",
+            user: "Guest",
             colour: "",
             use: "",
             legend: "",
@@ -25,7 +24,6 @@ class Annotation extends React.Component {
         };
         this.changeFigure = this.changeFigure.bind(this);
         this.handleLogin = this.handleLogin.bind(this);
-        this.handleLogOut = this.handleLogOut.bind(this);
     }
 
     componentDidMount() {
@@ -179,20 +177,15 @@ class Annotation extends React.Component {
         })
     }
 
-    handleLogOut() {
-        console.log("log out");
-        this.setState({user: ""});
-    }
-
     render() {
-        if (this.state.user !== "") {
+        // if (this.state.user !== "") {
             document.title = "Annotation tool";
             let figureInfo = this.getFigureInfo(this.state.currentFigureIndex);
             return (
                 <div className="App">
                     <Grid container spacing={2}>
-                    <Grid sx={{ flexGrow: 1 }} item xs={12 }>
-                        <MenuBar handleLogOut={this.handleLogOut}/>
+                    <Grid sx={{ flexGrow: 1 }} item xs={12}>
+                        <MenuBar handleLogin={this.handleLogin} user={this.state.user}/>
                     </Grid>
                         <Grid item xs={6}>
                             <Card>
@@ -215,12 +208,18 @@ class Annotation extends React.Component {
                                         <input className="indexInput" value={this.state.currentIndex} 
                                             onChange={(e) => this.jumpTo(e.target.value)} />
                                          / 29686
-                                    <Button size="small" onClick={() => this.changeFigure(true)}>Next</Button>                        
-                                    {this.state.annotated === true ? (
-                                        <Button variant="contained" onClick={() => this.submitAnnotation()}>UPDATE</Button>
+                                    <Button size="small" onClick={() => this.changeFigure(true)}>Next</Button>
+                                    {this.state.user === "Guest" ? (
+                                        <Button variant="contained" disabled>ANNOTATE</Button>
                                     ) : (
-                                        <Button variant="contained" onClick={() => this.submitAnnotation()}>ANNOTATE</Button>
-                                    )}
+                                        <div>
+                                            {this.state.annotated === true ? (
+                                                <Button variant="contained" onClick={() => this.submitAnnotation()}>UPDATE</Button>
+                                            ) : (
+                                                <Button variant="contained" onClick={() => this.submitAnnotation()}>ANNOTATE</Button>
+                                            )}
+                                        </div>
+                                    )}                   
                                 </div>
                             </Card>
                         </Grid>
@@ -348,15 +347,16 @@ class Annotation extends React.Component {
                     </Grid>
                 </div>
             );
-        } else {
-            document.title = "Login";
-            return(
-                <div>
-                    {/* <MenuBar /> */}
-                    <Login handleLogin={this.handleLogin} />
-                </div>
-            );
-        }        
+        // } else {
+            
+        //     document.title = "Login";
+        //     return(
+        //         <div>
+        //             <MenuBar handleLogin={this.handleLogin}/>
+        //             </div>
+        //     // <MenuBar handleLogin={this.handleLogin} handleLogOut={this.handleLogOut}/>
+        //     );
+        // }
     }
 }
 

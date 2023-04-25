@@ -1,19 +1,30 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import ColorLensRoundedIcon from '@mui/icons-material/ColorLensRounded';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { Button, MenuItem, Select } from '@mui/material';
 
-export default function MenuBar({handleLogOut}) {
+export default function MenuBar({handleLogin, user}) {
     const pages = ["annotation", "validation", "exploration"];
+    const usernames = [
+        "Guest",
+        "RL",
+        "HL",
+        "JV",
+        "LW",
+        "NK",
+        "WQ",
+        "YH",
+        "ZZ",
+    ];
+
     const navigate = useNavigate();
-    const status = handleLogOut;
     
     const lightTheme = createTheme({
         palette: {
@@ -62,11 +73,24 @@ export default function MenuBar({handleLogOut}) {
                     </Button>
                     ))}
                 </Box>
-                {status === null ? (
-                    <AccountCircleRoundedIcon />
-                ) : (
-                    <Button color="inherit" onClick={() => handleLogOut()}>Log out</Button>
-                )}
+
+                {user !== undefined &&
+                <Select
+                    label="Username"
+                    onChange={(e) => handleLogin(e.target.value)}
+                    sx={{ color: 'white'}} 
+                    value={user}
+                    >
+                    {usernames.map((username) => (
+                        <MenuItem
+                            key={username}
+                            value={username}
+                            >
+                            {username}
+                        </MenuItem>
+                    ))}
+                </Select>
+                }
                 </Toolbar>
             </AppBar>
         </ThemeProvider>

@@ -7,13 +7,42 @@ import MenuBar from './components/menubar';
 
 class Home extends React.Component {
 
+    handleLogin(username) {
+        console.log(username);
+        this.setState({user: username});
+        fetch(`https://express-backend-vfm5.onrender.com/annotation/1/${username.toString()}`)
+        .then(res => res.json())
+        .then((res) => {
+            if (res === null) {
+                console.log("res is null");
+                this.setState({annotated: false});
+                return;
+            } else {
+                this.setState({
+                    annotated: true,
+                    colour: res.colour,
+                    use: res.use,
+                    legend: res.legend,
+                    maptype: res.maptype,
+                    number: res.number,
+                    difficulty: res.difficulty,
+                })
+            }
+        })
+    }
+
+    handleLogOut() {
+        console.log("log out");
+        this.setState({user: ""});
+    }
+
     render() {
         document.title = "CO1OUR";
         return (
             <div className="App">
                 <Grid container spacing={2}>
                     <Grid sx={{ flexGrow: 1 }} item xs={12}>
-                        <MenuBar handleLogOut={null}/>
+                        <MenuBar handleLogin={this.handleLogin} handleLogOut={this.handleLogOut}/>
                     </Grid>
                     <Grid item xs={12}>
                         <Card>

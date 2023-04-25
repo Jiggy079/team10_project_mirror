@@ -15,9 +15,11 @@ class Validation extends React.Component {
             figures : [],
             users: [],
             annotations: [],
+            user: "Guest",
             figuresLoaded: false,
             annotationLoaded: false,
         };
+        this.handleLogin = this.handleLogin.bind(this);
     }
 
     componentDidMount() {
@@ -106,7 +108,11 @@ class Validation extends React.Component {
             },
             body: JSON.stringify(newAnnotation),
         })
+    }
 
+    handleLogin(username) {
+        console.log(username);
+        this.setState({user: username});
     }
 
     render() {
@@ -128,7 +134,7 @@ class Validation extends React.Component {
                 <div className="App">
                     <Grid container spacing={2}>
                         <Grid sx={{ flexGrow: 1 }} item xs={12}>
-                            <MenuBar handleLogOut={null}/>
+                            <MenuBar handleLogin={this.handleLogin} user={this.state.user}/>
                         </Grid>
                         <Grid item xs={12}>
                             {/* add user selection here */}
