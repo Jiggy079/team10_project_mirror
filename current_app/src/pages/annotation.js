@@ -35,6 +35,14 @@ class Annotation extends React.Component {
                     figuresLoaded: true
                 })
             })
+
+        const searchParams = new URLSearchParams(window.location.search);
+        const username = searchParams.get("user");
+        if (username === "undefined" || username === null) {
+            this.setState({ user: "Guest" });
+        } else {
+            this.setState({ user: username });
+        }
     }
 
     fetchAnnotation(id, user) {
@@ -154,7 +162,6 @@ class Annotation extends React.Component {
     }
 
     handleLogin(username) {
-        console.log(username);
         this.setState({user: username});
         fetch(`https://express-backend-vfm5.onrender.com/annotation/1/${username.toString()}`)
         .then(res => res.json())
@@ -178,185 +185,174 @@ class Annotation extends React.Component {
     }
 
     render() {
-        // if (this.state.user !== "") {
-            document.title = "Annotation tool";
-            let figureInfo = this.getFigureInfo(this.state.currentFigureIndex);
-            return (
-                <div className="App">
-                    <Grid container spacing={2}>
-                    <Grid sx={{ flexGrow: 1 }} item xs={12}>
-                        <MenuBar handleLogin={this.handleLogin} user={this.state.user}/>
-                    </Grid>
-                        <Grid item xs={6}>
-                            <Card>
-                                <div className="card">
-                                    <div className="figure">
-                                        {this.state.figuresLoaded === true ? (
-                                            <Figure imgUrl={this.getImgURL(this.state.currentFigureIndex)} />
+        document.title = "Annotation tool";
+        let figureInfo = this.getFigureInfo(this.state.currentFigureIndex);
+        return (
+            <div className="App">
+                <Grid container spacing={2}>
+                <Grid sx={{ flexGrow: 1 }} item xs={12}>
+                    <MenuBar handleLogin={this.handleLogin} user={this.state.user}/>
+                </Grid>
+                    <Grid item xs={6}>
+                        <Card>
+                            <div className="card">
+                                <div className="figure">
+                                    {this.state.figuresLoaded === true ? (
+                                        <Figure imgUrl={this.getImgURL(this.state.currentFigureIndex)} />
+                                    ) : (
+                                        <CircularProgress />
+                                    )}
+                                </div>
+                                <div className="metadata">
+                                    <p>Title: {figureInfo.name}</p>
+                                    <p>Year: {figureInfo.year}</p>
+                                    <p>Doi: {figureInfo.doi}</p>
+                                </div>
+                            </div>
+                            <div className="bar">
+                                <Button size="small" onClick={() => this.changeFigure(false)}>Prev</Button>
+                                    <input className="indexInput" value={this.state.currentIndex} 
+                                        onChange={(e) => this.jumpTo(e.target.value)} />
+                                        / 29686
+                                <Button size="small" onClick={() => this.changeFigure(true)}>Next</Button>
+                                {this.state.user === "Guest" ? (
+                                    <div><Button variant="contained" disabled>ANNOTATE</Button></div>
+                                ) : (
+                                    <div>
+                                        {this.state.annotated === true ? (
+                                            <Button variant="contained" onClick={() => this.submitAnnotation()}>UPDATE</Button>
                                         ) : (
-                                            <CircularProgress />
+                                            <Button variant="contained" onClick={() => this.submitAnnotation()}>ANNOTATE</Button>
                                         )}
                                     </div>
-                                    <div className="metadata">
-                                        <p>Title: {figureInfo.name}</p>
-                                        <p>Year: {figureInfo.year}</p>
-                                        <p>Doi: {figureInfo.doi}</p>
-                                    </div>
-                                </div>
-                                <div className="bar">
-                                    <Button size="small" onClick={() => this.changeFigure(false)}>Prev</Button>
-                                        <input className="indexInput" value={this.state.currentIndex} 
-                                            onChange={(e) => this.jumpTo(e.target.value)} />
-                                         / 29686
-                                    <Button size="small" onClick={() => this.changeFigure(true)}>Next</Button>
-                                    {this.state.user === "Guest" ? (
-                                        <div><Button variant="contained" disabled>ANNOTATE</Button></div>
-                                    ) : (
-                                        <div>
-                                            {this.state.annotated === true ? (
-                                                <Button variant="contained" onClick={() => this.submitAnnotation()}>UPDATE</Button>
-                                            ) : (
-                                                <Button variant="contained" onClick={() => this.submitAnnotation()}>ANNOTATE</Button>
-                                            )}
-                                        </div>
-                                    )}                   
-                                </div>
-                            </Card>
-                        </Grid>
-                        <Grid item xs={6}>
-                            <Stack spacing={2}>
-                                <Grid container spacing={2}>
-                                    <Grid item sm={6}>
-                                        <Card>
-                                            <div className="ques-box">
-                                                <h3>Q1. What is the colour type?</h3>
-                                                <RadioGroup
-                                                    aria-labelledby="colour-type"
-                                                    name="row-radio-buttons-group"
-                                                    defaultValue={this.state.colour}
-                                                    value={this.state.colour}
-                                                    onChange={(e) => this.setState({colour: e.target.value})}
-                                                >
-                                                    <FormControlLabel value="black and white" control={<Radio />} label="Black and white" />
-                                                    <FormControlLabel value="grey" control={<Radio />} label="Greyscale" />
-                                                    <FormControlLabel value="colour" control={<Radio />} label="Colour" />
-                                                </RadioGroup>
-                                            </div>
-                                        </Card>
-                                    </Grid>
-                                    <Grid item sm={6}>
-                                        <Card>
-                                        <div className="ques-box">
-                                            <h3>Q2. Is colour used for aesthetics or data visualisation?</h3>
-                                            <RadioGroup
-                                                    row
-                                                    aria-labelledby="colour-use"
-                                                    name="row-radio-buttons-group"
-                                                    defaultValue={this.state.use}
-                                                    value={this.state.use}
-                                                    onChange={(e) => this.setState({use: e.target.value})}
-                                                >
-                                                    <FormControlLabel value="aesthetics" control={<Radio />} label="Aesthetics" />
-                                                    <FormControlLabel value="colour-mapping" control={<Radio />} label="Colour mapping" />
-                                                    <FormControlLabel value="depth-perception" control={<Radio />} label="Depth perception" />
-                                                    <FormControlLabel value="uncertain" control={<Radio />} label="Not sure" />
-                                                    <FormControlLabel value="NA" control={<Radio />} label="Not applicable" />
-                                            </RadioGroup>
-                                        </div>
-                                        </Card>
-                                    </Grid>
-                                    <Grid item sm={6}>
-                                        <Card>
-                                        <div className="ques-box">
-                                            <h3>Q3. Is a colour mapping legend shown?</h3>
-                                            <RadioGroup
-                                                    aria-labelledby="legend"
-                                                    name="row-radio-buttons-group"
-                                                    value={this.state.legend}
-                                                    onChange={(e) => this.setState({legend: e.target.value})}
-                                                >
-                                                    <FormControlLabel value="legend" control={<Radio />} label="Yes" />
-                                                    <FormControlLabel value="n-legend" control={<Radio />} label="No" />
-                                                    <FormControlLabel value="uncertain" control={<Radio />} label="Not sure" />
-                                            </RadioGroup>
-                                        </div>
-                                        </Card>
-                                    </Grid>
-                                    <Grid item sm={6}>
-                                        <Card>
-                                        <div className="ques-box">
-                                            <h3>Q4. Is the colour mapping continuous or categorical?</h3>
-                                            <RadioGroup
-                                                    row
-                                                    aria-labelledby="continuous"
-                                                    name="row-radio-buttons-group"
-                                                    value={this.state.maptype}
-                                                    onChange={(e) => this.setState({maptype: e.target.value})}
-                                                >
-                                                    <FormControlLabel value="continuous" control={<Radio />} label="Continuous" />
-                                                    <FormControlLabel value="categorical" control={<Radio />} label="Categorical" />
-                                                    <FormControlLabel value="both" control={<Radio />} label="Both" />
-                                                    <FormControlLabel value="uncertain" control={<Radio />} label="Not sure" />
-                                            </RadioGroup>
-                                        </div>
-                                        </Card>
-                                    </Grid>
-                                    <Grid item sm={6}>
-                                        <Card>
-                                        <div className="ques-box">
-                                            <h3>Q5. How many colour values are used?</h3>
-                                        <RadioGroup
-                                            row
-                                            aria-labelledby="number"
-                                            name="row-radio-buttons-group"
-                                            value={this.state.number}
-                                            >
-                                            
-                                                    <TextField value={this.state.number} onChange={(e) => this.setState({number: e.target.value})}
-                                                        id="outlined-basic" variant="outlined" />
-                                                
-                                                <FormControlLabel value="NA" control={<Radio />} label="Not applicable/many" onChange={(e) => this.setState({number: "NA"})} />
-                                            </RadioGroup>
-                                        </div>
-                                        </Card>
-                                    </Grid>
-                                    <Grid item sm={6}>
-                                        <Card>
-                                        <div className="ques-box">
-                                            <h3>Q6. Difficulty?</h3>
-                                            <RadioGroup
-                                                    row
-                                                    aria-labelledby="difficulty"
-                                                    name="row-radio-buttons-group"
-                                                    value={this.state.difficulty}
-                                                    onChange={(e) => this.setState({difficulty: e.target.value})}
-                                                >
-                                                    <FormControlLabel value="1" control={<Radio />} label="1" />
-                                                    <FormControlLabel value="2" control={<Radio />} label="2" />
-                                                    <FormControlLabel value="3" control={<Radio />} label="3" />
-                                                    <FormControlLabel value="4" control={<Radio />} label="4" />
-                                                    <FormControlLabel value="5" control={<Radio />} label="5" />
-                                                    <div className="hint">(1=very easy, 5=very hard)</div>
-                                            </RadioGroup>
-                                        </div>
-                                        </Card>
-                                    </Grid>
-                                </Grid>
-                            </Stack>
-                        </Grid>
+                                )}                   
+                            </div>
+                        </Card>
                     </Grid>
-                </div>
-            );
-        // } else {
-            
-        //     document.title = "Login";
-        //     return(
-        //         <div>
-        //             <MenuBar handleLogin={this.handleLogin}/>
-        //             </div>
-        //     // <MenuBar handleLogin={this.handleLogin} handleLogOut={this.handleLogOut}/>
-        //     );
-        // }
+                    <Grid item xs={6}>
+                        <Stack spacing={2}>
+                            <Grid container spacing={2}>
+                                <Grid item sm={6}>
+                                    <Card>
+                                        <div className="ques-box">
+                                            <h3>Q1. What is the colour type?</h3>
+                                            <RadioGroup
+                                                aria-labelledby="colour-type"
+                                                name="row-radio-buttons-group"
+                                                defaultValue={this.state.colour}
+                                                value={this.state.colour}
+                                                onChange={(e) => this.setState({colour: e.target.value})}
+                                            >
+                                                <FormControlLabel value="black and white" control={<Radio />} label="Black and white" />
+                                                <FormControlLabel value="grey" control={<Radio />} label="Greyscale" />
+                                                <FormControlLabel value="colour" control={<Radio />} label="Colour" />
+                                            </RadioGroup>
+                                        </div>
+                                    </Card>
+                                </Grid>
+                                <Grid item sm={6}>
+                                    <Card>
+                                    <div className="ques-box">
+                                        <h3>Q2. Is colour used for aesthetics or data visualisation?</h3>
+                                        <RadioGroup
+                                                row
+                                                aria-labelledby="colour-use"
+                                                name="row-radio-buttons-group"
+                                                defaultValue={this.state.use}
+                                                value={this.state.use}
+                                                onChange={(e) => this.setState({use: e.target.value})}
+                                            >
+                                                <FormControlLabel value="aesthetics" control={<Radio />} label="Aesthetics" />
+                                                <FormControlLabel value="colour-mapping" control={<Radio />} label="Colour mapping" />
+                                                <FormControlLabel value="depth-perception" control={<Radio />} label="Depth perception" />
+                                                <FormControlLabel value="uncertain" control={<Radio />} label="Not sure" />
+                                                <FormControlLabel value="NA" control={<Radio />} label="Not applicable" />
+                                        </RadioGroup>
+                                    </div>
+                                    </Card>
+                                </Grid>
+                                <Grid item sm={6}>
+                                    <Card>
+                                    <div className="ques-box">
+                                        <h3>Q3. Is a colour mapping legend shown?</h3>
+                                        <RadioGroup
+                                                aria-labelledby="legend"
+                                                name="row-radio-buttons-group"
+                                                value={this.state.legend}
+                                                onChange={(e) => this.setState({legend: e.target.value})}
+                                            >
+                                                <FormControlLabel value="legend" control={<Radio />} label="Yes" />
+                                                <FormControlLabel value="n-legend" control={<Radio />} label="No" />
+                                                <FormControlLabel value="uncertain" control={<Radio />} label="Not sure" />
+                                        </RadioGroup>
+                                    </div>
+                                    </Card>
+                                </Grid>
+                                <Grid item sm={6}>
+                                    <Card>
+                                    <div className="ques-box">
+                                        <h3>Q4. Is the colour mapping continuous or categorical?</h3>
+                                        <RadioGroup
+                                                row
+                                                aria-labelledby="continuous"
+                                                name="row-radio-buttons-group"
+                                                value={this.state.maptype}
+                                                onChange={(e) => this.setState({maptype: e.target.value})}
+                                            >
+                                                <FormControlLabel value="continuous" control={<Radio />} label="Continuous" />
+                                                <FormControlLabel value="categorical" control={<Radio />} label="Categorical" />
+                                                <FormControlLabel value="both" control={<Radio />} label="Both" />
+                                                <FormControlLabel value="uncertain" control={<Radio />} label="Not sure" />
+                                        </RadioGroup>
+                                    </div>
+                                    </Card>
+                                </Grid>
+                                <Grid item sm={6}>
+                                    <Card>
+                                    <div className="ques-box">
+                                        <h3>Q5. How many colour values are used?</h3>
+                                    <RadioGroup
+                                        row
+                                        aria-labelledby="number"
+                                        name="row-radio-buttons-group"
+                                        value={this.state.number}
+                                        >
+                                        
+                                                <TextField value={this.state.number} onChange={(e) => this.setState({number: e.target.value})}
+                                                    id="outlined-basic" variant="outlined" />
+                                            
+                                            <FormControlLabel value="NA" control={<Radio />} label="Not applicable/many" onChange={(e) => this.setState({number: "NA"})} />
+                                        </RadioGroup>
+                                    </div>
+                                    </Card>
+                                </Grid>
+                                <Grid item sm={6}>
+                                    <Card>
+                                    <div className="ques-box">
+                                        <h3>Q6. Difficulty?</h3>
+                                        <RadioGroup
+                                                row
+                                                aria-labelledby="difficulty"
+                                                name="row-radio-buttons-group"
+                                                value={this.state.difficulty}
+                                                onChange={(e) => this.setState({difficulty: e.target.value})}
+                                            >
+                                                <FormControlLabel value="1" control={<Radio />} label="1" />
+                                                <FormControlLabel value="2" control={<Radio />} label="2" />
+                                                <FormControlLabel value="3" control={<Radio />} label="3" />
+                                                <FormControlLabel value="4" control={<Radio />} label="4" />
+                                                <FormControlLabel value="5" control={<Radio />} label="5" />
+                                                <div className="hint">(1=very easy, 5=very hard)</div>
+                                        </RadioGroup>
+                                    </div>
+                                    </Card>
+                                </Grid>
+                            </Grid>
+                        </Stack>
+                    </Grid>
+                </Grid>
+            </div>
+        );
     }
 }
 

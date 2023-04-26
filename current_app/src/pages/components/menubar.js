@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -36,7 +35,7 @@ export default function MenuBar({handleLogin, user}) {
     });
 
     const handleLink = (page) => {
-        navigate(`/${page}`);
+        navigate(`/${page}?user=${user}`);
     }
 
     return (
@@ -54,7 +53,8 @@ export default function MenuBar({handleLogin, user}) {
                 <Typography variant="h6"
                     noWrap
                     component="a"
-                    href="/" sx={{
+                    href="/" 
+                    sx={{
                         mr: 2,
                         display: { xs: 'none', md: 'flex' },
                         color: 'inherit',
@@ -77,6 +77,7 @@ export default function MenuBar({handleLogin, user}) {
                 {user !== undefined &&
                 <Select
                     label="Username"
+                    size="small"
                     onChange={(e) => handleLogin(e.target.value)}
                     sx={{ color: 'white'}} 
                     value={user}

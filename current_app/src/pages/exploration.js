@@ -11,20 +11,36 @@ class Exploration extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			filters: null
+			filters: null,
+			user: "",
 		}
 		this.filtersCallback = this.filtersCallback.bind(this);
+		this.handleLogin = this.handleLogin.bind(this);
 	}
+
+	componentDidMount() {
+        const searchParams = new URLSearchParams(window.location.search);
+        const username = searchParams.get("user");
+        if (username === "undefined" || username === null) {
+            this.setState({ user: "Guest" });
+        } else {
+            this.setState({ user: username });
+        }
+    }
 
 	filtersCallback(filters) {
 		this.setState({filters: filters});
 	}
 
+	handleLogin(username) {
+        this.setState({user: username});
+    }
+
 	render () {
 		document.title = "Exploration Tool";
 		return (
 			<div>
-				<MenuBar />
+				<MenuBar handleLogin={this.handleLogin} user={this.state.user}/>
 
 				{/*<CheckboxesTags/>*/}
 				<Card>

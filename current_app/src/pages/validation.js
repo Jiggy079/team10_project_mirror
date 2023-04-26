@@ -1,9 +1,6 @@
 import React from 'react';
 import './validation.css';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { Grid, Card, FormGroup, Checkbox, Button, RadioGroup, FormControlLabel, Radio, CircularProgress } from '@mui/material';
+import { Grid, Card, FormGroup, Checkbox, Button, RadioGroup, FormControlLabel, Radio, CircularProgress, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 import ArtTrackRoundedIcon from '@mui/icons-material/ArtTrackRounded';
 import MenuBar from './components/menubar';
 
@@ -15,7 +12,7 @@ class Validation extends React.Component {
             figures : [],
             users: [],
             annotations: [],
-            user: "Guest",
+            user: "",
             figuresLoaded: false,
             annotationLoaded: false,
         };
@@ -39,6 +36,13 @@ class Validation extends React.Component {
                     annotationLoaded: true,
                 })
             })
+        const searchParams = new URLSearchParams(window.location.search);
+        const username = searchParams.get("user");
+        if (username === "undefined" || username === null) {
+            this.setState({ user: "Guest" });
+        } else {
+            this.setState({ user: username });
+        }
     }
 
     modifyUser(checked, user) {
@@ -111,7 +115,6 @@ class Validation extends React.Component {
     }
 
     handleLogin(username) {
-        console.log(username);
         this.setState({user: username});
     }
 
