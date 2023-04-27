@@ -1,13 +1,9 @@
 import React from "react";
-import ImageList from '@mui/material/ImageList';
-import Box from '@mui/material/Box';
-import CircularProgress from '@mui/material/CircularProgress';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
 import bus from '../../utils/bus';
 import { StyledEngineProvider } from '@mui/material/styles';
-import {Card} from "@mui/material";
+import {Backdrop, Card, Button, ImageList, ImageListItem, ImageListItemBar, CircularProgress, Box} from "@mui/material";
 
+// noinspection JSValidateTypes
 class ImageExplorer extends React.Component {
 	constructor(props) {
 		super(props);
@@ -19,10 +15,14 @@ class ImageExplorer extends React.Component {
 			showedImage: null,
 			selectedYears:[],
 			picturePerline: 4,
+			open: false,
+			enlargedImgURL: "",
 		};
 		this.getAnnotations = this.getAnnotations.bind(this);
 		this.getImages = this.getImages.bind(this);
 		this.getAnnotatedImages = this.getAnnotatedImages.bind(this);
+		this.handleClose = this.handleClose.bind(this);
+		this.handleToggle = this.handleToggle.bind(this);
 	}
 
 	getAnnotations() {
@@ -121,6 +121,14 @@ class ImageExplorer extends React.Component {
 		}
 	}
 
+	handleClose() {
+		this.setState({open: false});
+	}
+
+	handleToggle(imgUrl) {
+		this.setState({enlargedImgURL: imgUrl, open: !this.state.open});
+	}
+
 	render() {
 		if (!this.state.annotationsLoaded) {
 			this.getAnnotations();
@@ -144,14 +152,22 @@ class ImageExplorer extends React.Component {
 				<StyledEngineProvider injectFirst>
 					<div id="imageExplorerContainer">
 						{/*<ImageList sx={{ width: 1850 }} cols={4}>*/}
+						<Backdrop sx={{ color: '#fff',
+							zIndex: (theme) => theme.zIndex.drawer + 1 }}
+								  open={this.state.open}
+								  onClick={this.handleClose}>
+							<img src={this.state.enlargedImgURL} alt={"Enlarged image"} className="enlargeImage" />
+						</Backdrop>
 						<ImageList cols={this.state.picturePerline} gap={5}>
 							{annotatedImages.map((item) => (
 								<Card>
 									<ImageListItem key={item["url"]}>
-										<img
-											src={item["url"]}
-											alt="Figure"
-											loading="lazy"/>
+										<Button onClick={() => this.handleToggle(item["url"])} data-url={item["url"]}>
+											<img
+												src={item["url"]}
+												alt="Figure"
+												loading="lazy"/>
+										</Button>
 										<ImageListItemBar
 											title={item["name"]}
 											position={"below"}
