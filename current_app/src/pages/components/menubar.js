@@ -79,7 +79,7 @@ export default function MenuBar({handleLogin, user}) {
                     label="Username"
                     size="small"
                     onChange={(e) => handleLogin(e.target.value)}
-                    sx={{ color: 'white'}} 
+                    sx={{ color: 'white' }} 
                     value={user}
                     >
                     {usernames.map((username) => (

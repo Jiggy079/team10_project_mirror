@@ -1,11 +1,10 @@
 import React from 'react';
 import './validation.css';
-import { Grid, Card, FormGroup, Checkbox, Button, RadioGroup, FormControlLabel, Radio, CircularProgress, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
-import ArtTrackRoundedIcon from '@mui/icons-material/ArtTrackRounded';
+import { Grid, Card, FormGroup, Checkbox, Button, Avatar, Stack, RadioGroup, Typography, FormControlLabel, Radio, CircularProgress, ImageList, ImageListItem, ImageListItemBar, CardContent, TextField } from '@mui/material';
 import MenuBar from './components/menubar';
+import ValidationIcons from './components/validationIcons';
 
 class Validation extends React.Component {
-    currentUserList = [];
     constructor(props) {
         super(props);
         this.state = {
@@ -20,7 +19,7 @@ class Validation extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://files.catbox.moe/9j21gm.json") // all images: https://files.catbox.moe/7dvpgw.json
+        fetch("https://files.catbox.moe/9j21gm.json")
             .then(res => res.json())
             .then((res) => {
                 this.setState({
@@ -36,6 +35,7 @@ class Validation extends React.Component {
                     annotationLoaded: true,
                 })
             })
+        
         const searchParams = new URLSearchParams(window.location.search);
         const username = searchParams.get("user");
         if (username === "undefined" || username === null) {
@@ -46,12 +46,13 @@ class Validation extends React.Component {
     }
 
     modifyUser(checked, user) {
+        let currentUserList = this.state.users;
         if (checked) {
-            this.currentUserList.push(user);
+            currentUserList.push(user);
         } else {
-            this.currentUserList = this.currentUserList.filter((element) => element !== user);
+            currentUserList = currentUserList.filter((element) => element !== user);
         }
-        this.setState({users: this.currentUserList});
+        this.setState({users: currentUserList});
     }
 
     countAnnotations() {
@@ -74,7 +75,7 @@ class Validation extends React.Component {
 
     filterByUser() {
         const userAnnotations = {};
-        if (this.state.users !== []) {
+        if (this.state.users.length > 0) {
             this.state.annotations.forEach(annotation => {
                 if (this.state.users.includes(annotation.user)) {
                     if (!userAnnotations[parseInt(annotation.id)]) {
@@ -83,36 +84,36 @@ class Validation extends React.Component {
                     userAnnotations[parseInt(annotation.id)].push(annotation);
                 }
             })
-            Object.keys(userAnnotations).forEach(key => {
+            for (const key in userAnnotations) {
                 if (userAnnotations[key].length !== this.state.users.length) {
                     delete userAnnotations[key];
                 }
-            })
+            }
         }
         console.log(userAnnotations);
         return userAnnotations;
     }
 
-    updateAnnotation() { 
-        const newAnnotation = {
-            id: this.state.currentFigureIndex + 1,
-            imageId: this.state.figures[this.state.currentFigureIndex]["imageID"],
-            colour: this.state.colour,
-            use: this.state.use,
-            legend: this.state.legend,
-            maptype: this.state.maptype,
-            number: this.state.number,
-            difficulty: this.state.difficulty,
-        }
+    // updateAnnotation() { 
+    //     const newAnnotation = {
+    //         id: this.state.currentFigureIndex + 1,
+    //         imageId: this.state.figures[this.state.currentFigureIndex]["imageID"],
+    //         colour: this.state.colour,
+    //         use: this.state.use,
+    //         legend: this.state.legend,
+    //         maptype: this.state.maptype,
+    //         number: this.state.number,
+    //         difficulty: this.state.difficulty,
+    //     }
         
-        fetch(`https://express-backend-vfm5.onrender.com/update/${newAnnotation.id.toString()}/${newAnnotation.user.toString()}`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(newAnnotation),
-        })
-    }
+    //     fetch(`https://express-backend-vfm5.onrender.com/update/${newAnnotation.id.toString()}/${newAnnotation.user.toString()}`, {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify(newAnnotation),
+    //     })
+    // }
 
     handleLogin(username) {
         this.setState({user: username});
@@ -140,20 +141,23 @@ class Validation extends React.Component {
                             <MenuBar handleLogin={this.handleLogin} user={this.state.user}/>
                         </Grid>
                         <Grid item xs={12}>
-                            {/* add user selection here */}
+                            {/* User selection */}
                             <Card>
                                 <FormGroup sx={{ ml: 3 }} row>
                                 {allUser.map((item, index) => (
-                                <FormControlLabel control={<Checkbox onChange={(e) => this.modifyUser(e.target.checked, item)}/>} label={item + ": " + annotationCnt[index]}/>
+                                    <FormControlLabel 
+                                        control={<Checkbox onChange={(e) => this.modifyUser(e.target.checked, item)}/>} 
+                                        label={item + ": " + annotationCnt[index]}
+                                    />
                                 ))}
                                 </FormGroup>
                             </Card>
     
-                            <ImageList cols={4} gap={10}>
+                            <ImageList loading="lazy" cols={4} gap={10}>
                             {Object.entries(annotationsById).map(([id, annotations]) => (
                                 <Card>
                                     <div className="card">
-                                        <ImageListItem variant="woven" key={this.state.figures[id-1]["url"]}>
+                                        <ImageListItem key={this.state.figures[id-1]["url"]}>
                                             <div className="figure">
                                                 <img
                                                 src={this.state.figures[id-1]["url"]}
@@ -163,28 +167,28 @@ class Validation extends React.Component {
                                             </div>
                                         <ImageListItemBar
                                             title={this.state.figures[id-1]["name"]}
-                                            subtitle={<span>{this.state.figures[id-1]["year"]}</span>}
                                             position="below"
                                         />
-                                            {/* modify annotation here */}
-                                            {annotations.map((annotation) => (
-                                                <div>
-                                                    {this.state.users.includes(annotation["user"]) ? (
-                                                        <div> 
-                                                            <h6>{annotation["user"]}</h6>                                             
+
+                                        <ValidationIcons annotations={annotations} />
+
+                                        {/* {annotations.map((annotation) => (
+                                            <div className="annotations">
+                                                {this.state.users.includes(annotation["user"]) ? (
+                                                    <div> 
+                                                        <h6>{annotation["user"]}</h6>                                             
                                                         colour type: {annotation["colour"]}, 
                                                         colour use: {annotation["use"]}, 
                                                         colour legend: {annotation["legend"]}, 
                                                         colour mapping: {annotation["maptype"]}, 
                                                         num of colours: {annotation["number"]}.
-                                                        </div>
-                                                    ):(
-                                                        <div></div>
-                                                    )}
-                                                </div>
-                                            ))}
+                                                    </div>
+                                                ):(
+                                                    <div></div>
+                                                )}
+                                            </div>
+                                        ))} */}
     
-                                            {/* <ArtTrackRoundedIcon /> */}
                                         </ImageListItem>
                                     </div>
                                 </Card>
