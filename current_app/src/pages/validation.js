@@ -3,6 +3,7 @@ import './validation.css';
 import { Grid, Card, FormGroup, Checkbox, Button, Avatar, Stack, RadioGroup, Typography, FormControlLabel, Radio, CircularProgress, ImageList, ImageListItem, ImageListItemBar, CardContent, TextField } from '@mui/material';
 import MenuBar from './components/menubar';
 import ValidationIcons from './components/validationIcons';
+import ImgWithLink from './components/imgWithLink'
 
 class Validation extends React.Component {
     constructor(props) {
@@ -156,14 +157,10 @@ class Validation extends React.Component {
                             <ImageList loading="lazy" cols={4} gap={10}>
                             {Object.entries(annotationsById).map(([id, annotations]) => (
                                 <Card>
-                                    <div className="card">
+                                    <div className="imgAnnotation">
                                         <ImageListItem key={this.state.figures[id-1]["url"]}>
-                                            <div className="figure">
-                                                <img
-                                                src={this.state.figures[id-1]["url"]}
-                                                alt={this.state.figures[id-1]["name"]}
-                                                loading="lazy"
-                                                />
+                                            <div className="imgcard">
+                                                <ImgWithLink figures={this.state.figures} id={id} user={this.state.user} />
                                             </div>
                                         <ImageListItemBar
                                             title={this.state.figures[id-1]["name"]}

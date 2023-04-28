@@ -1,9 +1,17 @@
-.card {
+.imgAnnotation {
+    margin: 10px;
     height: 500px;
     min-height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-img {
+.imgcard {
+    display: flex;
+    justify-content: center;
+}
+
+.imgwithlinks {
     max-height: 200px;
     max-width: 100%;
     width: auto;
