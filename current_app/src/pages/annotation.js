@@ -68,8 +68,8 @@ class Annotation extends React.Component {
                         use: "",
                         legend: "",
                         maptype: "",
-                        number: 0,
-                        difficulty: 1,
+                        number: "",
+                        difficulty: "",
                     })
                 } else {
                     this.setState({
@@ -179,7 +179,6 @@ class Annotation extends React.Component {
         .then(res => res.json())
         .then((res) => {
             if (res === null) {
-                console.log("res is null");
                 this.setState({annotated: false});
                 return;
             } else {
