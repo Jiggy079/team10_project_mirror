@@ -3,6 +3,7 @@ import './validation.css';
 import { Grid, Card, FormGroup, Checkbox, Button, RadioGroup, FormControlLabel, Radio, CircularProgress, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 import ArtTrackRoundedIcon from '@mui/icons-material/ArtTrackRounded';
 import MenuBar from './components/menubar';
+import { common } from '@material-ui/core/colors';
 
 class Validation extends React.Component {
     currentUserList = [];
@@ -15,6 +16,7 @@ class Validation extends React.Component {
             user: "",
             figuresLoaded: false,
             annotationLoaded: false,
+            commonannotationsCnt : 0,
         };
         this.handleLogin = this.handleLogin.bind(this);
     }
@@ -183,7 +185,7 @@ class Validation extends React.Component {
                                                     )}
                                                 </div>
                                             ))}
-    
+                                                              
                                             {/* <ArtTrackRoundedIcon /> */}
                                         </ImageListItem>
                                     </div>
@@ -201,6 +203,9 @@ class Validation extends React.Component {
                         <Grid sx={{ flexGrow: 1 }} item xs={12}>
                             <MenuBar handleLogOut={null}/>
                         </Grid>
+                        <Typography variant = "overline" display = "block" gutterbottom>
+                            Num of Annotations in Common :,  {commonannotationsCnt} ; 
+                        </Typography>
                         <Grid item xs={12}>
                             <CircularProgress />
                         </Grid>
