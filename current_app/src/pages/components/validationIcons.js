@@ -10,6 +10,9 @@ import NotInterestedRoundedIcon from '@mui/icons-material/NotInterestedRounded';
 import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
 import InsertPhotoRoundedIcon from '@mui/icons-material/InsertPhotoRounded';
 import ArtTrackIcon from '@mui/icons-material/ArtTrack';
+import BlurOnIcon from '@mui/icons-material/BlurOn';
+import SignalCellular0BarIcon from '@mui/icons-material/SignalCellular0Bar';
+import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 import SentimentVerySatisfiedRoundedIcon from '@mui/icons-material/SentimentVerySatisfiedRounded';
 import SentimentSatisfiedRoundedIcon from '@mui/icons-material/SentimentSatisfiedRounded';
 import SentimentNeutralRoundedIcon from '@mui/icons-material/SentimentNeutralRounded';
@@ -35,7 +38,23 @@ export default function ValidationIcons({annotations}) {
         </Stack>
 
         <Stack direction="row" spacing={1}>
-            <IconButton color="inherit">
+            <Tooltip title="Aesthetics">
+                <Checkbox icon={<LocalFloristIcon />} checkedIcon={<LocalFloristIcon color="inherit"/>} />
+            </Tooltip>
+            <Tooltip title="Colour mapping">
+                <Checkbox icon={<BarChartIcon />} checkedIcon={<BarChartIcon color="inherit"/>} />
+            </Tooltip>
+            <Tooltip title="Depth perception">
+                <Checkbox icon={<ThreeDRotationIcon />} checkedIcon={<ThreeDRotationIcon color="inherit"/>} />
+            </Tooltip>
+            <Tooltip title="Not sure">
+                <Checkbox icon={<QuestionMarkRoundedIcon />} checkedIcon={<QuestionMarkRoundedIcon color="inherit"/>} />
+            </Tooltip>
+            <Tooltip title="NA">
+                <Checkbox icon={<NotInterestedRoundedIcon />} checkedIcon={<NotInterestedRoundedIcon color="inherit"/>} />
+            </Tooltip>
+            
+            {/* <IconButton color="inherit">
                 <LocalFloristIcon />
             </IconButton>
             <IconButton color="inherit">
@@ -49,10 +68,21 @@ export default function ValidationIcons({annotations}) {
             </IconButton>
             <IconButton color="inherit">
                 <NotInterestedRoundedIcon />
-            </IconButton>
+            </IconButton> */}
         </Stack>
+        
         <Stack direction="row" spacing={1}>
-            <IconButton color="inherit">
+            <Tooltip title="Mapping legend">
+                <Checkbox icon={<ArtTrackIcon />} checkedIcon={<ArtTrackIcon color="inherit"/>} />
+            </Tooltip>
+            <Tooltip title="No legend">
+                <Checkbox icon={<InsertPhotoRoundedIcon />} checkedIcon={<InsertPhotoRoundedIcon color="inherit"/>} />
+            </Tooltip>
+            <Tooltip title="Not sure">
+                <Checkbox icon={<QuestionMarkRoundedIcon />} checkedIcon={<QuestionMarkRoundedIcon color="inherit"/>} />
+            </Tooltip>
+
+            {/* <IconButton color="inherit">
                 <ArtTrackIcon />
             </IconButton>
             <IconButton color="inherit">
@@ -60,21 +90,47 @@ export default function ValidationIcons({annotations}) {
             </IconButton>
             <IconButton color="inherit">
                 <QuestionMarkRoundedIcon />
-            </IconButton>
+            </IconButton> */}
         </Stack>
+
         <Stack direction="row" spacing={1}>
-            <Button color="inherit" size="small" variant="text">Continuous</Button>
+            <Tooltip title="Continuous">
+                <Checkbox icon={<SignalCellular0BarIcon />} checkedIcon={<SignalCellular0BarIcon color="inherit"/>} />
+            </Tooltip>
+            <Tooltip title="Categorical">
+                <Checkbox icon={<SignalCellularAltIcon />} checkedIcon={<SignalCellularAltIcon color="inherit"/>} />
+            </Tooltip>
+
+            {/* <Button color="inherit" size="small" variant="text">Continuous</Button>
             <Button color="inherit" size="small" variant="text">Categorical</Button>
-            <Button color="inherit" size="small" variant="text">Both</Button>
+            <Button color="inherit" size="small" variant="text">Both</Button> */}
         </Stack>
+
         <Stack direction="row" spacing={1}>
             <TextField size="small" variant="standard"></TextField>
-            <IconButton color="inherit">
-                <NotInterestedRoundedIcon />
-            </IconButton>
+            <Tooltip title="NA">
+                <Checkbox icon={<NotInterestedRoundedIcon />} checkedIcon={<NotInterestedRoundedIcon color="inherit"/>} />
+            </Tooltip>
         </Stack>
+
         <Stack direction="row" spacing={1}>
-            <IconButton color="inherit">
+            <Tooltip title="Very easy">
+                <Checkbox icon={<SentimentVerySatisfiedRoundedIcon />} checkedIcon={<SentimentVerySatisfiedRoundedIcon color="inherit"/>} />
+            </Tooltip>
+            <Tooltip title="Easy">
+                <Checkbox icon={<SentimentSatisfiedRoundedIcon />} checkedIcon={<SentimentSatisfiedRoundedIcon color="inherit"/>} />
+            </Tooltip>
+            <Tooltip title="Neutral">
+                <Checkbox icon={<SentimentNeutralRoundedIcon />} checkedIcon={<SentimentNeutralRoundedIcon color="inherit"/>} />
+            </Tooltip>
+            <Tooltip title="Difficult">
+                <Checkbox icon={<SentimentDissatisfiedRoundedIcon />} checkedIcon={<SentimentDissatisfiedRoundedIcon color="inherit"/>} />
+            </Tooltip>
+            <Tooltip title="Very difficult">
+                <Checkbox icon={<SentimentVeryDissatisfiedRoundedIcon />} checkedIcon={<SentimentVeryDissatisfiedRoundedIcon color="inherit"/>} />
+            </Tooltip>
+            
+            {/* <IconButton color="inherit">
                 <SentimentVerySatisfiedRoundedIcon />
             </IconButton>
             <IconButton color="inherit">
@@ -88,7 +144,7 @@ export default function ValidationIcons({annotations}) {
             </IconButton>
             <IconButton color="inherit">
                 <SentimentVeryDissatisfiedRoundedIcon />
-            </IconButton>
+            </IconButton> */}
         </Stack>
     </div>
     )
