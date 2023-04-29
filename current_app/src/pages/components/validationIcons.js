@@ -127,7 +127,7 @@ export default function ValidationIcons({annotations, id, user}) {
         </Stack>
 
         <Stack spacing={2}>
-            <Button variant="contained" onClick={() => this.updateAnnotation()} disabled={true}> UPDATE </Button>
+            <Button variant="contained" onClick={() => updateAnnotation()} disabled={true}> UPDATE </Button>
         </Stack>
     </div>
     )

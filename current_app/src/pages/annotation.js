@@ -202,7 +202,7 @@ class Annotation extends React.Component {
             <div className="App">
                 <Grid container spacing={2}>
                 <Grid sx={{ flexGrow: 1 }} item xs={12}>
-                    <MenuBar handleLogin={this.handleLogin} user={this.state.user}/>
+                    <MenuBar user={this.state.user}/>
                 </Grid>
                     <Grid item xs={6}>
                         <Card>

@@ -40,7 +40,7 @@ class Exploration extends React.Component {
 		document.title = "Exploration Tool";
 		return (
 			<div>
-				<MenuBar handleLogin={this.handleLogin} user={this.state.user}/>
+				<MenuBar user={this.state.user}/>
 
 				{/*<CheckboxesTags/>*/}
 				<Card>

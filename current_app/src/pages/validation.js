@@ -120,7 +120,7 @@ class Validation extends React.Component {
                 <div className="App">
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
-                            <MenuBar handleLogin={this.handleLogin} user={this.state.user}/>
+                            <MenuBar user={this.state.user}/>
                         </Grid>
                         <Grid item xs={12}>
                             {/* User selection */}
