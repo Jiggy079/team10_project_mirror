@@ -43,6 +43,7 @@ export default function MenuBar({handleLogin, user}) {
             <AppBar position="static">
                 <Toolbar>
                 <IconButton
+                    href="/" 
                     size="large"
                     edge="start"
                     color="inherit"

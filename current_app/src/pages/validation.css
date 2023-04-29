@@ -1,13 +1,10 @@
 .imgAnnotation {
     margin: 10px;
-    height: 500px;
+    height: 550px;
     min-height: 100%;
     display: flex;
     justify-content: center;
-}
-
-.imgcard {
-    object-fit: contain !important;
+    text-align: center;
 }
 
 .imgwithlinks {

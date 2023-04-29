@@ -19,21 +19,46 @@ import SentimentNeutralRoundedIcon from '@mui/icons-material/SentimentNeutralRou
 import SentimentDissatisfiedRoundedIcon from '@mui/icons-material/SentimentDissatisfiedRounded';
 import SentimentVeryDissatisfiedRoundedIcon from '@mui/icons-material/SentimentVeryDissatisfiedRounded';
 
-export default function ValidationIcons({annotations}) {
+export default function ValidationIcons({annotations, id, user}) {
 
-    const user = "inherit";
+    const colour = annotations[0]["colour"]==="black and white";
+    
+    
+    const mapAnnotation = () => {
+        
+    }
+
+    let newAnnotation = {
+        id: id,
+        colour: "",
+        use: "",
+        legend: "",
+        maptype: "",
+        number: "",
+        difficulty: "",
+    };
+
+    const updateAnnotation = () => {       
+        fetch(`https://express-backend-vfm5.onrender.com/update/${newAnnotation.id.toString()}/${newAnnotation.user.toString()}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newAnnotation),
+        })
+    }
 
     return (
         <div>
         <Stack direction="row" spacing={1}>
             <Tooltip title="Black and white">
-                <Checkbox icon={<ContrastIcon />} checkedIcon={<ContrastIcon color={user}/>} />
+                <Checkbox checked={colour} icon={<ContrastIcon />} checkedIcon={<ContrastIcon color="inherit"/>} />
             </Tooltip>
             <Tooltip title="Colour">
-                <Checkbox icon={<ColorLensIcon />} checkedIcon={<ColorLensIcon color={user}/>} />
+                <Checkbox icon={<ColorLensIcon />} checkedIcon={<ColorLensIcon color="inherit"/>} />
             </Tooltip>
             <Tooltip title="Grey">
-                <Checkbox icon={<FilterBAndWTwoToneIcon />} checkedIcon={<FilterBAndWTwoToneIcon color={user}/>} />
+                <Checkbox icon={<FilterBAndWTwoToneIcon />} checkedIcon={<FilterBAndWTwoToneIcon color="inherit"/>} />
             </Tooltip>
         </Stack>
 
@@ -53,22 +78,6 @@ export default function ValidationIcons({annotations}) {
             <Tooltip title="NA">
                 <Checkbox icon={<NotInterestedRoundedIcon />} checkedIcon={<NotInterestedRoundedIcon color="inherit"/>} />
             </Tooltip>
-            
-            {/* <IconButton color="inherit">
-                <LocalFloristIcon />
-            </IconButton>
-            <IconButton color="inherit">
-                <BarChartIcon />
-            </IconButton>
-            <IconButton color="inherit">
-                <ThreeDRotationIcon />
-            </IconButton>
-            <IconButton color="inherit">
-                <QuestionMarkRoundedIcon value="Not sure"/>
-            </IconButton>
-            <IconButton color="inherit">
-                <NotInterestedRoundedIcon />
-            </IconButton> */}
         </Stack>
         
         <Stack direction="row" spacing={1}>
@@ -81,16 +90,6 @@ export default function ValidationIcons({annotations}) {
             <Tooltip title="Not sure">
                 <Checkbox icon={<QuestionMarkRoundedIcon />} checkedIcon={<QuestionMarkRoundedIcon color="inherit"/>} />
             </Tooltip>
-
-            {/* <IconButton color="inherit">
-                <ArtTrackIcon />
-            </IconButton>
-            <IconButton color="inherit">
-                <InsertPhotoRoundedIcon />
-            </IconButton>
-            <IconButton color="inherit">
-                <QuestionMarkRoundedIcon />
-            </IconButton> */}
         </Stack>
 
         <Stack direction="row" spacing={1}>
@@ -100,10 +99,6 @@ export default function ValidationIcons({annotations}) {
             <Tooltip title="Categorical">
                 <Checkbox icon={<SignalCellularAltIcon />} checkedIcon={<SignalCellularAltIcon color="inherit"/>} />
             </Tooltip>
-
-            {/* <Button color="inherit" size="small" variant="text">Continuous</Button>
-            <Button color="inherit" size="small" variant="text">Categorical</Button>
-            <Button color="inherit" size="small" variant="text">Both</Button> */}
         </Stack>
 
         <Stack direction="row" spacing={1}>
@@ -129,22 +124,10 @@ export default function ValidationIcons({annotations}) {
             <Tooltip title="Very difficult">
                 <Checkbox icon={<SentimentVeryDissatisfiedRoundedIcon />} checkedIcon={<SentimentVeryDissatisfiedRoundedIcon color="inherit"/>} />
             </Tooltip>
-            
-            {/* <IconButton color="inherit">
-                <SentimentVerySatisfiedRoundedIcon />
-            </IconButton>
-            <IconButton color="inherit">
-                <SentimentSatisfiedRoundedIcon />
-            </IconButton>
-            <IconButton color="inherit">
-                <SentimentNeutralRoundedIcon />
-            </IconButton>
-            <IconButton color="inherit">
-                <SentimentDissatisfiedRoundedIcon />
-            </IconButton>
-            <IconButton color="inherit">
-                <SentimentVeryDissatisfiedRoundedIcon />
-            </IconButton> */}
+        </Stack>
+
+        <Stack spacing={2}>
+            <Button variant="contained" onClick={() => this.updateAnnotation()} disabled={true}> UPDATE </Button>
         </Stack>
     </div>
     )
