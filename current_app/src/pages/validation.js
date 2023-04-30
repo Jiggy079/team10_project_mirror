@@ -44,6 +44,7 @@ class Validation extends React.Component {
         } else {
             this.setState({ 
                 user: username,
+                users: [username],
             });
         }
     }
@@ -86,14 +87,18 @@ class Validation extends React.Component {
                     }
                     userAnnotations[parseInt(annotation.id)].push(annotation);
                 }
-            })
-            for (const key in userAnnotations) {
+            });
+
+            // only includes annotations where all selected users have provided an annotation for a given id
+            Object.keys(userAnnotations).forEach(key => {
                 if (userAnnotations[key].length !== this.state.users.length) {
                     delete userAnnotations[key];
                 }
-            }
+            })
         }
         console.log(userAnnotations);
+
+        // sort？
         return userAnnotations;
     }
 
@@ -122,16 +127,28 @@ class Validation extends React.Component {
                         <Grid item xs={12}>
                             <MenuBar user={this.state.user}/>
                         </Grid>
+                        {this.state.user !== "Guest" &&
                         <Grid item xs={12}>
                             {/* User selection */}
                             <Card>
                                 <FormGroup sx={{ ml: 3 }} row>
                                 {allUser.map((item, index) => (
-                                    <FormControlLabel 
-                                        control={<Checkbox onChange={(e) => this.modifyUser(e.target.checked, item)}/>} 
-                                        label={item + ": " + annotationCnt[index]}
-                                        disabled={this.state.users.length >= 2 && !this.state.users.includes(item)}
-                                    />
+                                    <div>
+                                        {item!==this.state.user ? (
+                                            <FormControlLabel 
+                                                control={<Checkbox onChange={(e) => this.modifyUser(e.target.checked, item)}/>} 
+                                                label={item + ": " + annotationCnt[index]}
+                                                disabled={this.state.users.length >= 2 && !this.state.users.includes(item)}
+                                            />
+                                        ) : (
+                                            <FormControlLabel 
+                                            control={<Checkbox checked/>} 
+                                            label={item + ": " + annotationCnt[index]}
+                                            disabled={this.state.users.length >= 2 && !this.state.users.includes(item)}
+                                        />
+                                        )
+                                        }
+                                    </div>
                                 ))}
                                 </FormGroup>
                             </Card>
@@ -147,7 +164,9 @@ class Validation extends React.Component {
                                             position="below"
                                         />
 
-                                        <ValidationIcons annotations={annotations} id={id} user={this.state.user} />
+                                        {this.state.users.length > 1 &&
+                                            <ValidationIcons annotations={annotations} id={id} />
+                                        }
 
                                         {/* {annotations.map((annotation) => (
                                             <div className="annotations">
@@ -168,6 +187,7 @@ class Validation extends React.Component {
                             ))}
                             </ImageList>
                         </Grid>
+                        }
                     </Grid>
                 </div>
             );

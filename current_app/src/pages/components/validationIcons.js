@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import { Button, IconButton, Stack, TextField, Tooltip, Checkbox, FormGroup, FormControlLabel } from '@mui/material';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import ContrastIcon from '@mui/icons-material/Contrast';
@@ -19,64 +20,101 @@ import SentimentNeutralRoundedIcon from '@mui/icons-material/SentimentNeutralRou
 import SentimentDissatisfiedRoundedIcon from '@mui/icons-material/SentimentDissatisfiedRounded';
 import SentimentVeryDissatisfiedRoundedIcon from '@mui/icons-material/SentimentVeryDissatisfiedRounded';
 
-export default function ValidationIcons({annotations, id, user}) {
+export default function ValidationIcons({annotations, id}) {
+    
+    // will ensure the annotations are phrased as currentUser, the other user later
+    // or considering to change it to getting two annotations separately and change the related ways to get annotations
 
-    const colour = annotations[0]["colour"]==="black and white";
-    
-    
-    const mapAnnotation = () => {
-        
+    // init the current user's 
+    const [bw, setBw] = useState(false);
+    const [grey, setGrey] = useState(false);
+    const [colour, setColour] = useState(false);
+    const [aesthetics, setAesthetics] = useState(false);
+    const [mapping, setMapping] = useState(false);
+    const [depth, setDepth] = useState(false);
+    const [uncertainUse, setUncertainUse] = useState(false);
+    const [naUse, setNaUse] = useState(false);
+
+    // set the other user's annotation as fixed value
+    const bw0 = annotations[1]["colour"]==="black and white";
+    const grey0 = annotations[1]["colour"]==="grey";
+    const colour0 = annotations[1]["colour"]==="colour";
+    // const aesthetics0 = annotations[0]["use"]==="aesthetics";
+    // const mapping0 = annotations[0]["use"]==="colour-mapping";
+    // const depth0 = annotations[0]["use"]==="depth-perception";
+    // const uncertainUse0 = annotations[0]["use"]==="uncertain";
+    // const naUse0 = annotations[0]["use"]==="NA";
+
+    // set the current user's annotations
+    useEffect(() => {
+        setBw(annotations[0]["colour"]==="black and white");
+        setGrey(annotations[0]["colour"] === "grey");
+        setColour(annotations[0]["colour"] === "colour");
+        // setAesthetics(annotations[0]["use"] === "aesthetics");
+        // setMapping(annotations[0]["use"] === "colour-mapping");
+        // setDepth(annotations[0]["use"] === "depth-perception");
+        // setUncertainUse(annotations[0]["use"] === "uncertain");
+        // setNaUse(annotations[0]["use"] === "NA");
+    }, [annotations]);
+
+    const handleChange1 = () => {
+        setBw(false);
     }
 
-    let newAnnotation = {
-        id: id,
-        colour: "",
-        use: "",
-        legend: "",
-        maptype: "",
-        number: "",
-        difficulty: "",
-    };
+    const updateAnnotation = () => {
+        const newAnnotation = {
+            id: id,
+            colour: bw ? "black and white" : grey ? "grey" : colour ? "colour" : "",
+            use: "",
+            legend: "",
+            maptype: "",
+            number: "",
+            difficulty: "",
+        };
 
-    const updateAnnotation = () => {       
-        fetch(`https://express-backend-vfm5.onrender.com/update/${newAnnotation.id.toString()}/${newAnnotation.user.toString()}`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(newAnnotation),
-        })
+        console.log(newAnnotation.colour);
+
+        // fetch(`https://express-backend-vfm5.onrender.com/update/${newAnnotation.id.toString()}/${newAnnotation.user.toString()}`, {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify(newAnnotation),
+        // })
     }
 
     return (
         <div>
+        {/* only finish this part currently */}
         <Stack direction="row" spacing={1}>
             <Tooltip title="Black and white">
-                <Checkbox checked={colour} icon={<ContrastIcon />} checkedIcon={<ContrastIcon color="inherit"/>} />
+                <Checkbox checked={bw || bw0} icon={<ContrastIcon />} onChange={() => setBw(true) & setColour(false) & setGrey(false)} checkedIcon={<ContrastIcon color={bw? "inherit" : "secondary"}/>} />
             </Tooltip>
             <Tooltip title="Colour">
-                <Checkbox icon={<ColorLensIcon />} checkedIcon={<ColorLensIcon color="inherit"/>} />
+                <Checkbox checked={colour || colour0} icon={<ColorLensIcon />} onChange={() => setBw(false) & setColour(true) & setGrey(false)} checkedIcon={<ColorLensIcon color={colour? "inherit" : "secondary"}/>} />
             </Tooltip>
             <Tooltip title="Grey">
-                <Checkbox icon={<FilterBAndWTwoToneIcon />} checkedIcon={<FilterBAndWTwoToneIcon color="inherit"/>} />
+                <Checkbox checked={grey || grey0} icon={<FilterBAndWTwoToneIcon />} onChange={() => setBw(false) & setColour(false) & setGrey(true)} checkedIcon={<FilterBAndWTwoToneIcon color={grey? "inherit" : "secondary"} />} />
             </Tooltip>
         </Stack>
 
+
+
         <Stack direction="row" spacing={1}>
             <Tooltip title="Aesthetics">
-                <Checkbox icon={<LocalFloristIcon />} checkedIcon={<LocalFloristIcon color="inherit"/>} />
+                <Checkbox checked={aesthetics} icon={<LocalFloristIcon />} checkedIcon={<LocalFloristIcon color="inherit"/>} />
             </Tooltip>
             <Tooltip title="Colour mapping">
-                <Checkbox icon={<BarChartIcon />} checkedIcon={<BarChartIcon color="inherit"/>} />
+                <Checkbox checked={mapping} icon={<BarChartIcon />} checkedIcon={<BarChartIcon color="inherit"/>} />
             </Tooltip>
             <Tooltip title="Depth perception">
-                <Checkbox icon={<ThreeDRotationIcon />} checkedIcon={<ThreeDRotationIcon color="inherit"/>} />
+                <Checkbox checked={depth} icon={<ThreeDRotationIcon />} checkedIcon={<ThreeDRotationIcon color="inherit"/>} />
             </Tooltip>
             <Tooltip title="Not sure">
-                <Checkbox icon={<QuestionMarkRoundedIcon />} checkedIcon={<QuestionMarkRoundedIcon color="inherit"/>} />
+                <Checkbox checked={uncertainUse} icon={<QuestionMarkRoundedIcon />} checkedIcon={<QuestionMarkRoundedIcon color="inherit"/>} />
             </Tooltip>
             <Tooltip title="NA">
-                <Checkbox icon={<NotInterestedRoundedIcon />} checkedIcon={<NotInterestedRoundedIcon color="inherit"/>} />
+                <Checkbox checked={naUse} icon={<NotInterestedRoundedIcon />} checkedIcon={<NotInterestedRoundedIcon color="inherit"/>} />
             </Tooltip>
         </Stack>
         
