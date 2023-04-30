@@ -1,6 +1,6 @@
 import React, {lazy, Suspense} from 'react';
 import './validation.css';
-import { Grid, Card, FormGroup, Checkbox, Button, Avatar, Stack, RadioGroup, Typography, FormControlLabel, Radio, CircularProgress, ImageList, ImageListItem, ImageListItemBar, CardContent, TextField } from '@mui/material';
+import { Grid, Card, FormGroup, Checkbox, Button, Avatar, Stack, RadioGroup, Typography, Alert, FormControlLabel, Radio, CircularProgress, ImageList, ImageListItem, ImageListItemBar, CardContent, TextField } from '@mui/material';
 import MenuBar from './components/menubar';
 import ValidationIcons from './components/validationIcons';
 import ImgWithLink from './components/imgWithLink'
@@ -79,6 +79,8 @@ class Validation extends React.Component {
 
     filterByUser() {
         const userAnnotations = {};
+        const reversedAnnotations = {};
+
         if (this.state.users.length > 0) {
             this.state.annotations.forEach(annotation => {
                 if (this.state.users.includes(annotation.user)) {
@@ -95,10 +97,21 @@ class Validation extends React.Component {
                     delete userAnnotations[key];
                 }
             })
-        }
-        console.log(userAnnotations);
 
-        // sort？
+            if (userAnnotations[1][0]["user"] !== this.state.user) {
+                Object.keys(userAnnotations).forEach(key => {
+                    if (!reversedAnnotations[parseInt(key)]) {
+                        reversedAnnotations[parseInt(key)] = [];
+                    }
+                    reversedAnnotations[parseInt(key)].push(userAnnotations[key][1]);
+                    reversedAnnotations[parseInt(key)].push(userAnnotations[key][0]);
+                });
+                console.log(reversedAnnotations);
+                return reversedAnnotations;
+            }
+        }
+
+        // console.log(userAnnotations);
         return userAnnotations;
     }
 
@@ -127,67 +140,63 @@ class Validation extends React.Component {
                         <Grid item xs={12}>
                             <MenuBar user={this.state.user}/>
                         </Grid>
-                        {this.state.user !== "Guest" &&
-                        <Grid item xs={12}>
-                            {/* User selection */}
-                            <Card>
-                                <FormGroup sx={{ ml: 3 }} row>
-                                {allUser.map((item, index) => (
-                                    <div>
-                                        {item!==this.state.user ? (
-                                            <FormControlLabel 
-                                                control={<Checkbox onChange={(e) => this.modifyUser(e.target.checked, item)}/>} 
-                                                label={item + ": " + annotationCnt[index]}
-                                                disabled={this.state.users.length >= 2 && !this.state.users.includes(item)}
-                                            />
-                                        ) : (
-                                            <FormControlLabel 
-                                            control={<Checkbox checked/>} 
-                                            label={item + ": " + annotationCnt[index]}
-                                            disabled={this.state.users.length >= 2 && !this.state.users.includes(item)}
-                                        />
-                                        )
-                                        }
-                                    </div>
-                                ))}
-                                </FormGroup>
-                            </Card>
-    
-                            <ImageList loading="lazy" cols={4} gap={10}>
-                            {Object.entries(annotationsById).map(([id, annotations]) => (
+                        {this.state.user !== "Guest" ? (
+                            <Grid item xs={12}>
+                                {/* User selection */}
                                 <Card>
-                                    <div className="imgAnnotation">
-                                        <ImageListItem loading="lazy" key={this.state.figures[id-1]["url"]}>
-                                            <ImgWithLink figures={this.state.figures} id={id} user={this.state.user} />
-                                        <ImageListItemBar
-                                            title={this.state.figures[id-1]["name"]}
-                                            position="below"
-                                        />
-
-                                        {this.state.users.length > 1 &&
-                                            <ValidationIcons annotations={annotations} id={id} />
-                                        }
-
-                                        {/* {annotations.map((annotation) => (
-                                            <div className="annotations">
-                                                <div> 
-                                                    <h6>{annotation["user"]}</h6>                                             
-                                                    colour type: {annotation["colour"]}, 
-                                                    colour use: {annotation["use"]}, 
-                                                    colour legend: {annotation["legend"]}, 
-                                                    colour mapping: {annotation["maptype"]}, 
-                                                    num of colours: {annotation["number"]}.
-                                                </div>
-                                            </div>
-                                        ))} */}
-    
-                                        </ImageListItem>
-                                    </div>
+                                    <FormGroup sx={{ ml: 3 }} row>
+                                    {allUser.map((item, index) => (
+                                        <div>
+                                            {item !== this.state.user ? (
+                                                <FormControlLabel
+                                                    control={<Checkbox color="secondary" onChange={(e) => this.modifyUser(e.target.checked, item)}/>} 
+                                                    label={item + ": " + annotationCnt[index]}
+                                                    disabled={this.state.users.length >= 2 && !this.state.users.includes(item)}
+                                                />
+                                            ) : (
+                                                <FormControlLabel 
+                                                    control={<Checkbox color="primary" checked/>} 
+                                                    label={item + ": " + annotationCnt[index]}
+                                                    disabled={this.state.users.length >= 2 && !this.state.users.includes(item)}
+                                                />
+                                            )
+                                            }
+                                        </div>
+                                    ))}
+                                    </FormGroup>
                                 </Card>
-                            ))}
-                            </ImageList>
-                        </Grid>
-                        }
+        
+                                <ImageList loading="lazy" cols={4} gap={10}>
+                                {Object.entries(annotationsById).map(([id, annotations]) => (
+                                    <Card>
+                                        <div className="imgAnnotation">
+                                            <ImageListItem loading="lazy" key={this.state.figures[id-1]["url"]}>
+                                                <ImgWithLink figures={this.state.figures} id={id} user={this.state.user} />
+                                            <ImageListItemBar
+                                                title={this.state.figures[id-1]["name"]}
+                                                position="below"
+                                            />
+
+                                            {this.state.users.length > 1 ? (
+                                                    <ValidationIcons annotations={annotations} id={id} user={this.state.user}/>
+                                                ) : (
+                                                    <h6>Choose another user to cross check.</h6>
+                                                )
+                                            }
+        
+                                            </ImageListItem>
+                                        </div>
+                                    </Card>
+                                ))}
+                                </ImageList>
+                            </Grid>
+                        ) : (
+                            <Grid item xs={12}>
+                                <Alert severity="error">Please log in first.</Alert>
+                            </Grid>
+                        )}
+                        
+
                     </Grid>
                 </div>
             );
