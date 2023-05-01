@@ -1,6 +1,6 @@
-import React, {lazy, Suspense} from 'react';
+import React from 'react';
 import './validation.css';
-import { Grid, Card, FormGroup, Checkbox, Pagination, TablePagination, Button, Avatar, Stack, RadioGroup, Typography, Alert, FormControlLabel, Radio, CircularProgress, ImageList, ImageListItem, ImageListItemBar, CardContent, TextField, Divider } from '@mui/material';
+import { Grid, Card, FormGroup, Checkbox, TablePagination, Alert, FormControlLabel, CircularProgress, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 import MenuBar from './components/menubar';
 import ValidationIcons from './components/validationIcons';
 import ImgWithLink from './components/imgWithLink'
@@ -19,7 +19,6 @@ class Validation extends React.Component {
             annotationLoaded: false,
  
         };
-        this.handleLogin = this.handleLogin.bind(this);
     }
 
     componentDidMount() {
@@ -119,10 +118,6 @@ class Validation extends React.Component {
 
         // console.log(userAnnotations);
         return userAnnotations;
-    }
-
-    handleLogin(username) {
-        this.setState({user: username});
     }
 
     handleChangePage(page) {

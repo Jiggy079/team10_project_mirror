@@ -1,9 +1,9 @@
 import React from 'react';
 import './annotation.css';
-import Figure from './components/figure';
 import { Grid, Card, Button, RadioGroup, FormControlLabel, Radio, TextField, CircularProgress } from '@mui/material';
 import { Stack } from '@mui/system';
 import MenuBar from './components/menubar';
+import Figure from './components/figure';
 
 class Annotation extends React.Component {
     constructor(props) {

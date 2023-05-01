@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Button, IconButton, Stack, TextField, Tooltip, Checkbox, FormGroup, FormControlLabel, Typography } from '@mui/material';
+import { Button, Stack, TextField, Tooltip, Checkbox } from '@mui/material';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import ContrastIcon from '@mui/icons-material/Contrast';
-import GradientIcon from '@mui/icons-material/Gradient';
 import FilterBAndWTwoToneIcon from '@mui/icons-material/FilterBAndWTwoTone';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import ThreeDRotationIcon from '@mui/icons-material/ThreeDRotation';
@@ -11,7 +10,6 @@ import NotInterestedRoundedIcon from '@mui/icons-material/NotInterestedRounded';
 import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
 import InsertPhotoRoundedIcon from '@mui/icons-material/InsertPhotoRounded';
 import ArtTrackIcon from '@mui/icons-material/ArtTrack';
-import BlurOnIcon from '@mui/icons-material/BlurOn';
 import SignalCellular0BarIcon from '@mui/icons-material/SignalCellular0Bar';
 import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 import LooksTwoIcon from '@mui/icons-material/LooksTwo';
@@ -22,9 +20,6 @@ import SentimentDissatisfiedRoundedIcon from '@mui/icons-material/SentimentDissa
 import SentimentVeryDissatisfiedRoundedIcon from '@mui/icons-material/SentimentVeryDissatisfiedRounded';
 
 export default function ValidationIcons({annotations, id, user}) {
-    
-    // will ensure the annotations are phrased as currentUser, the other user later
-    // or considering to change it to getting two annotations separately and change the related ways to get annotations
 
     const q1 = ["black and white", "grey", "colour"];
     const q2 = ["aesthetics", "colour-mapping", "depth-perception", "uncertain", "NA"];
