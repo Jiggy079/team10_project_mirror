@@ -20,6 +20,17 @@ class Validation extends React.Component {
     }
 
     componentDidMount() {
+        const searchParams = new URLSearchParams(window.location.search);
+        const username = searchParams.get("user");
+        if (username === "undefined" || username === null) {
+            this.setState({ user: "Guest" });
+        } else {
+            this.setState({ 
+                user: username,
+                users: [username],
+            });
+        }
+
         fetch("https://files.catbox.moe/9j21gm.json")
             .then(res => res.json())
             .then((res) => {
@@ -36,17 +47,6 @@ class Validation extends React.Component {
                     annotationLoaded: true,
                 })
             })
-        
-        const searchParams = new URLSearchParams(window.location.search);
-        const username = searchParams.get("user");
-        if (username === "undefined" || username === null) {
-            this.setState({ user: "Guest" });
-        } else {
-            this.setState({ 
-                user: username,
-                users: [username],
-            });
-        }
     }
 
     modifyUser(checked, user) {
@@ -81,7 +81,7 @@ class Validation extends React.Component {
         const userAnnotations = {};
         const reversedAnnotations = {};
 
-        if (this.state.users.length > 0) {
+        if (this.state.user !== "Guest") {
             this.state.annotations.forEach(annotation => {
                 if (this.state.users.includes(annotation.user)) {
                     if (!userAnnotations[parseInt(annotation.id)]) {
