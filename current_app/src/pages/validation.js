@@ -17,6 +17,7 @@ class Validation extends React.Component {
             rowsPerPage: 20,
             figuresLoaded: false,
             annotationLoaded: false,
+ 
         };
         this.handleLogin = this.handleLogin.bind(this);
     }
@@ -243,6 +244,7 @@ class Validation extends React.Component {
                         <Grid sx={{ flexGrow: 1 }} item xs={12}>
                             <MenuBar handleLogOut={null}/>
                         </Grid>
+
                         <Grid item xs={12}>
                             <CircularProgress />
                         </Grid>
