@@ -1338,7 +1338,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 |To-Do| Assigned To:|
 |--------------------------------------|-------------------|
 | software manual | zhening, yizhan, wenfei  |
-| group report | jamie, nita | 
+| group report | nita | 
 | user manual | jamie, nita  |
 | fix the incorrect filtering on the exploration tool - check people's annotation first | jamie |
 | expand image when clicked | jamie | 
@@ -1351,6 +1351,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | text input for how many colours on exploration tool filter | yizhan | 
 | link to annotation tool from validation tool | zhening |
 | notes section on validation - if you have time | zhening | 
+| write individual paragraphs in group report | everyone | 
 
 </details>
 
