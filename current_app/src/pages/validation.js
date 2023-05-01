@@ -1,6 +1,6 @@
 import React, {lazy, Suspense} from 'react';
 import './validation.css';
-import { Grid, Card, FormGroup, Checkbox, Button, Avatar, Stack, RadioGroup, Typography, Alert, FormControlLabel, Radio, CircularProgress, ImageList, ImageListItem, ImageListItemBar, CardContent, TextField, Divider } from '@mui/material';
+import { Grid, Card, FormGroup, Checkbox, Pagination, TablePagination, Button, Avatar, Stack, RadioGroup, Typography, Alert, FormControlLabel, Radio, CircularProgress, ImageList, ImageListItem, ImageListItemBar, CardContent, TextField, Divider } from '@mui/material';
 import MenuBar from './components/menubar';
 import ValidationIcons from './components/validationIcons';
 import ImgWithLink from './components/imgWithLink'
@@ -13,6 +13,8 @@ class Validation extends React.Component {
             users: [],
             annotations: [],
             user: "Guest",
+            page: 0,
+            rowsPerPage: 20,
             figuresLoaded: false,
             annotationLoaded: false,
         };
@@ -122,6 +124,17 @@ class Validation extends React.Component {
         this.setState({user: username});
     }
 
+    handleChangePage(page) {
+        this.setState({page: page});
+    }
+    
+    handleChangeRowsPerPage(row) {
+        this.setState({
+            rowsPerPage: parseInt(row, 20),
+            page: 0,
+        });
+    }
+
     render() {
         document.title = "Validation tool";
         let allUser = [
@@ -182,14 +195,21 @@ class Validation extends React.Component {
                                 ))}
                                 </FormGroup>
                                     {this.state.users.length > 1 &&
-                                        <CardContent>
-                                            <Typography variant="subtitle1">Annotations in common: {Object.entries(annotationsById).length}</Typography>
-                                        </CardContent>
+                                            <TablePagination
+                                            count={Object.entries(annotationsById).length}
+                                            page={this.state.page}
+                                            onPageChange={(e, newPage) => this.handleChangePage(newPage)}
+                                            rowsPerPage={this.state.rowsPerPage}
+                                            rowsPerPageOptions={[4, 12, 20, 40, 80]}
+                                            onRowsPerPageChange={(e) => this.handleChangeRowsPerPage(e.target.value)}
+                                            />
                                     }
                             </Card>
     
                             <ImageList loading="lazy" cols={4} gap={10}>
-                            {Object.entries(annotationsById).map(([id, annotations]) => (
+                            {Object.entries(annotationsById)
+                                .slice((this.state.page) * this.state.rowsPerPage, (this.state.page + 1) * this.state.rowsPerPage)
+                                .map(([id, annotations]) => (
                                 <Card>
                                     <div className="imgAnnotation">
                                         <ImageListItem loading="lazy" key={this.state.figures[id-1]["url"]}>
