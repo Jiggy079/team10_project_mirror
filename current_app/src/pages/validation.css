@@ -1,11 +1,14 @@
-/* .card {
-    height: 500px;
-} */
-/* 
-img {
-    max-height: 100%;
+.imgAnnotation {
+    margin: 10px;
+    height: 550px;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.imgwithlinks {
+    max-height: 200px;
     max-width: 100%;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-} */
+    width: auto;
+}

@@ -1,18 +1,20 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import './validation.css';
-import { Grid, Card, FormGroup, Checkbox, Button, RadioGroup, FormControlLabel, Radio, CircularProgress, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
-import ArtTrackRoundedIcon from '@mui/icons-material/ArtTrackRounded';
+import { Grid, Card, FormGroup, Checkbox, Pagination, TablePagination, Button, Avatar, Stack, RadioGroup, Typography, Alert, FormControlLabel, Radio, CircularProgress, ImageList, ImageListItem, ImageListItemBar, CardContent, TextField, Divider } from '@mui/material';
 import MenuBar from './components/menubar';
+import ValidationIcons from './components/validationIcons';
+import ImgWithLink from './components/imgWithLink'
 
 class Validation extends React.Component {
-    currentUserList = [];
     constructor(props) {
         super(props);
         this.state = {
             figures : [],
             users: [],
             annotations: [],
-            user: "",
+            user: "Guest",
+            page: 0,
+            rowsPerPage: 20,
             figuresLoaded: false,
             annotationLoaded: false,
  
@@ -21,7 +23,18 @@ class Validation extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://files.catbox.moe/9j21gm.json") // all images: https://files.catbox.moe/7dvpgw.json
+        const searchParams = new URLSearchParams(window.location.search);
+        const username = searchParams.get("user");
+        if (username === "undefined" || username === null) {
+            this.setState({ user: "Guest" });
+        } else {
+            this.setState({ 
+                user: username,
+                users: [username],
+            });
+        }
+
+        fetch("https://files.catbox.moe/9j21gm.json")
             .then(res => res.json())
             .then((res) => {
                 this.setState({
@@ -37,22 +50,16 @@ class Validation extends React.Component {
                     annotationLoaded: true,
                 })
             })
-        const searchParams = new URLSearchParams(window.location.search);
-        const username = searchParams.get("user");
-        if (username === "undefined" || username === null) {
-            this.setState({ user: "Guest" });
-        } else {
-            this.setState({ user: username });
-        }
     }
 
     modifyUser(checked, user) {
+        let currentUserList = this.state.users;
         if (checked) {
-            this.currentUserList.push(user);
+            currentUserList.push(user);
         } else {
-            this.currentUserList = this.currentUserList.filter((element) => element !== user);
+            currentUserList = currentUserList.filter((element) => element !== user);
         }
-        this.setState({users: this.currentUserList});
+        this.setState({ users: currentUserList });
     }
 
     countAnnotations() {
@@ -75,7 +82,9 @@ class Validation extends React.Component {
 
     filterByUser() {
         const userAnnotations = {};
-        if (this.state.users !== []) {
+        const reversedAnnotations = {};
+
+        if (this.state.user !== "Guest" && this.state.users.length >= 1) {
             this.state.annotations.forEach(annotation => {
                 if (this.state.users.includes(annotation.user)) {
                     if (!userAnnotations[parseInt(annotation.id)]) {
@@ -83,40 +92,48 @@ class Validation extends React.Component {
                     }
                     userAnnotations[parseInt(annotation.id)].push(annotation);
                 }
-            })
+            });
+
+            // only includes annotations where all selected users have provided an annotation for a given id
             Object.keys(userAnnotations).forEach(key => {
                 if (userAnnotations[key].length !== this.state.users.length) {
                     delete userAnnotations[key];
                 }
             })
-        }
-        console.log(userAnnotations);
-        return userAnnotations;
-    }
 
-    updateAnnotation() { 
-        const newAnnotation = {
-            id: this.state.currentFigureIndex + 1,
-            imageId: this.state.figures[this.state.currentFigureIndex]["imageID"],
-            colour: this.state.colour,
-            use: this.state.use,
-            legend: this.state.legend,
-            maptype: this.state.maptype,
-            number: this.state.number,
-            difficulty: this.state.difficulty,
+            Object.keys(userAnnotations).forEach(key => {
+                if (!reversedAnnotations[parseInt(key)]) {
+                    reversedAnnotations[parseInt(key)] = [];
+                }
+                if (userAnnotations[parseInt(key)][0]["user"] !== this.state.user) {
+                    reversedAnnotations[parseInt(key)].push(userAnnotations[key][1]);
+                    reversedAnnotations[parseInt(key)].push(userAnnotations[key][0]);
+                } else {
+                    reversedAnnotations[parseInt(key)].push(userAnnotations[key][0]);
+                    reversedAnnotations[parseInt(key)].push(userAnnotations[key][1]);
+                }
+            });
+            console.log(reversedAnnotations);
+            return reversedAnnotations;
         }
-        
-        fetch(`https://express-backend-vfm5.onrender.com/update/${newAnnotation.id.toString()}/${newAnnotation.user.toString()}`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(newAnnotation),
-        })
+
+        // console.log(userAnnotations);
+        return userAnnotations;
     }
 
     handleLogin(username) {
         this.setState({user: username});
+    }
+
+    handleChangePage(page) {
+        this.setState({page: page});
+    }
+    
+    handleChangeRowsPerPage(row) {
+        this.setState({
+            rowsPerPage: parseInt(row, 20),
+            page: 0,
+        });
     }
 
     render() {
@@ -131,67 +148,92 @@ class Validation extends React.Component {
             "YH",
             "ZZ",
         ];
-        if (this.state.annotationLoaded && this.state.figuresLoaded) {
+
+        if (this.state.user === "Guest") {
+            return (
+                <div className="App">
+                    <Grid container spacing={2}>
+                        <Grid item xs={12}>
+                            <MenuBar user={this.state.user}/>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Alert severity="error">Please log in first.</Alert>
+                        </Grid>                        
+
+                    </Grid>
+                </div>
+            );
+        } else if (this.state.annotationLoaded && this.state.figuresLoaded) {
             const annotationsById = this.filterByUser();
             const annotationCnt = this.countAnnotations();
             return (
                 <div className="App">
                     <Grid container spacing={2}>
-                        <Grid sx={{ flexGrow: 1 }} item xs={12}>
-                            <MenuBar handleLogin={this.handleLogin} user={this.state.user}/>
+                        <Grid item xs={12}>
+                            <MenuBar user={this.state.user}/>
                         </Grid>
                         <Grid item xs={12}>
-                            {/* add user selection here */}
+                            {/* User selection */}
                             <Card>
                                 <FormGroup sx={{ ml: 3 }} row>
                                 {allUser.map((item, index) => (
-                                <FormControlLabel control={<Checkbox onChange={(e) => this.modifyUser(e.target.checked, item)}/>} label={item + ": " + annotationCnt[index]}/>
+                                    <div>
+                                        {item !== this.state.user ? (
+                                            <FormControlLabel
+                                                control={<Checkbox color="secondary" onChange={(e) => this.modifyUser(e.target.checked, item)}/>} 
+                                                label={item + ": " + annotationCnt[index]}
+                                                disabled={this.state.users.length >= 2 && !this.state.users.includes(item)}
+                                            />
+                                        ) : (
+                                            <FormControlLabel 
+                                                control={<Checkbox color="primary" checked/>} 
+                                                label={item + ": " + annotationCnt[index]}
+                                                disabled={this.state.users.length >= 2 && !this.state.users.includes(item)}
+                                            />
+                                        )
+                                        }
+                                    </div>
                                 ))}
                                 </FormGroup>
+                                    {this.state.users.length > 1 &&
+                                            <TablePagination
+                                            count={Object.entries(annotationsById).length}
+                                            page={this.state.page}
+                                            onPageChange={(e, newPage) => this.handleChangePage(newPage)}
+                                            rowsPerPage={this.state.rowsPerPage}
+                                            rowsPerPageOptions={[4, 12, 20, 40, 80]}
+                                            onRowsPerPageChange={(e) => this.handleChangeRowsPerPage(e.target.value)}
+                                            />
+                                    }
                             </Card>
     
-                            <ImageList cols={4} gap={10}>
-                            {Object.entries(annotationsById).map(([id, annotations]) => (
+                            <ImageList loading="lazy" cols={4} gap={10}>
+                            {Object.entries(annotationsById)
+                                .slice((this.state.page) * this.state.rowsPerPage, (this.state.page + 1) * this.state.rowsPerPage)
+                                .map(([id, annotations]) => (
                                 <Card>
-                                    <div className="card">
-                                        <ImageListItem variant="woven" key={this.state.figures[id-1]["url"]}>
-                                            <div className="figure">
-                                                <img
-                                                src={this.state.figures[id-1]["url"]}
-                                                alt={this.state.figures[id-1]["name"]}
-                                                loading="lazy"
-                                                />
-                                            </div>
+                                    <div className="imgAnnotation">
+                                        <ImageListItem loading="lazy" key={this.state.figures[id-1]["url"]}>
+                                            <ImgWithLink figures={this.state.figures} id={id} user={this.state.user} />
                                         <ImageListItemBar
                                             title={this.state.figures[id-1]["name"]}
-                                            subtitle={<span>{this.state.figures[id-1]["year"]}</span>}
                                             position="below"
                                         />
-                                            {/* modify annotation here */}
-                                            {annotations.map((annotation) => (
-                                                <div>
-                                                    {this.state.users.includes(annotation["user"]) ? (
-                                                        <div> 
-                                                            <h6>{annotation["user"]}</h6>                                             
-                                                        colour type: {annotation["colour"]}, 
-                                                        colour use: {annotation["use"]}, 
-                                                        colour legend: {annotation["legend"]}, 
-                                                        colour mapping: {annotation["maptype"]}, 
-                                                        num of colours: {annotation["number"]}.
-                                                        </div>
-                                                    ):(
-                                                        <div></div>
-                                                    )}
-                                                </div>
-                                            ))}
-                                                              
-                                            {/* <ArtTrackRoundedIcon /> */}
+
+                                        {this.state.users.length > 1 ? (
+                                                <ValidationIcons annotations={annotations} id={id} user={this.state.user}/>
+                                            ) : (
+                                                <h6>Choose another user to cross check.</h6>
+                                            )
+                                        }
+    
                                         </ImageListItem>
                                     </div>
                                 </Card>
                             ))}
                             </ImageList>
-                        </Grid>
+                        </Grid>                        
+
                     </Grid>
                 </div>
             );

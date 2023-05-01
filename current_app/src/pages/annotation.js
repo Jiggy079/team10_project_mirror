@@ -27,6 +27,26 @@ class Annotation extends React.Component {
     }
 
     componentDidMount() {
+        const searchParams = new URLSearchParams(window.location.search);
+        const username = searchParams.get("user");
+        const id = searchParams.get("image");
+        if (username === "undefined" || username === null) {
+            this.setState({ user: "Guest" });
+        } else if (id === null) {
+            this.fetchAnnotation(1, username);
+            this.setState({ 
+                user: username,
+                currentFigureIndex: 0
+            })
+        } else {
+            this.fetchAnnotation(parseInt(id), username);
+            this.setState({
+                user: username,
+                currentFigureIndex: parseInt(id) - 1,
+                currentIndex: parseInt(id)
+            })
+        }
+
         fetch("https://files.catbox.moe/9j21gm.json") // all images in original order: https://files.catbox.moe/7dvpgw.json
             .then(res => res.json())
             .then((res) => {
@@ -35,14 +55,6 @@ class Annotation extends React.Component {
                     figuresLoaded: true
                 })
             })
-
-        const searchParams = new URLSearchParams(window.location.search);
-        const username = searchParams.get("user");
-        if (username === "undefined" || username === null) {
-            this.setState({ user: "Guest" });
-        } else {
-            this.setState({ user: username });
-        }
     }
 
     fetchAnnotation(id, user) {
@@ -56,8 +68,8 @@ class Annotation extends React.Component {
                         use: "",
                         legend: "",
                         maptype: "",
-                        number: 0,
-                        difficulty: 0,
+                        number: "",
+                        difficulty: "",
                     })
                 } else {
                     this.setState({
@@ -68,7 +80,7 @@ class Annotation extends React.Component {
                         maptype: res.maptype,
                         number: res.number,
                         difficulty: res.difficulty,
-                    })
+                    });
                 }
             })
     }
@@ -167,7 +179,6 @@ class Annotation extends React.Component {
         .then(res => res.json())
         .then((res) => {
             if (res === null) {
-                console.log("res is null");
                 this.setState({annotated: false});
                 return;
             } else {
@@ -191,7 +202,7 @@ class Annotation extends React.Component {
             <div className="App">
                 <Grid container spacing={2}>
                 <Grid sx={{ flexGrow: 1 }} item xs={12}>
-                    <MenuBar handleLogin={this.handleLogin} user={this.state.user}/>
+                    <MenuBar user={this.state.user}/>
                 </Grid>
                     <Grid item xs={6}>
                         <Card>

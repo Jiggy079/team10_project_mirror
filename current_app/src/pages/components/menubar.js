@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import ColorLensRoundedIcon from '@mui/icons-material/ColorLensRounded';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
+import LogoutIcon from '@mui/icons-material/Logout';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Button, MenuItem, Select } from '@mui/material';
 
@@ -43,6 +44,7 @@ export default function MenuBar({handleLogin, user}) {
             <AppBar position="static">
                 <Toolbar>
                 <IconButton
+                    href="/" 
                     size="large"
                     edge="start"
                     color="inherit"
@@ -75,23 +77,47 @@ export default function MenuBar({handleLogin, user}) {
                 </Box>
 
                 {user !== undefined &&
-                <Select
-                    label="Username"
-                    size="small"
-                    onChange={(e) => handleLogin(e.target.value)}
-                    sx={{ color: 'white'}} 
-                    value={user}
-                    >
-                    {usernames.map((username) => (
-                        <MenuItem
-                            key={username}
-                            value={username}
+                <div>
+                    {handleLogin !== undefined ? (
+                        <Select
+                        label="Username"
+                        size="small"
+                        onChange={(e) => handleLogin(e.target.value)}
+                        sx={{ color: 'white' }} 
+                        value={user}
+                        >
+                            {usernames.map((username) => (
+                                <MenuItem
+                                    key={username}
+                                    value={username}
+                                    >
+                                    {username}
+                                </MenuItem>
+                            ))}
+                        </Select>
+                    ) : (
+                        <div>
+                        {user==="Guest" ? (
+                            <Button
+                            onClick={() => handleLink("")}
+                            sx={{ my: 2, color: 'white' }}
                             >
-                            {username}
-                        </MenuItem>
-                    ))}
-                </Select>
-                }
+                            Log in
+                            </Button>
+                        ) : (
+                            <Button
+                            onClick={() => handleLink("")}
+                            sx={{ my: 2, color: 'white' }}
+                            endIcon={<LogoutIcon />}
+                            >
+                            {user}
+                            </Button>
+                        )}
+                        </div>
+                    )}
+            </div>
+            }
+
                 </Toolbar>
             </AppBar>
         </ThemeProvider>
