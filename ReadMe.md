@@ -1382,8 +1382,8 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 |To-Do| Assigned To:|
 |--------------------------------------|-------------------|
-| context & requirements for video | Jamie |
-| future directions for project for video | Nita  |
+| context & requirements for video | Jamie, due thursday |
+| future directions for project for video | Nita, due thursday  |
 | exploration tool demo video | Jamie | 
 | annotation tool demo video | Nita |
 | Validation tool demo video | Yizhan | 
@@ -1391,6 +1391,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | Video editing | Zhening |
 | Write project abstract | Nita |
 | Make poster for live demo day | Zhening |
+| draft introduction to demo video | Yizhan | 
 
 </details>
 
