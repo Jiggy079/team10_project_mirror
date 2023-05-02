@@ -1357,7 +1357,7 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 <details><summary> Tuesday 2nd May 2023 </summary>
 
-### Location and Time: 
+### Location and Time: 9:30am @ CS Building
 
 | Attendees | Attended |
 |-----------|--------------|
