@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import ColorLensRoundedIcon from '@mui/icons-material/ColorLensRounded';
-import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Button, MenuItem, Select } from '@mui/material';
