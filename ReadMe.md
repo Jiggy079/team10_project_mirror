@@ -1355,9 +1355,46 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 
 </details>
 
-<details><summary> Tuesday 2nd May 2023 - with supervisor </summary>
+<details><summary> Tuesday 2nd May 2023 </summary>
 
 ### Location and Time: 
+
+| Attendees | Attended |
+|-----------|--------------|
+| Hyanggi L | N |
+|Zhening Z | Y |
+|Jamie V| Y|
+|Yizhan H|  Y |
+| Nita K| Y |
+|Wenfei Q| Y |
+|Luke W| N |
+
+### Agenda
+
+- talk about deliverable video 
+- talk about final report status 
+
+### Points Discussed:
+
+- group split for the video 
+- Wenfei wants to swap doing the software manual with Jamie for the user manual instead 
+
+
+|To-Do| Assigned To:|
+|--------------------------------------|-------------------|
+| context & requirements for video | Jamie |
+| future directions for project for video | Nita  |
+| exploration tool demo video | Jamie | 
+| annotation tool demo video | Nita |
+| Validation tool demo video | Yizhan | 
+| Slides for demo video | Zhening | 
+| Video editing | Zhening |
+
+</details>
+
+<details><summary> Tuesday 2nd May 2023 - with supervisor </summary>
+
+### Location and Time: 10am @ CS Building
 
 | Attendees | Attended |
 |-----------|--------------|
