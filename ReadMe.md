@@ -1389,6 +1389,8 @@ ex. Git Report, Trello Kanban board, list of skills of group, fill ethics form
 | Validation tool demo video | Yizhan | 
 | Slides for demo video | Zhening | 
 | Video editing | Zhening |
+| Write project abstract | Nita |
+| Make poster for live demo day | Zhening |
 
 </details>
 
