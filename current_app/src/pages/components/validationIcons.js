@@ -275,7 +275,7 @@ export default function ValidationIcons({annotations, id, user}) {
         </Stack>
 
         <Stack direction="row" spacing={1}>
-            <TextField size="small" focused value={number} onChange={(e) => this.setState({number: e.target.value})}
+            <TextField size="small" focused value={number} onChange={(e) => setNumber(e.target.value)}
                 color={number===annotations[1]["number"]? "success" : "primary" }
             />
             <TextField size="small" value={annotations[1]["number"]} disabled />
