@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { Button, Stack, TextField, Tooltip, Checkbox } from '@mui/material';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import ContrastIcon from '@mui/icons-material/Contrast';
@@ -21,11 +21,11 @@ import SentimentVeryDissatisfiedRoundedIcon from '@mui/icons-material/SentimentV
 
 export default function ValidationIcons({annotations, id, user}) {
 
-    const q1 = ["black and white", "grey", "colour"];
-    const q2 = ["aesthetics", "colour-mapping", "depth-perception", "uncertain", "NA"];
-    const q3 = ["legend", "n-legend", "uncertain"];
-    const q4 = ["continuous", "categorical", "both", "uncertain"];
-    const q6 = ["1", "2", "3", "4", "5"];
+    const q1 = useMemo(() => ["black and white", "grey", "colour"], []);
+    const q2 = useMemo(() => ["aesthetics", "colour-mapping", "depth-perception", "uncertain", "NA"],[]);
+    const q3 = useMemo(() => ["legend", "n-legend", "uncertain"], []);
+    const q4 = useMemo(() => ["continuous", "categorical", "both", "uncertain"], []);
+    const q6 = useMemo(() => ["1", "2", "3", "4", "5"], []);
 
     // init the current user's annotation
     // q1
@@ -59,31 +59,30 @@ export default function ValidationIcons({annotations, id, user}) {
 
     // set the other user's annotation as fixed value
     // q1
-    const bw0 = annotations[1]["colour"] === q1[0];
-    const grey0 = annotations[1]["colour"] === q1[1];
-    const colour0 = annotations[1]["colour"] === q1[2];
+    const bw0 = annotations[1] ? annotations[1]["colour"] === q1[0] : false;
+    const grey0 = annotations[1] ? annotations[1]["colour"] === q1[1] : false;
+    const colour0 = annotations[1] ? annotations[1]["colour"] === q1[2] : false;
     // q2
-    const aesthetics0 = annotations[1]["use"] === q2[0];
-    const mapping0 = annotations[1]["use"] === q2[1];
-    const depth0 = annotations[1]["use"] === q2[2];
-    const uncertainUse0 = annotations[1]["use"] === q2[3];
-    const naUse0 = annotations[1]["use"] === q2[4];
+    const aesthetics0 = annotations[1] ? annotations[1]["use"] === q2[0] : false;
+    const mapping0 = annotations[1] ? annotations[1]["use"] === q2[1] : false;
+    const depth0 = annotations[1] ? annotations[1]["use"] === q2[2] : false;
+    const uncertainUse0 = annotations[1] ? annotations[1]["use"] === q2[3] : false;
+    const naUse0 = annotations[1] ? annotations[1]["use"] === q2[4] : false;
     // q3
-    const legend0 = annotations[1]["legend"] === q3[0];
-    const nlegend0 = annotations[1]["legend"] === q3[1];
-    const ulegend0 = annotations[1]["legend"] === q3[2];
+    const legend0 = annotations[1] ? annotations[1]["legend"] === q3[0] : false;
+    const nlegend0 = annotations[1] ? annotations[1]["legend"] === q3[1] : false;
+    const ulegend0 = annotations[1] ? annotations[1]["legend"] === q3[2] : false;
     // q4
-    const continuous0 = annotations[1]["maptype"] === q4[0];
-    const categorical0 = annotations[1]["maptype"] === q4[1];
-    const both0 = annotations[1]["maptype"] === q4[2];
-    const uType0 = annotations[1]["maptype"] === q4[3];
+    const continuous0 = annotations[1] ? annotations[1]["maptype"] === q4[0] : false;
+    const categorical0 = annotations[1] ? annotations[1]["maptype"] === q4[1] : false;
+    const both0 = annotations[1] ? annotations[1]["maptype"] === q4[2] : false;
+    const uType0 = annotations[1] ? annotations[1]["maptype"] === q4[3] : false;
     // q6
-    const veryEasy0 = annotations[1]["difficulty"] === q6[0];
-    const easy0 = annotations[1]["difficulty"] === q6[1];
-    const neutral0 = annotations[1]["difficulty"] === q6[2];
-    const hard0 = annotations[1]["difficulty"] === q6[3];
-    const veryHard0 = annotations[1]["difficulty"] === q6[4];
-
+    const veryEasy0 = annotations[1] ? annotations[1]["difficulty"] === q6[0] : false;
+    const easy0 = annotations[1] ? annotations[1]["difficulty"] === q6[1] : false;
+    const neutral0 = annotations[1] ? annotations[1]["difficulty"] === q6[2] : false;
+    const hard0 = annotations[1] ? annotations[1]["difficulty"] === q6[3] : false;
+    const veryHard0 = annotations[1] ? annotations[1]["difficulty"] === q6[4] : false;
 
     // set the current user's annotations
     useEffect(() => {
@@ -114,7 +113,7 @@ export default function ValidationIcons({annotations, id, user}) {
         setNeutral(annotations[0]["difficulty"] === q6[2]);
         setHard(annotations[0]["difficulty"] === q6[3]);
         setVHard(annotations[0]["difficulty"] === q6[4]);
-    }, [annotations]);
+    }, [annotations, q1, q2, q3, q4, q6]);
 
     const updateAnnotation = () => {
         const newAnnotation = {
@@ -276,9 +275,9 @@ export default function ValidationIcons({annotations, id, user}) {
 
         <Stack direction="row" spacing={1}>
             <TextField size="small" focused value={number} onChange={(e) => setNumber(e.target.value)}
-                color={number===annotations[1]["number"]? "success" : "primary" }
+                color={annotations[1] ? number===annotations[1]["number"]? "success" : "primary" : "primary" }
             />
-            <TextField size="small" value={annotations[1]["number"]} disabled />
+            <TextField size="small" value={annotations[1]? annotations[1]["number"] : ""} disabled />
         </Stack>
 
         <Stack direction="row" spacing={1}>

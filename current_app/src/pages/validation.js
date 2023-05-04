@@ -215,12 +215,7 @@ class Validation extends React.Component {
                                             position="below"
                                         />
 
-                                        {this.state.users.length > 1 ? (
-                                                <ValidationIcons annotations={annotations} id={id} user={this.state.user}/>
-                                            ) : (
-                                                <h6>Choose another user to cross check.</h6>
-                                            )
-                                        }
+                                        <ValidationIcons annotations={annotations} id={id} user={this.state.user}/>
     
                                         </ImageListItem>
                                     </div>
