@@ -1,9 +1,10 @@
 import React from 'react';
 import './validation.css';
-import { Grid, Card, FormGroup, Checkbox, TablePagination, Alert, FormControlLabel, CircularProgress, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
+import { Grid, Card, FormGroup, Checkbox, TablePagination, Alert, FormControlLabel, CircularProgress, ImageList, ImageListItem, ImageListItemBar, Stack } from '@mui/material';
 import MenuBar from './components/menubar';
 import ValidationIcons from './components/validationIcons';
-import ImgWithLink from './components/imgWithLink'
+import ImgWithLink from './components/imgWithLink';
+import CommentBox from './components/commentbox';
 
 class Validation extends React.Component {
     constructor(props) {
@@ -214,8 +215,11 @@ class Validation extends React.Component {
                                             title={this.state.figures[id-1]["name"]}
                                             position="below"
                                         />
-
-                                        <ValidationIcons annotations={annotations} id={id} user={this.state.user}/>
+                                        
+                                        <Stack spacing={2}>
+                                            <ValidationIcons annotations={annotations} id={id} user={this.state.user}/>
+                                            <CommentBox id={id} user={this.state.user}/>
+                                        </Stack>
     
                                         </ImageListItem>
                                     </div>
