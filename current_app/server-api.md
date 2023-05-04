@@ -23,3 +23,9 @@ GET https://express-backend-vfm5.onrender.com/image/:id
 ```
 GET https://express-backend-vfm5.onrender.com/annotation/:id/:user
 ```
+
+
+- Get: one comment
+```
+GET https://express-backend-vfm5.onrender.com/comment/:id
+```
