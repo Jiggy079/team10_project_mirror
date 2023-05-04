@@ -4,6 +4,10 @@ Main URL: https://team10-project-mirror.vercel.app/
 
 The mirror on github is [here](https://github.com/Jiggy079/team10_project_mirror) if anyone needs it.
 
+Server: on server branch (API can be found in server-api.md)
+
+Deployed [here](https://github.com/zheningz/mern-backend).
+
 # Create React App
 
 This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
