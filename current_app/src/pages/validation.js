@@ -121,12 +121,12 @@ class Validation extends React.Component {
     }
 
     handleChangePage(page) {
-        this.setState({page: page});
+        this.setState({page: parseInt(page)});
     }
     
     handleChangeRowsPerPage(row) {
         this.setState({
-            rowsPerPage: parseInt(row, 20),
+            rowsPerPage: parseInt(row),
             page: 0,
         });
     }
@@ -196,7 +196,7 @@ class Validation extends React.Component {
                                             page={this.state.page}
                                             onPageChange={(e, newPage) => this.handleChangePage(newPage)}
                                             rowsPerPage={this.state.rowsPerPage}
-                                            rowsPerPageOptions={[4, 12, 20, 40, 80]}
+                                            rowsPerPageOptions={[4, 20, 40, 80]}
                                             onRowsPerPageChange={(e) => this.handleChangeRowsPerPage(e.target.value)}
                                             />
                                     }
