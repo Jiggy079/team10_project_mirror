@@ -1595,23 +1595,3 @@ We decided to use personas and user stories as part of our requirements gatherin
 <details><summary> expand details </summary>
 
 </details>
-
-
-## Test Plan 
-
-<details><summary> </summary>
-
-|Test|Reason|Inputs|Expected Outcome|Pass/Fail|Notes|
-|----|---------------|------|----------------|-------|------|
-| | | | | | |
-
-<details><summary>Code Fixes</summary>
- 
-
-| Test | Why it failed | What changed to make them pass |
-| ------ | ------------ | ------ |
-| | | |
-</details>
-
-
-</details>
